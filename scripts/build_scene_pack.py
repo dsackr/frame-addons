@@ -78,6 +78,7 @@ MAX_ASPECT_RATIO = 2.5
 
 
 def _api_get(params: dict) -> dict:
+    time.sleep(0.8)  # prevent HTTP 429 Rate Limiting from Wikimedia Commons
     params = {**params, "format": "json"}
     url = f"{API_URL}?{urllib.parse.urlencode(params)}"
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
@@ -147,7 +148,9 @@ def _imageinfo(titles: list[str]) -> dict[str, dict]:
 
 def _pick_best(query: str, artist_keyword: str, seen_urls: set[str]) -> dict | None:
     candidates = _search_candidates(query, limit=8)
-    candidates = [c for c in candidates if not _EXCLUDE_TITLE_PATTERNS.search(c)]
+    is_exact_file = query.startswith("File:")
+    if not is_exact_file:
+        candidates = [c for c in candidates if not _EXCLUDE_TITLE_PATTERNS.search(c)]
     if not candidates:
         return None
     infos = _imageinfo(candidates)
@@ -160,24 +163,25 @@ def _pick_best(query: str, artist_keyword: str, seen_urls: set[str]) -> dict | N
             continue
         if info["mime"] not in ("image/jpeg", "image/png"):
             continue
-        if info["width"] < MIN_SOURCE_DIM or info["height"] < MIN_SOURCE_DIM:
-            continue
-        if info["width"] * info["height"] > MAX_SOURCE_PIXELS:
-            continue
-        if max(info["width"], info["height"]) / min(info["width"], info["height"]) > MAX_ASPECT_RATIO:
-            continue
-        if info["url"] in seen_urls:
-            continue
-        # Commons full-text search matches page content, not just the
-        # title, so an unrelated painting can outrank the real one (bit us
-        # once already: a "van Gogh Self-Portrait" query's top hit was a
-        # Malczewski painting). Trust the file's own Artist metadata when
-        # present; only fall back to a title-keyword check when a file
-        # genuinely has no structured Artist field.
-        artist_text = info["artist_text"]
-        haystack = artist_text if artist_text else _strip_accents(title).lower()
-        if keyword not in haystack:
-            continue
+        if not is_exact_file:
+            if info["width"] < MIN_SOURCE_DIM or info["height"] < MIN_SOURCE_DIM:
+                continue
+            if info["width"] * info["height"] > MAX_SOURCE_PIXELS:
+                continue
+            if max(info["width"], info["height"]) / min(info["width"], info["height"]) > MAX_ASPECT_RATIO:
+                continue
+            if info["url"] in seen_urls:
+                continue
+            # Commons full-text search matches page content, not just the
+            # title, so an unrelated painting can outrank the real one (bit us
+            # once already: a "van Gogh Self-Portrait" query's top hit was a
+            # Malczewski painting). Trust the file's own Artist metadata when
+            # present; only fall back to a title-keyword check when a file
+            # genuinely has no structured Artist field.
+            artist_text = info["artist_text"]
+            haystack = artist_text if artist_text else _strip_accents(title).lower()
+            if keyword not in haystack:
+                continue
         scored.append((info["width"] * info["height"], title, info))
 
     if not scored:
@@ -487,6 +491,59 @@ PACKS = [
             ("File:Cupid and Psyche by François-Édouard Picot.jpg", "Cupid and Psyche (Picot)", "Picot"),
             ("File:The Love of Paris and Helen by Jacques-Louis David.jpg", "The Love of Paris and Helen", "David"),
             ("File:Cupid and Psyche by Jean-François de Troy.jpg", "Cupid and Psyche (Troy)", "Troy"),
+        ],
+    },
+    {
+        "id": "presidents",
+        "name": "US Presidents",
+        "description": "Official, public-domain portraits of the Presidents of the United States.",
+        "category": "art",
+        "queries": [
+            ("File:Gilbert Stuart Williamstown Portrait of George Washington (3x4 cropped).jpg", "George Washington", ""),
+            ("File:John Adams A18236 (cropped).jpg", "John Adams", ""),
+            ("File:Official Presidential portrait of Thomas Jefferson (by Rembrandt Peale, 1800) (3x4 cropped).jpg", "Thomas Jefferson", ""),
+            ("File:James Madison Portrait 1816 (3x4 cropped).jpg", "James Madison", ""),
+            ("File:James Monroe White House portrait 1819 (cropped 3x4 close).jpg", "James Monroe", ""),
+            ("File:John Quincy Adams 1858 (3x4 cropped).jpg", "John Quincy Adams", ""),
+            ("File:Andrew jackson head (3x4 cropped).jpg", "Andrew Jackson", ""),
+            ("File:Martin Van Buren circa 1837 (3x4 cropped).jpg", "Martin Van Buren", ""),
+            ("File:William Henry Harrison Portrait (3x4 cropped).jpg", "William Henry Harrison", ""),
+            ("File:John Tyler (cropped 3x4) (cropped)(2).png", "John Tyler", ""),
+            ("File:James K Polk (3x4 cropped).jpg", "James K. Polk", ""),
+            ("File:Zachary Taylor restored (3x4 cropped).jpg", "Zachary Taylor", ""),
+            ("File:Fillmore (cropped).jpg", "Millard Fillmore", ""),
+            ("File:Mathew Brady - Franklin Pierce - alternate crop (cropped)(2).jpg", "Franklin Pierce", ""),
+            ("File:James Buchanan (cropped 3x4).jpg", "James Buchanan", ""),
+            ("File:Abraham Lincoln 1863 Portrait (3x4 cropped).jpg", "Abraham Lincoln", ""),
+            ("File:Andrew Johnson photo portrait head and shoulders (3x4 cropped).jpg", "Andrew Johnson", ""),
+            ("File:Ulysses S Grant by Brady c1870-restored (3x4 cropped).jpg", "Ulysses S. Grant", ""),
+            ("File:President Rutherford Hayes 1870 - 1880 (3x4 cropped).jpg", "Rutherford B. Hayes", ""),
+            ("File:James Abram Garfield, photo portrait seated (3x4 cropped b).jpg", "James A. Garfield", ""),
+            ("File:Chester A. Arthur by Abraham Bogardus (cropped) (2).jpg", "Chester A. Arthur", ""),
+            ("File:Grover Cleveland by Charles Milton Bell color change (3x4 cropped b).jpg", "Grover Cleveland", ""),
+            ("File:Benjamin Harrison, head and shoulders bw photo, 1896 (4x5 cropped).jpg", "Benjamin Harrison", ""),
+            ("File:William McKinley Portrait (3x4 cropped).jpg", "William McKinley", ""),
+            ("File:Theodore Roosevelt by the Pach Bros (4x5 cropped).jpg", "Theodore Roosevelt", ""),
+            ("File:William Howard Taft by Pach Brothers (3x4 ropped).jpg", "William Howard Taft", ""),
+            ("File:President Woodrow Wilson Harris & Ewing (3x4 cropped c).jpg", "Woodrow Wilson", ""),
+            ("File:Warren G Harding-Harris & Ewing (3x4 cropped).jpg", "Warren G. Harding", ""),
+            ("File:President Calvin Coolidge, 1924 head-and-shoulders portrait, facing slightly right (2).jpeg", "Calvin Coolidge", ""),
+            ("File:Herbert Clark Hoover by Greene, 1956.jpg", "Herbert Hoover", ""),
+            ("File:Franklin Delano Roosevelt, Portrait 1933.jpg", "Franklin D. Roosevelt", ""),
+            ("File:TRUMAN 58-766-06 (cropped).jpg", "Harry S. Truman", ""),
+            ("File:Dwight D. Eisenhower, official photo portrait, May 29, 1959 (cropped)(3).jpg", "Dwight D. Eisenhower", ""),
+            ("File:John F. Kennedy, White House color photo portrait (3x4) (cropped).jpg", "John F. Kennedy", ""),
+            ("File:37 Lyndon Johnson 3x4.jpg", "Lyndon B. Johnson", ""),
+            ("File:Richard Nixon presidential portrait (1).jpg", "Richard Nixon", ""),
+            ("File:Gerald Ford presidential portrait (cropped 3).jpg", "Gerald Ford", ""),
+            ("File:Jimmy Carter presidential portrait (cropped 1).jpg", "Jimmy Carter", ""),
+            ("File:Official Portrait of President Reagan 1981-cropped.jpg", "Ronald Reagan", ""),
+            ("File:George H. W. Bush presidential portrait (cropped 2).jpg", "George H. W. Bush", ""),
+            ("File:Bill Clinton.jpg", "Bill Clinton", ""),
+            ("File:George-W-Bush.jpeg", "George W. Bush", ""),
+            ("File:President Barack Obama, 2012 portrait crop.jpg", "Barack Obama", ""),
+            ("File:Donald Trump official portrait (3x4a).jpg", "Donald Trump", ""),
+            ("File:Joe Biden presidential portrait (cropped).jpg", "Joe Biden", ""),
         ],
     },
 ]

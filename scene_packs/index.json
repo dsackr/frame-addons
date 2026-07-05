@@ -872,6 +872,331 @@
           "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Psyche_by_Jean-Fran%C3%A7ois_de_Troy.jpg"
         }
       ]
+    },
+    {
+      "id": "presidents",
+      "name": "US Presidents",
+      "description": "Official, public-domain portraits of the Presidents of the United States.",
+      "category": "art",
+      "license": "Public domain (verified per-image via Wikimedia Commons)",
+      "cover": "scene_packs/presidents/01_george_washington.jpg",
+      "images": [
+        {
+          "filename": "01_george_washington.jpg",
+          "path": "scene_packs/presidents/01_george_washington.jpg",
+          "title": "George Washington",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+        },
+        {
+          "filename": "02_john_adams.jpg",
+          "path": "scene_packs/presidents/02_john_adams.jpg",
+          "title": "John Adams",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Adams_A18236.jpg"
+        },
+        {
+          "filename": "03_thomas_jefferson.jpg",
+          "path": "scene_packs/presidents/03_thomas_jefferson.jpg",
+          "title": "Thomas Jefferson",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Presidential_portrait_of_Thomas_Jefferson_(by_Rembrandt_Peale,_1800).jpg"
+        },
+        {
+          "filename": "04_james_madison.jpg",
+          "path": "scene_packs/presidents/04_james_madison.jpg",
+          "title": "James Madison",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Madison.jpg"
+        },
+        {
+          "filename": "05_james_monroe.jpg",
+          "path": "scene_packs/presidents/05_james_monroe.jpg",
+          "title": "James Monroe",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Monroe_White_House_portrait_1819.jpg"
+        },
+        {
+          "filename": "06_john_quincy_adams.jpg",
+          "path": "scene_packs/presidents/06_john_quincy_adams.jpg",
+          "title": "John Quincy Adams",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Quincy_Adams_1858_crop.jpg"
+        },
+        {
+          "filename": "07_andrew_jackson.jpg",
+          "path": "scene_packs/presidents/07_andrew_jackson.jpg",
+          "title": "Andrew Jackson",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_jackson_head.jpg"
+        },
+        {
+          "filename": "08_martin_van_buren.jpg",
+          "path": "scene_packs/presidents/08_martin_van_buren.jpg",
+          "title": "Martin Van Buren",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Martin_Van_Buren_MET_ap93.19.2.jpg"
+        },
+        {
+          "filename": "09_william_henry_harrison.jpg",
+          "path": "scene_packs/presidents/09_william_henry_harrison.jpg",
+          "title": "William Henry Harrison",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:William_Henry_Harrison_by_James_Reid_Lambdin,_1835.jpg"
+        },
+        {
+          "filename": "10_john_tyler.jpg",
+          "path": "scene_packs/presidents/10_john_tyler.jpg",
+          "title": "John Tyler",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Tyler_(cropped_3x4).png"
+        },
+        {
+          "filename": "11_james_k_polk.jpg",
+          "path": "scene_packs/presidents/11_james_k_polk.jpg",
+          "title": "James K. Polk",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:JamesKPolk.jpg"
+        },
+        {
+          "filename": "12_zachary_taylor.jpg",
+          "path": "scene_packs/presidents/12_zachary_taylor.jpg",
+          "title": "Zachary Taylor",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Zachary_Taylor_restored_and_cropped.jpg"
+        },
+        {
+          "filename": "13_millard_fillmore.jpg",
+          "path": "scene_packs/presidents/13_millard_fillmore.jpg",
+          "title": "Millard Fillmore",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Millard_Fillmore_Better_Crop.jpg"
+        },
+        {
+          "filename": "14_franklin_pierce.jpg",
+          "path": "scene_packs/presidents/14_franklin_pierce.jpg",
+          "title": "Franklin Pierce",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg"
+        },
+        {
+          "filename": "15_james_buchanan.jpg",
+          "path": "scene_packs/presidents/15_james_buchanan.jpg",
+          "title": "James Buchanan",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Buchanan_Eads_-_Brady-Handy.jpg"
+        },
+        {
+          "filename": "16_abraham_lincoln.jpg",
+          "path": "scene_packs/presidents/16_abraham_lincoln.jpg",
+          "title": "Abraham Lincoln",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+        },
+        {
+          "filename": "17_andrew_johnson.jpg",
+          "path": "scene_packs/presidents/17_andrew_johnson.jpg",
+          "title": "Andrew Johnson",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_Johnson_photo_portrait_head_and_shoulders,_c1870-1880-Edit1.jpg"
+        },
+        {
+          "filename": "18_ulysses_s_grant.jpg",
+          "path": "scene_packs/presidents/18_ulysses_s_grant.jpg",
+          "title": "Ulysses S. Grant",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Ulysses_S_Grant_by_Brady_c1870-restored.jpg"
+        },
+        {
+          "filename": "19_rutherford_b_hayes.jpg",
+          "path": "scene_packs/presidents/19_rutherford_b_hayes.jpg",
+          "title": "Rutherford B. Hayes",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Rutherford_Hayes_1870_-_1880.jpg"
+        },
+        {
+          "filename": "20_james_a_garfield.jpg",
+          "path": "scene_packs/presidents/20_james_a_garfield.jpg",
+          "title": "James A. Garfield",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Abram_Garfield,_photo_portrait_seated_(cropped_4x5).jpg"
+        },
+        {
+          "filename": "21_chester_a_arthur.jpg",
+          "path": "scene_packs/presidents/21_chester_a_arthur.jpg",
+          "title": "Chester A. Arthur",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Chester_A._Arthur_by_Abraham_Bogardus.jpg"
+        },
+        {
+          "filename": "22_grover_cleveland.jpg",
+          "path": "scene_packs/presidents/22_grover_cleveland.jpg",
+          "title": "Grover Cleveland",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Grover_Cleveland_by_Charles_Milton_Bell_color_change_(3x4_cropped).jpg"
+        },
+        {
+          "filename": "23_benjamin_harrison.jpg",
+          "path": "scene_packs/presidents/23_benjamin_harrison.jpg",
+          "title": "Benjamin Harrison",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Benjamin_Harrison,_head_and_shoulders_bw_photo,_1896.jpg"
+        },
+        {
+          "filename": "24_william_mckinley.jpg",
+          "path": "scene_packs/presidents/24_william_mckinley.jpg",
+          "title": "William McKinley",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:McKinley_(cropped).jpg"
+        },
+        {
+          "filename": "25_theodore_roosevelt.jpg",
+          "path": "scene_packs/presidents/25_theodore_roosevelt.jpg",
+          "title": "Theodore Roosevelt",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros.jpg"
+        },
+        {
+          "filename": "26_william_howard_taft.jpg",
+          "path": "scene_packs/presidents/26_william_howard_taft.jpg",
+          "title": "William Howard Taft",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cabinet_card_of_William_Howard_Taft_by_Pach_Brothers_-_Cropped_to_image.jpg"
+        },
+        {
+          "filename": "27_woodrow_wilson.jpg",
+          "path": "scene_packs/presidents/27_woodrow_wilson.jpg",
+          "title": "Woodrow Wilson",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Woodrow_Wilson_Harris_%26_Ewing_(3x4_cropped_b).jpg"
+        },
+        {
+          "filename": "28_warren_g_harding.jpg",
+          "path": "scene_packs/presidents/28_warren_g_harding.jpg",
+          "title": "Warren G. Harding",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:HARDING,_WARREN_G._HONORABLE_LCCN2016859359.jpg"
+        },
+        {
+          "filename": "29_calvin_coolidge.jpg",
+          "path": "scene_packs/presidents/29_calvin_coolidge.jpg",
+          "title": "Calvin Coolidge",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Calvin_Coolidge,_1924_head-and-shoulders_portrait,_facing_slightly_right_(2).jpeg"
+        },
+        {
+          "filename": "30_herbert_hoover.jpg",
+          "path": "scene_packs/presidents/30_herbert_hoover.jpg",
+          "title": "Herbert Hoover",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Herbert_Clark_Hoover_by_Greene,_1956.jpg"
+        },
+        {
+          "filename": "31_franklin_d_roosevelt.jpg",
+          "path": "scene_packs/presidents/31_franklin_d_roosevelt.jpg",
+          "title": "Franklin D. Roosevelt",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Franklin_Delano_Roosevelt_portrait_painting_LCCN2016894437.jpg"
+        },
+        {
+          "filename": "32_harry_s_truman.jpg",
+          "path": "scene_packs/presidents/32_harry_s_truman.jpg",
+          "title": "Harry S. Truman",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:TRUMAN_58-766-06.jpg"
+        },
+        {
+          "filename": "33_dwight_d_eisenhower.jpg",
+          "path": "scene_packs/presidents/33_dwight_d_eisenhower.jpg",
+          "title": "Dwight D. Eisenhower",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg"
+        },
+        {
+          "filename": "34_john_f_kennedy.jpg",
+          "path": "scene_packs/presidents/34_john_f_kennedy.jpg",
+          "title": "John F. Kennedy",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Fitzgerald_Kennedy_official_White_House_portrait_(July_1963).jpg"
+        },
+        {
+          "filename": "35_lyndon_b_johnson.jpg",
+          "path": "scene_packs/presidents/35_lyndon_b_johnson.jpg",
+          "title": "Lyndon B. Johnson",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Black_and_White_37_Lyndon_Johnson_3x4.jpg"
+        },
+        {
+          "filename": "36_richard_nixon.jpg",
+          "path": "scene_packs/presidents/36_richard_nixon.jpg",
+          "title": "Richard Nixon",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Richard_Nixon_Vice_Presidential_Portrait.jpg"
+        },
+        {
+          "filename": "37_gerald_ford.jpg",
+          "path": "scene_packs/presidents/37_gerald_ford.jpg",
+          "title": "Gerald Ford",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Gerald_R._Ford_(1974)_(A0381-600).jpg"
+        },
+        {
+          "filename": "38_jimmy_carter.jpg",
+          "path": "scene_packs/presidents/38_jimmy_carter.jpg",
+          "title": "Jimmy Carter",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Jimmy_Carter_-_NARA_-_179156_(cropped).jpg"
+        },
+        {
+          "filename": "39_ronald_reagan.jpg",
+          "path": "scene_packs/presidents/39_ronald_reagan.jpg",
+          "title": "Ronald Reagan",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg"
+        },
+        {
+          "filename": "40_george_h_w_bush.jpg",
+          "path": "scene_packs/presidents/40_george_h_w_bush.jpg",
+          "title": "George H. W. Bush",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:George_H._W._Bush_presidential_portrait_2.jpg"
+        },
+        {
+          "filename": "41_bill_clinton.jpg",
+          "path": "scene_packs/presidents/41_bill_clinton.jpg",
+          "title": "Bill Clinton",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Bill_Clinton.jpg"
+        },
+        {
+          "filename": "42_george_w_bush.jpg",
+          "path": "scene_packs/presidents/42_george_w_bush.jpg",
+          "title": "George W. Bush",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:George_W._Bush_2003_(4x5).png"
+        },
+        {
+          "filename": "43_barack_obama.jpg",
+          "path": "scene_packs/presidents/43_barack_obama.jpg",
+          "title": "Barack Obama",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg"
+        },
+        {
+          "filename": "44_donald_trump.jpg",
+          "path": "scene_packs/presidents/44_donald_trump.jpg",
+          "title": "Donald Trump",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:January_2025_Official_Presidential_Portrait_of_Donald_J._Trump.jpg"
+        },
+        {
+          "filename": "45_joe_biden.jpg",
+          "path": "scene_packs/presidents/45_joe_biden.jpg",
+          "title": "Joe Biden",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg"
+        }
+      ]
     }
   ]
 }
