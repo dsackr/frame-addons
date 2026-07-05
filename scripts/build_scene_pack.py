@@ -159,7 +159,7 @@ def _pick_best(query: str, artist_keyword: str, seen_urls: set[str]) -> dict | N
     scored = []
     for title in candidates:
         info = infos.get(title)
-        if not info or not info["license_ok"]:
+        if not info or (not is_exact_file and not info["license_ok"]):
             continue
         if info["mime"] not in ("image/jpeg", "image/png"):
             continue
@@ -544,6 +544,22 @@ PACKS = [
             ("File:President Barack Obama, 2012 portrait crop.jpg", "Barack Obama", ""),
             ("File:Donald Trump official portrait (3x4a).jpg", "Donald Trump", ""),
             ("File:Joe Biden presidential portrait (cropped).jpg", "Joe Biden", ""),
+        ],
+    },
+    {
+        "id": "wonders",
+        "name": "7 Wonders of the World",
+        "description": "Stunning landscapes of the New Seven Wonders of the World plus the Great Pyramid of Giza.",
+        "category": "art",
+        "queries": [
+            ("File:The Great Wall of China at Jinshanling.jpg", "Great Wall of China", ""),
+            ("File:The Monastery, Petra, Jordan8.jpg", "Petra", ""),
+            ("File:Unique Moment with the Moon and Christ the Redeemer 3.jpg", "Christ the Redeemer", ""),
+            ("File:Machu Picchu, Peru.jpg", "Machu Picchu", ""),
+            ("File:Chichen-Itza-Castillo-Seen-From-East.JPG", "Chichén Itzá", ""),
+            ("File:Colosseum in Rome, Italy - April 2007.jpg", "Colosseum", ""),
+            ("File:Taj Mahal in March 2004.jpg", "Taj Mahal", ""),
+            ("File:Great Pyramid of Giza.jpg", "Great Pyramid of Giza", ""),
         ],
     },
 ]

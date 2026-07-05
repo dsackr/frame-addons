@@ -1197,6 +1197,72 @@
           "commons_url": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg"
         }
       ]
+    },
+    {
+      "id": "wonders",
+      "name": "7 Wonders of the World",
+      "description": "Stunning landscapes of the New Seven Wonders of the World plus the Great Pyramid of Giza.",
+      "category": "art",
+      "license": "Public domain (verified per-image via Wikimedia Commons)",
+      "cover": "scene_packs/wonders/01_great_wall_of_china.jpg",
+      "images": [
+        {
+          "filename": "01_great_wall_of_china.jpg",
+          "path": "scene_packs/wonders/01_great_wall_of_china.jpg",
+          "title": "Great Wall of China",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling.jpg"
+        },
+        {
+          "filename": "02_petra.jpg",
+          "path": "scene_packs/wonders/02_petra.jpg",
+          "title": "Petra",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Monastery,_Petra,_Jordan8.jpg"
+        },
+        {
+          "filename": "03_christ_the_redeemer.jpg",
+          "path": "scene_packs/wonders/03_christ_the_redeemer.jpg",
+          "title": "Christ the Redeemer",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Unique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg"
+        },
+        {
+          "filename": "04_machu_picchu.jpg",
+          "path": "scene_packs/wonders/04_machu_picchu.jpg",
+          "title": "Machu Picchu",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg"
+        },
+        {
+          "filename": "05_chich_n_itz.jpg",
+          "path": "scene_packs/wonders/05_chich_n_itz.jpg",
+          "title": "Chich\u00e9n Itz\u00e1",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Chichen-Itza-Castillo-Seen-From-East.JPG"
+        },
+        {
+          "filename": "06_colosseum.jpg",
+          "path": "scene_packs/wonders/06_colosseum.jpg",
+          "title": "Colosseum",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg"
+        },
+        {
+          "filename": "07_taj_mahal.jpg",
+          "path": "scene_packs/wonders/07_taj_mahal.jpg",
+          "title": "Taj Mahal",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg"
+        },
+        {
+          "filename": "08_great_pyramid_of_giza.jpg",
+          "path": "scene_packs/wonders/08_great_pyramid_of_giza.jpg",
+          "title": "Great Pyramid of Giza",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_from_southeast_corner.JPG"
+        }
+      ]
     }
   ]
 }
