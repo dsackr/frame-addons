@@ -9,7 +9,9 @@ By hosting these resources separately, users can discover and install new conten
 * **`scene_packs/`**: Curated, public-domain art and seasonal image bundles designed for one-click installation on Fraimic e-ink canvas frames.
   * Includes a central manifest (`scene_packs/index.json`) mapping all available packs and image specifications.
   * Automatically and dynamically fetched at runtime by the Home Assistant integration.
-* **Future Add-on Capabilities**: Expanded layouts, additional device configurations, and integrations will be hosted here to keep the core code footprint lightweight.
+* **`addons/`**: Custom layout scripts, diagnostics, and widgets to display dynamic information on your canvas.
+  * **[Daily Agenda](file:///Users/dsackrider/repos/frame-addons/addons/daily_agenda/README.md)**: Reads your Google Calendar (via direct iCal or Home Assistant API) and weather forecast, rendering a beautiful dashboard natively in e-ink Spectra 6 colors.
+
 
 ## Related Repositories
 

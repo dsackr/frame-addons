@@ -1,0 +1,21 @@
+{
+  "calendar": {
+    "source_type": "ical",
+    "ical_url": "https://calendar.google.com/calendar/ical/your-private-link/basic.ics",
+    "ha_url": "http://homeassistant.local:8123",
+    "ha_token": "YOUR_HA_LONG_LIVED_ACCESS_TOKEN",
+    "ha_calendar_entity": "calendar.personal"
+  },
+  "weather": {
+    "enabled": true,
+    "latitude": 37.7749,
+    "longitude": -122.4194,
+    "temp_unit": "fahrenheit"
+  },
+  "frame": {
+    "ip_address": "fraimic.local",
+    "resolution": [1200, 1600],
+    "layout": "split_half"
+  },
+  "timezone": "America/Los_Angeles"
+}

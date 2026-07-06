@@ -1,0 +1,12 @@
+{
+  "name": "fraimic-addons-tests",
+  "version": "1.0.0",
+  "description": "Integration and visual rendering tests for Fraimic Add-ons",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
