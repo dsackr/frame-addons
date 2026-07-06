@@ -835,7 +835,7 @@
       "id": "presidents",
       "name": "US Presidents",
       "description": "Official, public-domain portraits of the Presidents of the United States.",
-      "category": "famous_artists",
+      "category": "history",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/presidents/01_george_washington.jpg",
       "images": [
