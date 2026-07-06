@@ -4,7 +4,7 @@
       "id": "monet",
       "name": "Claude Monet",
       "description": "Impressionist gardens, water lilies, and shifting light.",
-      "category": "art",
+      "category": "famous_artists",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/monet/01_impression_sunrise.jpg",
       "images": [
@@ -84,7 +84,7 @@
       "id": "davinci",
       "name": "Leonardo da Vinci",
       "description": "Renaissance portraits, studies, and sacred scenes.",
-      "category": "art",
+      "category": "famous_artists",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/davinci/01_mona_lisa.jpg",
       "images": [
@@ -150,7 +150,7 @@
       "id": "van_gogh",
       "name": "Vincent van Gogh",
       "description": "Bold color and brushwork from Post-Impressionism's icon.",
-      "category": "art",
+      "category": "famous_artists",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/van_gogh/01_the_starry_night.jpg",
       "images": [
@@ -223,7 +223,7 @@
       "id": "classic_art",
       "name": "Classic Art",
       "description": "Famous public-domain masterworks spanning centuries and continents.",
-      "category": "art",
+      "category": "famous_artists",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/classic_art/01_girl_with_a_pearl_earring.jpg",
       "images": [
@@ -296,7 +296,7 @@
       "id": "christmas",
       "name": "Christmas",
       "description": "Vibrant, high-contrast Christmas scenes optimized for Spectra 6 displays.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/christmas/01_christmas_tree.jpg",
       "images": [
@@ -376,7 +376,7 @@
       "id": "halloween",
       "name": "Halloween",
       "description": "Spooky-cute, vibrant Halloween illustrations optimized for Spectra 6 displays.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/halloween/01_jack_o_lanterns.jpg",
       "images": [
@@ -456,7 +456,7 @@
       "id": "independence_day",
       "name": "Independence Day",
       "description": "Patriotic Americana and vibrant July 4th displays optimized for Spectra 6 displays.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/independence_day/01_statue_of_liberty.jpg",
       "images": [
@@ -536,7 +536,7 @@
       "id": "thanksgiving",
       "name": "Thanksgiving",
       "description": "Harvest abundance, fruit still lifes, and warm autumn scenes.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/thanksgiving/01_home_to_thanksgiving_durrie.jpg",
       "images": [
@@ -616,7 +616,7 @@
       "id": "easter",
       "name": "Easter",
       "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/easter/01_bunny_basket_landscape.jpg",
       "images": [
@@ -682,7 +682,7 @@
       "id": "new_years",
       "name": "New Year's",
       "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
       "images": [
@@ -748,7 +748,7 @@
       "id": "valentines_day",
       "name": "Valentine's Day",
       "description": "Iconic romantic masterworks and classic Cupid and heart illustrations.",
-      "category": "seasonal",
+      "category": "seasons",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/valentines_day/01_pygmalion_and_galatea_gerome.jpg",
       "images": [
@@ -835,7 +835,7 @@
       "id": "presidents",
       "name": "US Presidents",
       "description": "Official, public-domain portraits of the Presidents of the United States.",
-      "category": "art",
+      "category": "famous_artists",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/presidents/01_george_washington.jpg",
       "images": [
@@ -1160,7 +1160,7 @@
       "id": "wonders",
       "name": "7 Wonders of the World",
       "description": "Stunning landscapes of the New Seven Wonders of the World plus the Great Pyramid of Giza.",
-      "category": "art",
+      "category": "nature",
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/wonders/01_great_wall_of_china.jpg",
       "images": [
@@ -1223,10 +1223,58 @@
       ]
     },
     {
+      "id": "canyons",
+      "name": "Canyons",
+      "description": "Breathtaking views of the Grand Canyon and glowing sandstone paths of Antelope Canyon.",
+      "category": "nature",
+      "license": "Public domain",
+      "cover": "scene_packs/canyons/preview_cover.jpg",
+      "images": [
+        {
+          "filename": "01_grand_canyon.jpg",
+          "path": "scene_packs/canyons/01_grand_canyon.jpg",
+          "title": "Grand Canyon Sunset",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "02_antelope_canyon.jpg",
+          "path": "scene_packs/canyons/02_antelope_canyon.jpg",
+          "title": "Antelope Canyon Light Beam",
+          "source": "Generative Art",
+          "commons_url": ""
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Famous Architecture",
+      "description": "Iconic structural wonders including the Golden Gate Bridge and the Great Pyramids of Giza.",
+      "category": "architecture",
+      "license": "Public domain",
+      "cover": "scene_packs/architecture/preview_cover.jpg",
+      "images": [
+        {
+          "filename": "01_golden_gate.jpg",
+          "path": "scene_packs/architecture/01_golden_gate.jpg",
+          "title": "Golden Gate Bridge in Evening Fog",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "02_great_pyramids.jpg",
+          "path": "scene_packs/architecture/02_great_pyramids.jpg",
+          "title": "Great Pyramids of Giza at Sunset",
+          "source": "Generative Art",
+          "commons_url": ""
+        }
+      ]
+    },
+    {
       "id": "daily_agenda",
       "name": "Daily Agenda",
       "description": "Displays your daily Google/iCal calendar agenda, status, and local weather forecast.",
-      "category": "widgets",
+      "category": "productivity",
       "type": "widget",
       "script_url": "addons/daily_agenda/agenda_renderer.py",
       "cover": "addons/daily_agenda/preview_cover.jpg",
@@ -1251,7 +1299,7 @@
       "id": "quote_of_the_day",
       "name": "Quote of the Day",
       "description": "Displays an inspiring quote daily, fetched from the web or a local custom list, formatted on a premium decorative layout.",
-      "category": "widgets",
+      "category": "productivity",
       "type": "widget",
       "script_url": "addons/quote_of_the_day/quote_renderer.py",
       "cover": "addons/quote_of_the_day/preview_cover.jpg",
@@ -1276,7 +1324,7 @@
       "id": "scripture_of_the_day",
       "name": "Scripture of the Day",
       "description": "Displays an inspiring daily Bible verse in your chosen translation (NIV, KJV, WEB, BBE, etc.) on a premium layout.",
-      "category": "widgets",
+      "category": "productivity",
       "type": "widget",
       "script_url": "addons/scripture_of_the_day/scripture_renderer.py",
       "cover": "addons/scripture_of_the_day/preview_cover.jpg",
