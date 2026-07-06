@@ -279,6 +279,10 @@ def build_pack(pack: dict) -> dict:
             "images": images,
         }
 
+    for existing_filename in os.listdir(out_dir):
+        if existing_filename.lower().endswith((".jpg", ".jpeg")):
+            os.remove(os.path.join(out_dir, existing_filename))
+
     images = []
     seen_urls: set[str] = set()
 
@@ -459,6 +463,22 @@ PACKS = [
             ("Katsushika Hokusai Kajikazawa in Kai Province print", "Kajikazawa in Kai Province", "Hokusai"),
             ("Katsushika Hokusai Amida Falls on the Kiso Road print", "Amida Falls on the Kiso Road", "Hokusai"),
             ("Katsushika Hokusai The Waterfall Where Yoshitsune Washed his Horse at Yoshino print", "Yoshitsune's Horse-Washing Falls", "Hokusai"),
+        ],
+    },
+    {
+        "id": "mucha",
+        "name": "Alphonse Mucha",
+        "description": "Art Nouveau posters and decorative panels with elegant linework and color.",
+        "categories": ["famous_artists"],
+        "queries": [
+            ("Alphonse Mucha Gismonda poster", "Gismonda", "Mucha"),
+            ("Alphonse Mucha Zodiac poster", "Zodiac", "Mucha"),
+            ("Alphonse Mucha JOB cigarette poster", "JOB Cigarettes", "Mucha"),
+            ("Alphonse Mucha Moet Chandon poster", "Moët & Chandon", "Mucha"),
+            ("Alphonse Mucha The Seasons Spring", "The Seasons: Spring", "Mucha"),
+            ("Alphonse Mucha The Seasons Summer", "The Seasons: Summer", "Mucha"),
+            ("Alphonse Mucha Princess Hyacinth poster", "Princess Hyacinth", "Mucha"),
+            ("Alphonse Mucha La Dame aux Camelias poster", "La Dame aux Camélias", "Mucha"),
         ],
     },
     {
@@ -677,6 +697,38 @@ PACKS = [
         ],
     },
     {
+        "id": "nasa_space",
+        "name": "NASA Space",
+        "description": "Openly licensed views of Earth, spaceflight, planets, and deep space.",
+        "categories": ["nature", "history"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("NASA Earthrise Apollo 8", "Earthrise", ""),
+            ("NASA Blue Marble 1972", "The Blue Marble", ""),
+            ("NASA Buzz Aldrin Moon Apollo 11", "Buzz Aldrin on the Moon", ""),
+            ("NASA Apollo 11 Lunar Module Eagle", "Lunar Module Eagle", ""),
+            ("NASA Pillars of Creation Hubble", "Pillars of Creation", ""),
+            ("NASA Hubble Ultra Deep Field", "Hubble Ultra Deep Field", ""),
+            ("NASA Carina Nebula Webb", "Carina Nebula", ""),
+            ("NASA Jupiter Great Red Spot Juno", "Jupiter and the Great Red Spot", ""),
+        ],
+    },
+    {
+        "id": "wpa_national_parks",
+        "name": "WPA National Parks",
+        "description": "Vintage National Park Service poster art from New Deal-era public works.",
+        "categories": ["nature", "history"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("File:Grand Canyon National Park, a free government service LCCN2007676131.jpg", "Grand Canyon National Park", ""),
+            ("File:Lassen Volcanic National Park, Ranger Naturalist Service LCCN2007676132.jpg", "Lassen Volcanic National Park", ""),
+            ("File:Yellowstone National Park, Ranger Naturalist Service LCCN2007676133.jpg", "Yellowstone National Park", ""),
+            ("File:Zion National Park, Ranger Naturalist Service LCCN2007676134.jpg", "Zion National Park", ""),
+            ("File:The national parks preserve wild life LCCN98518597.jpg", "National Parks Preserve Wildlife", ""),
+            ("File:Pueblos of the Southwest poster, ca. 1935.jpg", "Pueblos of the Southwest", ""),
+        ],
+    },
+    {
         "id": "skylines",
         "name": "City Skylines",
         "description": "Famous city skylines from New York, Shanghai, Tokyo, London, Dubai, Sydney, and Frankfurt.",
@@ -690,6 +742,23 @@ PACKS = [
             ("File:Dubai Skyline with Ra's Al Khor Wildlife Sanctuary.jpg", "Dubai", ""),
             ("File:Sydney skyline at night 2020.jpg", "Sydney", ""),
             ("File:Skyline Frankfurt am Main 2015.jpg", "Frankfurt", ""),
+        ],
+    },
+    {
+        "id": "castles_cathedrals",
+        "name": "Castles & Cathedrals",
+        "description": "Dramatic castles, cathedrals, abbeys, and historic sacred architecture.",
+        "categories": ["architecture", "history"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("File:Neuschwanstein Castle 2024-02.jpg", "Neuschwanstein Castle", ""),
+            ("File:Mont-Saint-Michel vu du ciel.jpg", "Mont Saint-Michel", ""),
+            ("File:Kölner Dom - Westfassade 2022 ohne Gerüst-0968 b.jpg", "Cologne Cathedral", ""),
+            ("File:Paris Notre-Dame Southeast View 01.JPG", "Notre-Dame de Paris", ""),
+            ("File:Segovia - Alcázar de Segovia 22 2017-10-24.jpg", "Alcázar of Segovia", ""),
+            ("File:Half-Moon battery Edinburgh Castle dec.23.jpg", "Edinburgh Castle", ""),
+            ("File:Chartres JBU01.JPG", "Chartres Cathedral", ""),
+            ("File:Bran Castle cloudy.jpg", "Bran Castle", ""),
         ],
     },
 ]

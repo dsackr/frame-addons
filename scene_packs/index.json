@@ -591,6 +591,82 @@
       ]
     },
     {
+      "id": "mucha",
+      "name": "Alphonse Mucha",
+      "description": "Art Nouveau posters and decorative panels with elegant linework and color.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain (verified per-image via Wikimedia Commons)",
+      "cover": "scene_packs/mucha/01_gismonda.jpg",
+      "images": [
+        {
+          "filename": "01_gismonda.jpg",
+          "path": "scene_packs/mucha/01_gismonda.jpg",
+          "title": "Gismonda",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        },
+        {
+          "filename": "02_zodiac.jpg",
+          "path": "scene_packs/mucha/02_zodiac.jpg",
+          "title": "Zodiac",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Zodiac,_1869.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        },
+        {
+          "filename": "03_job_cigarettes.jpg",
+          "path": "scene_packs/mucha/03_job_cigarettes.jpg",
+          "title": "JOB Cigarettes",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Advertisment_for_Job_cigarettes,_1896.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        },
+        {
+          "filename": "04_mo_t_chandon.jpg",
+          "path": "scene_packs/mucha/04_mo_t_chandon.jpg",
+          "title": "Mo\u00ebt & Chandon",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mo%C3%ABt_%26_Chandon_Champagne_White_Star_affiche,_Mucha_99.jpg",
+          "license": "Public domain",
+          "attribution": "Mucha, Alphonse (1860-1939). Illustrateur"
+        },
+        {
+          "filename": "05_the_seasons_spring.jpg",
+          "path": "scene_packs/mucha/05_the_seasons_spring.jpg",
+          "title": "The Seasons: Spring",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mucha_-_Les_Saisons_(1896)_-_printemps.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        },
+        {
+          "filename": "06_the_seasons_summer.jpg",
+          "path": "scene_packs/mucha/06_the_seasons_summer.jpg",
+          "title": "The Seasons: Summer",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mucha_-_Les_Saisons_(1896)_-_ete.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        },
+        {
+          "filename": "07_princess_hyacinth.jpg",
+          "path": "scene_packs/mucha/07_princess_hyacinth.jpg",
+          "title": "Princess Hyacinth",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Alfons_Mucha_-_Princess_Hyacinth.jpg",
+          "license": "Public domain",
+          "attribution": "Alphonse Mucha"
+        }
+      ]
+    },
+    {
       "id": "classic_art",
       "name": "Classic Art",
       "description": "Famous public-domain masterworks spanning centuries and continents.",
@@ -1644,6 +1720,166 @@
       ]
     },
     {
+      "id": "nasa_space",
+      "name": "NASA Space",
+      "description": "Openly licensed views of Earth, spaceflight, planets, and deep space.",
+      "category": [
+        "nature",
+        "history"
+      ],
+      "categories": [
+        "nature",
+        "history"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/nasa_space/01_earthrise.jpg",
+      "images": [
+        {
+          "filename": "01_earthrise.jpg",
+          "path": "scene_packs/nasa_space/01_earthrise.jpg",
+          "title": "Earthrise",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:NASA_Earthrise_AS08-14-2383_Apollo_8,_1968-12-24,_from_print.png",
+          "license": "Public domain",
+          "attribution": "NASA"
+        },
+        {
+          "filename": "02_the_blue_marble.jpg",
+          "path": "scene_packs/nasa_space/02_the_blue_marble.jpg",
+          "title": "The Blue Marble",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Marble,_AS17-148-22727.jpg",
+          "license": "Public domain",
+          "attribution": "Harrison Schmitt / Apollo 17"
+        },
+        {
+          "filename": "03_buzz_aldrin_on_the_moon.jpg",
+          "path": "scene_packs/nasa_space/03_buzz_aldrin_on_the_moon.jpg",
+          "title": "Buzz Aldrin on the Moon",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Astronaut_Edwin_Aldrin_descends_the_Lunar_Module_ladder,_AS11-40-5868_(21037483754).jpg",
+          "license": "Public domain",
+          "attribution": "Neil A. Armstrong"
+        },
+        {
+          "filename": "04_lunar_module_eagle.jpg",
+          "path": "scene_packs/nasa_space/04_lunar_module_eagle.jpg",
+          "title": "Lunar Module Eagle",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Earth,_Moon_and_Lunar_Module,_AS11-44-6643.jpg",
+          "license": "Public domain",
+          "attribution": "NASA / Apollo 11"
+        },
+        {
+          "filename": "05_pillars_of_creation.jpg",
+          "path": "scene_packs/nasa_space/05_pillars_of_creation.jpg",
+          "title": "Pillars of Creation",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Pillars_of_Creation_(Hubble_and_Webb_Images_Side_by_Side).png",
+          "license": "CC BY 2.0",
+          "attribution": "NASA's James Webb Space Telescope"
+        },
+        {
+          "filename": "06_hubble_ultra_deep_field.jpg",
+          "path": "scene_packs/nasa_space/06_hubble_ultra_deep_field.jpg",
+          "title": "Hubble Ultra Deep Field",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field_high_rez_edit1.jpg",
+          "license": "Public domain",
+          "attribution": "NASA and the European Space Agency. Edited by Noodle snacks"
+        },
+        {
+          "filename": "07_carina_nebula.jpg",
+          "path": "scene_packs/nasa_space/07_carina_nebula.jpg",
+          "title": "Carina Nebula",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:%22Cosmic_Cliffs%22_in_the_Carina_Nebula_(NIRCam_and_MIRI_Composite_Compass_Image)_(2022-031).png",
+          "license": "Public domain",
+          "attribution": "IMAGE: NASA, ESA, CSA, STScI"
+        },
+        {
+          "filename": "08_jupiter_and_the_great_red_spot.jpg",
+          "path": "scene_packs/nasa_space/08_jupiter_and_the_great_red_spot.jpg",
+          "title": "Jupiter and the Great Red Spot",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jupiter_%27s_Great_Red_Spot_-_Nasa%E2%80%99s_Juno_PJ_31_(51641404848).png",
+          "license": "CC BY 2.0",
+          "attribution": "Andrea Luck"
+        }
+      ]
+    },
+    {
+      "id": "wpa_national_parks",
+      "name": "WPA National Parks",
+      "description": "Vintage National Park Service poster art from New Deal-era public works.",
+      "category": [
+        "nature",
+        "history"
+      ],
+      "categories": [
+        "nature",
+        "history"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/wpa_national_parks/01_grand_canyon_national_park.jpg",
+      "images": [
+        {
+          "filename": "01_grand_canyon_national_park.jpg",
+          "path": "scene_packs/wpa_national_parks/01_grand_canyon_national_park.jpg",
+          "title": "Grand Canyon National Park",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_a_free_government_service_LCCN2007676131.jpg",
+          "license": "Public domain",
+          "attribution": "Work Projects Administration Poster Collection"
+        },
+        {
+          "filename": "02_lassen_volcanic_national_park.jpg",
+          "path": "scene_packs/wpa_national_parks/02_lassen_volcanic_national_park.jpg",
+          "title": "Lassen Volcanic National Park",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Lassen_Volcanic_National_Park,_Ranger_Naturalist_Service_LCCN2007676132.jpg",
+          "license": "Public domain",
+          "attribution": "Work Projects Administration Poster Collection"
+        },
+        {
+          "filename": "03_yellowstone_national_park.jpg",
+          "path": "scene_packs/wpa_national_parks/03_yellowstone_national_park.jpg",
+          "title": "Yellowstone National Park",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park,_Ranger_Naturalist_Service_LCCN2007676133.jpg",
+          "license": "Public domain",
+          "attribution": "Work Projects Administration Poster Collection"
+        },
+        {
+          "filename": "04_zion_national_park.jpg",
+          "path": "scene_packs/wpa_national_parks/04_zion_national_park.jpg",
+          "title": "Zion National Park",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Zion_National_Park,_Ranger_Naturalist_Service_LCCN2007676134.jpg",
+          "license": "Public domain",
+          "attribution": "Work Projects Administration Poster Collection"
+        },
+        {
+          "filename": "05_national_parks_preserve_wildlife.jpg",
+          "path": "scene_packs/wpa_national_parks/05_national_parks_preserve_wildlife.jpg",
+          "title": "National Parks Preserve Wildlife",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_national_parks_preserve_wild_life_LCCN98518597.jpg",
+          "license": "Public domain",
+          "attribution": "Work Projects Administration Poster Collection"
+        },
+        {
+          "filename": "06_pueblos_of_the_southwest.jpg",
+          "path": "scene_packs/wpa_national_parks/06_pueblos_of_the_southwest.jpg",
+          "title": "Pueblos of the Southwest",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Pueblos_of_the_Southwest_poster,_ca._1935.jpg",
+          "license": "Public domain",
+          "attribution": "Dorothy Waugh, employed by the National Park Service [1]"
+        }
+      ]
+    },
+    {
       "id": "skylines",
       "name": "City Skylines",
       "description": "Famous city skylines from New York, Shanghai, Tokyo, London, Dubai, Sydney, and Frankfurt.",
@@ -1716,6 +1952,95 @@
           "commons_url": "https://commons.wikimedia.org/wiki/File:Skyline_Frankfurt_am_Main_2015.jpg",
           "license": "CC BY-SA 3.0 de",
           "attribution": "Christian Wolf (www.c-w-design.de)"
+        }
+      ]
+    },
+    {
+      "id": "castles_cathedrals",
+      "name": "Castles & Cathedrals",
+      "description": "Dramatic castles, cathedrals, abbeys, and historic sacred architecture.",
+      "category": [
+        "architecture",
+        "history"
+      ],
+      "categories": [
+        "architecture",
+        "history"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/castles_cathedrals/01_neuschwanstein_castle.jpg",
+      "images": [
+        {
+          "filename": "01_neuschwanstein_castle.jpg",
+          "path": "scene_packs/castles_cathedrals/01_neuschwanstein_castle.jpg",
+          "title": "Neuschwanstein Castle",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024-02.jpg",
+          "license": "CC0",
+          "attribution": "Wilfredor"
+        },
+        {
+          "filename": "02_mont_saint_michel.jpg",
+          "path": "scene_packs/castles_cathedrals/02_mont_saint_michel.jpg",
+          "title": "Mont Saint-Michel",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mont-Saint-Michel_vu_du_ciel.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Amaustan"
+        },
+        {
+          "filename": "03_cologne_cathedral.jpg",
+          "path": "scene_packs/castles_cathedrals/03_cologne_cathedral.jpg",
+          "title": "Cologne Cathedral",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Raimond Spekking"
+        },
+        {
+          "filename": "04_notre_dame_de_paris.jpg",
+          "path": "scene_packs/castles_cathedrals/04_notre_dame_de_paris.jpg",
+          "title": "Notre-Dame de Paris",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Paris_Notre-Dame_Southeast_View_01.JPG",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Uoaei1"
+        },
+        {
+          "filename": "05_alc_zar_of_segovia.jpg",
+          "path": "scene_packs/castles_cathedrals/05_alc_zar_of_segovia.jpg",
+          "title": "Alc\u00e1zar of Segovia",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Segovia_-_Alc%C3%A1zar_de_Segovia_22_2017-10-24.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Rafa Esteve"
+        },
+        {
+          "filename": "06_edinburgh_castle.jpg",
+          "path": "scene_packs/castles_cathedrals/06_edinburgh_castle.jpg",
+          "title": "Edinburgh Castle",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Half-Moon_battery_Edinburgh_Castle_dec.23.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Peulle"
+        },
+        {
+          "filename": "07_chartres_cathedral.jpg",
+          "path": "scene_packs/castles_cathedrals/07_chartres_cathedral.jpg",
+          "title": "Chartres Cathedral",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Chartres_JBU01.JPG",
+          "license": "CC BY-SA 3.0",
+          "attribution": "J\u00f6rg Bittner Unna"
+        },
+        {
+          "filename": "08_bran_castle.jpg",
+          "path": "scene_packs/castles_cathedrals/08_bran_castle.jpg",
+          "title": "Bran Castle",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Bran_Castle_cloudy.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Ryanjoejohnmccleary"
         }
       ]
     },
