@@ -1271,6 +1271,31 @@
           "placeholder": "https://..."
         }
       ]
+    },
+    {
+      "id": "scripture_of_the_day",
+      "name": "Scripture of the Day",
+      "description": "Displays an inspiring daily Bible verse in your chosen translation (NIV, KJV, WEB, BBE, etc.) on a premium layout.",
+      "category": "widgets",
+      "type": "widget",
+      "script_url": "addons/scripture_of_the_day/scripture_renderer.py",
+      "cover": "addons/scripture_of_the_day/preview_cover.jpg",
+      "config_schema": [
+        {
+          "name": "bible_translation",
+          "type": "string",
+          "label": "Bible Translation",
+          "required": true,
+          "placeholder": "niv"
+        },
+        {
+          "name": "scripture_source",
+          "type": "string",
+          "label": "Scripture Source",
+          "required": true,
+          "placeholder": "daily_api"
+        }
+      ]
     }
   ]
 }
