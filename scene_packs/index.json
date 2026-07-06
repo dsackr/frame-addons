@@ -622,167 +622,116 @@
     {
       "id": "easter",
       "name": "Easter",
-      "description": "Renaissance masterworks and vibrant vintage spring postcards.",
+      "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
       "category": "seasonal",
-      "license": "Public domain (verified per-image via Wikimedia Commons)",
-      "cover": "scene_packs/easter/01_resurrection_of_christ_raphael.jpg",
+      "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
+      "cover": "scene_packs/easter/01_bunny_basket_landscape.jpg",
       "images": [
         {
-          "filename": "01_resurrection_of_christ_raphael.jpg",
-          "path": "scene_packs/easter/01_resurrection_of_christ_raphael.jpg",
-          "title": "Resurrection of Christ (Raphael)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Rafael_-_ressureicaocristo01.jpg"
+          "filename": "01_bunny_basket_landscape.jpg",
+          "path": "scene_packs/easter/01_bunny_basket_landscape.jpg",
+          "title": "Easter Bunny and Basket",
+          "source": "AI Generated"
         },
         {
-          "filename": "02_the_resurrection_fra_angelico.jpg",
-          "path": "scene_packs/easter/02_the_resurrection_fra_angelico.jpg",
-          "title": "The Resurrection (Fra Angelico)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Fra_Angelico_JungsteGericht_berlin.JPG"
+          "filename": "02_decorated_eggs_landscape.jpg",
+          "path": "scene_packs/easter/02_decorated_eggs_landscape.jpg",
+          "title": "Vibrant Easter Eggs in Spring Grass",
+          "source": "AI Generated"
         },
         {
-          "filename": "03_easter_cross_and_lilies.jpg",
-          "path": "scene_packs/easter/03_easter_cross_and_lilies.jpg",
-          "title": "Easter Cross and Lilies",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Easter_greetings_postcard.jpg"
+          "filename": "03_bunny_portrait_tall.jpg",
+          "path": "scene_packs/easter/03_bunny_portrait_tall.jpg",
+          "title": "Fluffy Easter Bunny Portrait",
+          "source": "AI Generated"
         },
         {
-          "filename": "04_the_resurrection_piero_della_francesca.jpg",
-          "path": "scene_packs/easter/04_the_resurrection_piero_della_francesca.jpg",
-          "title": "The Resurrection (Piero della Francesca)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Piero_della_Francesca_-_Resurrection_-_WGA17609.jpg"
+          "filename": "04_eggs_hanging_portrait.jpg",
+          "path": "scene_packs/easter/04_eggs_hanging_portrait.jpg",
+          "title": "Pastel Eggs Hanging from Cherry Blossoms",
+          "source": "AI Generated"
         },
         {
-          "filename": "05_easter_card_soderberg.jpg",
-          "path": "scene_packs/easter/05_easter_card_soderberg.jpg",
-          "title": "Easter Card (Soderberg)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Ad%C3%A8le_S%C3%B6derberg_-_Easter_card.jpg"
+          "filename": "05_egg_hunt_landscape.jpg",
+          "path": "scene_packs/easter/05_egg_hunt_landscape.jpg",
+          "title": "Easter Egg Hunt in the Meadow",
+          "source": "AI Generated"
         },
         {
-          "filename": "06_easter_brings_the_budding_spring.jpg",
-          "path": "scene_packs/easter/06_easter_brings_the_budding_spring.jpg",
-          "title": "Easter Brings the Budding Spring",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Easter_card_-_Easter_brings_the_budding_spring_-_DPLA_-_beda615ebbddf6a8cf74d60fbd56b960.jpg"
+          "filename": "06_bunny_painting_portrait.jpg",
+          "path": "scene_packs/easter/06_bunny_painting_portrait.jpg",
+          "title": "Whimsical Bunny Painting Easter Egg",
+          "source": "AI Generated"
         },
         {
-          "filename": "07_spring_landscape_doughty.jpg",
-          "path": "scene_packs/easter/07_spring_landscape_doughty.jpg",
-          "title": "Spring Landscape (Doughty)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Spring_Landscape_MET_ap17.66.jpg"
+          "filename": "07_easter_wreath_landscape.jpg",
+          "path": "scene_packs/easter/07_easter_wreath_landscape.jpg",
+          "title": "Rustic Spring Easter Wreath",
+          "source": "AI Generated"
         },
         {
-          "filename": "08_spring_landscape_daubigny.jpg",
-          "path": "scene_packs/easter/08_spring_landscape_daubigny.jpg",
-          "title": "Spring Landscape (Daubigny)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Alte_Nationalgalerie-Daubigny-Spring_Landscape_DSC8098.jpg"
-        },
-        {
-          "filename": "09_spring_landscape_munch.jpg",
-          "path": "scene_packs/easter/09_spring_landscape_munch.jpg",
-          "title": "Spring Landscape (Munch)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Munch_-_V%C3%85RLANDSKAP_(SPRING_LANDSCAPE),_circa_1923-24,_Lot_136.jpg"
-        },
-        {
-          "filename": "10_spring_landscape_thorma.jpg",
-          "path": "scene_packs/easter/10_spring_landscape_thorma.jpg",
-          "title": "Spring Landscape (Thorma)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Thorma_Spring_Landscape_1932.jpg"
+          "filename": "08_chicks_nest_portrait.jpg",
+          "path": "scene_packs/easter/08_chicks_nest_portrait.jpg",
+          "title": "Fluffy Yellow Chicks in Nest",
+          "source": "AI Generated"
         }
       ]
     },
     {
       "id": "new_years",
       "name": "New Year's",
-      "description": "Celebratory retro postcards, magazine covers, and prints welcoming the new year.",
+      "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
       "category": "seasonal",
-      "license": "Public domain (verified per-image via Wikimedia Commons)",
-      "cover": "scene_packs/new_years/01_new_year_s_baby_leyendecker.jpg",
+      "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
+      "cover": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
       "images": [
         {
-          "filename": "01_new_year_s_baby_leyendecker.jpg",
-          "path": "scene_packs/new_years/01_new_year_s_baby_leyendecker.jpg",
-          "title": "New Year's Baby (Leyendecker)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Saturday_Evening_Post_Baby_New_Year_1930.jpg"
+          "filename": "01_nyc_times_square_landscape.jpg",
+          "path": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
+          "title": "New Year's Eve in Times Square",
+          "source": "AI Generated"
         },
         {
-          "filename": "02_happy_new_year_puck.jpg",
-          "path": "scene_packs/new_years/02_happy_new_year_puck.jpg",
-          "title": "Happy New Year! (Puck)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Happy_new_year!_-_Albert_Levering._LCCN2011647381.jpg"
+          "filename": "02_sydney_fireworks_landscape.jpg",
+          "path": "scene_packs/new_years/02_sydney_fireworks_landscape.jpg",
+          "title": "Sydney Harbour Fireworks Celebration",
+          "source": "AI Generated"
         },
         {
-          "filename": "03_new_year_resolutions_till_they_melt.jpg",
-          "path": "scene_packs/new_years/03_new_year_resolutions_till_they_melt.jpg",
-          "title": "New Year Resolutions -- Till They Melt!",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:New_Year_resolutions_-_till_they_melt!_-_Leighton_Budd._LCCN2011649414.jpg"
+          "filename": "03_champagne_toast_portrait.jpg",
+          "path": "scene_packs/new_years/03_champagne_toast_portrait.jpg",
+          "title": "Champagne Toast at Midnight",
+          "source": "AI Generated"
         },
         {
-          "filename": "04_puck_pays_his_compliments.jpg",
-          "path": "scene_packs/new_years/04_puck_pays_his_compliments.jpg",
-          "title": "Puck Pays His Compliments",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Puck_pays_his_compliments_-_Keppler._LCCN2012647452.jpg"
+          "filename": "04_ball_drop_portrait.jpg",
+          "path": "scene_packs/new_years/04_ball_drop_portrait.jpg",
+          "title": "One Times Square Ball Drop",
+          "source": "AI Generated"
         },
         {
-          "filename": "05_welcome_puck.jpg",
-          "path": "scene_packs/new_years/05_welcome_puck.jpg",
-          "title": "Welcome! (Puck)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Welcome!_And_let_us_hope_you_will_be_a_real_happy_new_year_-_J.S._Pughe._LCCN2012648685.jpg"
+          "filename": "05_paris_fireworks_landscape.jpg",
+          "path": "scene_packs/new_years/05_paris_fireworks_landscape.jpg",
+          "title": "Eiffel Tower Fireworks Display",
+          "source": "AI Generated"
         },
         {
-          "filename": "06_new_year_s_eve_foxfires_hiroshige.jpg",
-          "path": "scene_packs/new_years/06_new_year_s_eve_foxfires_hiroshige.jpg",
-          "title": "New Year's Eve Foxfires (Hiroshige)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Hiroshige,_New_Year%27s_Eve_foxfires_at_the_changing_tree,_Oji,_1857.jpg"
+          "filename": "06_sparkler_close_up_portrait.jpg",
+          "path": "scene_packs/new_years/06_sparkler_close_up_portrait.jpg",
+          "title": "Glowing New Year Sparkler",
+          "source": "AI Generated"
         },
         {
-          "filename": "07_new_year_s_day_boughton.jpg",
-          "path": "scene_packs/new_years/07_new_year_s_day_boughton.jpg",
-          "title": "New Year's Day (Boughton)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Party_For_New_Year%27s_Day_In_New_Amsterdam_1636_by_George_Henry_Boughton.jpg"
+          "filename": "07_london_fireworks_landscape.jpg",
+          "path": "scene_packs/new_years/07_london_fireworks_landscape.jpg",
+          "title": "London Eye Fireworks Spectacular",
+          "source": "AI Generated"
         },
         {
-          "filename": "08_a_new_year_on_the_cimarron.jpg",
-          "path": "scene_packs/new_years/08_a_new_year_on_the_cimarron.jpg",
-          "title": "A New Year on the Cimarron",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Frederic_Remington_-_A_New_Year_on_the_Cimarron_-_Google_Art_Project.jpg"
-        },
-        {
-          "filename": "09_new_year_celebrations_shinsai.jpg",
-          "path": "scene_packs/new_years/09_new_year_celebrations_shinsai.jpg",
-          "title": "New Year Celebrations (Shinsai)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:%E3%80%8E%E6%98%A5%E9%9B%A8%E9%9B%86%E3%80%8F_%E6%91%BA%E7%89%A9%E5%B8%96%E6%9F%B3%E3%80%85%E5%B1%85%E8%BE%B0%E6%96%8E%E7%94%BB_%E8%8B%A5%E6%9D%BE-Spring_Rain_Collection_(Harusame_sh%C5%AB),_vol._2-_Pine_Shoots_and_Accoutrements_for_New_Year%E2%80%99s_Celebrations_MET_DP138359.jpg"
-        },
-        {
-          "filename": "10_celebrating_the_new_year_yoshitoshi.jpg",
-          "path": "scene_packs/new_years/10_celebrating_the_new_year_yoshitoshi.jpg",
-          "title": "Celebrating the New Year (Yoshitoshi)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:January-_Celebrating_the_New_Year_LACMA_M.84.31.540.jpg"
-        },
-        {
-          "filename": "11_wishing_you_a_happy_new_year_wall.jpg",
-          "path": "scene_packs/new_years/11_wishing_you_a_happy_new_year_wall.jpg",
-          "title": "Wishing You a Happy New Year (Wall)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:%22Wishing_You_a_Happy_New_Year.%22.jpg"
+          "filename": "08_confetti_party_portrait.jpg",
+          "path": "scene_packs/new_years/08_confetti_party_portrait.jpg",
+          "title": "New Year's Eve Celebration Party",
+          "source": "AI Generated"
         }
       ]
     },
