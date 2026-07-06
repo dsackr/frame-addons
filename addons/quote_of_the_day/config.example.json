@@ -1,0 +1,19 @@
+{
+  "frame": {
+    "ip_address": "fraimic.local",
+    "resolution": [1200, 1600],
+    "layout": "split_half"
+  },
+  "quote_source": "api",
+  "timezone": "America/Los_Angeles",
+  "custom_quotes": [
+    {
+      "q": "The only way to do great work is to love what you do.",
+      "a": "Steve Jobs"
+    },
+    {
+      "q": "Difficulties strengthen the mind, as labor does the body.",
+      "a": "Seneca"
+    }
+  ]
+}

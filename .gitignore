@@ -13,3 +13,9 @@ addons/daily_agenda/config.json
 addons/daily_agenda/agenda.bin
 addons/daily_agenda/agenda_preview.png
 addons/daily_agenda/fonts/
+
+addons/quote_of_the_day/config.json
+addons/quote_of_the_day/quote.bin
+addons/quote_of_the_day/quote_preview.png
+addons/quote_of_the_day/fonts/
+

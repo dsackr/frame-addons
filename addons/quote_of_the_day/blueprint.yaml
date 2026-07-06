@@ -1,0 +1,26 @@
+blueprint:
+  name: "Fraimic Quote of the Day Updater"
+  description: "Automatically refresh a Fraimic e-ink canvas frame with a fresh Quote of the Day at a selected time daily."
+  domain: automation
+  input:
+    update_time:
+      name: "Daily Update Time"
+      description: "Choose the time of day when the frame should be refreshed with a new quote."
+      default: "07:00:00"
+      selector:
+        time: {}
+    shell_command_service:
+      name: "Quote Shell Command"
+      description: "The shell command service defined in your Home Assistant configuration (e.g., shell_command.update_fraimic_quote)."
+      default: "shell_command.update_fraimic_quote"
+      selector:
+        text: {}
+
+mode: single
+
+trigger:
+  - platform: time
+    at: !input update_time
+
+action:
+  - service: !input shell_command_service
