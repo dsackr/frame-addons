@@ -1271,6 +1271,96 @@
       ]
     },
     {
+      "id": "muscle_cars",
+      "name": "Muscle Cars",
+      "description": "High-speed modern and classic performance vehicles including Mustang, Porsche, Lamborghini, Bugatti, and Dodge Charger.",
+      "category": "speed",
+      "license": "Public domain",
+      "cover": "scene_packs/muscle_cars/preview_cover.jpg",
+      "images": [
+        {
+          "filename": "01_mustang.jpg",
+          "path": "scene_packs/muscle_cars/01_mustang.jpg",
+          "title": "Ford Mustang Shelby GT500",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "02_porsche.jpg",
+          "path": "scene_packs/muscle_cars/02_porsche.jpg",
+          "title": "Porsche 911 GT3 RS",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "03_lamborghini.jpg",
+          "path": "scene_packs/muscle_cars/03_lamborghini.jpg",
+          "title": "Lamborghini Aventador",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "04_bugatti.jpg",
+          "path": "scene_packs/muscle_cars/04_bugatti.jpg",
+          "title": "Bugatti Chiron",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "05_dodge_charger.jpg",
+          "path": "scene_packs/muscle_cars/05_dodge_charger.jpg",
+          "title": "Classic 1969 Dodge Charger",
+          "source": "Generative Art",
+          "commons_url": ""
+        }
+      ]
+    },
+    {
+      "id": "fast_animals",
+      "name": "Fast Animals",
+      "description": "Nature's high-speed hunters and runners, featuring an eagle, cheetah, greyhound, falcon, and sailfish.",
+      "category": "speed",
+      "license": "Public domain",
+      "cover": "scene_packs/animals/preview_cover.jpg",
+      "images": [
+        {
+          "filename": "01_eagle.jpg",
+          "path": "scene_packs/animals/01_eagle.jpg",
+          "title": "Bald Eagle in Flight",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "02_cheetah.jpg",
+          "path": "scene_packs/animals/02_cheetah.jpg",
+          "title": "Cheetah Sprinting",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "03_greyhound.jpg",
+          "path": "scene_packs/animals/03_greyhound.jpg",
+          "title": "Racing Greyhound",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "04_falcon.jpg",
+          "path": "scene_packs/animals/04_falcon.jpg",
+          "title": "Peregrine Falcon Dive",
+          "source": "Generative Art",
+          "commons_url": ""
+        },
+        {
+          "filename": "05_sailfish.jpg",
+          "path": "scene_packs/animals/05_sailfish.jpg",
+          "title": "Sailfish Leaping",
+          "source": "Generative Art",
+          "commons_url": ""
+        }
+      ]
+    },
+    {
       "id": "daily_agenda",
       "name": "Daily Agenda",
       "description": "Displays your daily Google/iCal calendar agenda, status, and local weather forecast.",
