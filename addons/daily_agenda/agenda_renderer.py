@@ -208,28 +208,47 @@ def fetch_ical_events(ical_url: str, target_tz) -> list[dict]:
 
 def fetch_ha_events(config: dict, target_tz) -> list[dict]:
     """Fetch calendar events from the Home Assistant API."""
-    print("Fetching calendar from Home Assistant API...")
-    ha_url = config["ha_url"].rstrip("/")
-    token = config["ha_token"]
-    entity = config["ha_calendar_entity"]
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    ha_events_path = os.path.join(script_dir, "ha_events.json")
     
-    now = datetime.datetime.now(target_tz)
-    start_str = now.replace(hour=0, minute=0, second=0).isoformat()
-    end_str = now.replace(hour=23, minute=59, second=59).isoformat()
-    
-    url = f"{ha_url}/api/calendars/{entity}?start={urllib.parse.quote(start_str)}&end={urllib.parse.quote(end_str)}"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Content-Type": "application/json"
-    }
-    
-    try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=15) as response:
-            data = json.loads(response.read().decode("utf-8"))
-    except Exception as e:
-        print(f"Error fetching from Home Assistant Calendar API: {e}")
-        return []
+    data = []
+    if os.path.exists(ha_events_path):
+        print("Loading calendar events from local pre-fetched ha_events.json...")
+        try:
+            with open(ha_events_path, "r") as f:
+                data = json.load(f)
+        except Exception as e:
+            print(f"Error reading local ha_events.json: {e}")
+            data = []
+            
+    if not data:
+        print("Fetching calendar from Home Assistant API...")
+        ha_url = config.get("ha_url")
+        token = config.get("ha_token")
+        entity = config.get("ha_calendar_entity")
+        
+        if not (ha_url and token and entity):
+            print("Warning: Home Assistant connection credentials missing. No calendar events loaded.")
+            return []
+            
+        ha_url = ha_url.rstrip("/")
+        now = datetime.datetime.now(target_tz)
+        start_str = now.replace(hour=0, minute=0, second=0).isoformat()
+        end_str = now.replace(hour=23, minute=59, second=59).isoformat()
+        
+        url = f"{ha_url}/api/calendars/{entity}?start={urllib.parse.quote(start_str)}&end={urllib.parse.quote(end_str)}"
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json"
+        }
+        
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read().decode("utf-8"))
+        except Exception as e:
+            print(f"Error fetching from Home Assistant Calendar API: {e}")
+            return []
         
     events = []
     for item in data:
