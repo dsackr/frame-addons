@@ -41,7 +41,7 @@
           "path": "scene_packs/monet/05_rouen_cathedral.jpg",
           "title": "Rouen Cathedral",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet,_Rouen_Cathedral,_West_Fa%C3%A7ade,_Sunlight,_1894,_NGA_46654.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Rouen_Cathedral,_West_Fa%C3%A7ade_-_Google_Art_Project.jpg"
         },
         {
           "filename": "06_the_magpie.jpg",
@@ -142,7 +142,7 @@
           "path": "scene_packs/davinci/08_saint_john_the_baptist.jpg",
           "title": "Saint John the Baptist",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Saint_John_the_Baptist_C2RMF_retouched.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Saint_Jean-Baptiste,_by_Leonardo_da_Vinci,_from_C2RMF.jpg"
         }
       ]
     },
@@ -267,7 +267,7 @@
           "path": "scene_packs/classic_art/06_the_arnolfini_portrait.jpg",
           "title": "The Arnolfini Portrait",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Arnolfini_Portrait_(1434).png"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg"
         },
         {
           "filename": "07_las_meninas.jpg",
@@ -548,71 +548,64 @@
           "commons_url": "https://commons.wikimedia.org/wiki/File:Home_To_Thanksgiving,_Currier_and_Ives.jpg"
         },
         {
-          "filename": "02_the_harvesters_brueghel.jpg",
-          "path": "scene_packs/thanksgiving/02_the_harvesters_brueghel.jpg",
-          "title": "The Harvesters (Brueghel)",
-          "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Harvesters.jpg"
-        },
-        {
-          "filename": "03_still_life_of_fruit_roesen.jpg",
-          "path": "scene_packs/thanksgiving/03_still_life_of_fruit_roesen.jpg",
+          "filename": "02_still_life_of_fruit_roesen.jpg",
+          "path": "scene_packs/thanksgiving/02_still_life_of_fruit_roesen.jpg",
           "title": "Still Life of Fruit (Roesen)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Still_Life_with_Fruit_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Fruit_Still_Life_with_Champagne_Bottle_-_2000.363_-_Dallas_Museum_of_Art.jpg"
         },
         {
-          "filename": "04_fruit_cornucopia_roesen.jpg",
-          "path": "scene_packs/thanksgiving/04_fruit_cornucopia_roesen.jpg",
+          "filename": "03_fruit_cornucopia_roesen.jpg",
+          "path": "scene_packs/thanksgiving/03_fruit_cornucopia_roesen.jpg",
           "title": "Fruit Cornucopia (Roesen)",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Two-Tiered_Still_Life_with_Fruit_and_Sunset_Landscape_-_Google_Art_Project.jpg"
         },
         {
-          "filename": "05_still_life_with_fruit_roesen.jpg",
-          "path": "scene_packs/thanksgiving/05_still_life_with_fruit_roesen.jpg",
+          "filename": "04_still_life_with_fruit_roesen.jpg",
+          "path": "scene_packs/thanksgiving/04_still_life_with_fruit_roesen.jpg",
           "title": "Still Life with Fruit (Roesen)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Fruit_Still_Life_with_Champagne_Bottle_-_2000.363_-_Dallas_Museum_of_Art.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Still_Life_with_Fruit_-_Google_Art_Project.jpg"
         },
         {
-          "filename": "06_vintage_thanksgiving_postcard.jpg",
-          "path": "scene_packs/thanksgiving/06_vintage_thanksgiving_postcard.jpg",
+          "filename": "05_vintage_thanksgiving_postcard.jpg",
+          "path": "scene_packs/thanksgiving/05_vintage_thanksgiving_postcard.jpg",
           "title": "Vintage Thanksgiving Postcard",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_day_-_DPLA_-_754f1711409e406676cf9febaf17862a_(page_1).jpg"
         },
         {
-          "filename": "07_thanksgiving_glackens.jpg",
-          "path": "scene_packs/thanksgiving/07_thanksgiving_glackens.jpg",
+          "filename": "06_thanksgiving_glackens.jpg",
+          "path": "scene_packs/thanksgiving/06_thanksgiving_glackens.jpg",
           "title": "Thanksgiving (Glackens)",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Puck_Thanksgiving_1903_-_L.M._Glackens._LCCN2010652321.jpg"
         },
         {
-          "filename": "08_thanksgiving_day_ways_and_means.jpg",
-          "path": "scene_packs/thanksgiving/08_thanksgiving_day_ways_and_means.jpg",
+          "filename": "07_thanksgiving_day_ways_and_means.jpg",
+          "path": "scene_packs/thanksgiving/07_thanksgiving_day_ways_and_means.jpg",
           "title": "Thanksgiving Day -- Ways and Means",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Day_%E2%80%93_Ways_and_Means_(Harper%27s_Weekly,_Vol._II)_MET_DP875137.jpg"
         },
         {
-          "filename": "09_hearty_thanksgiving_greeting_winsch.jpg",
-          "path": "scene_packs/thanksgiving/09_hearty_thanksgiving_greeting_winsch.jpg",
+          "filename": "08_hearty_thanksgiving_greeting_winsch.jpg",
+          "path": "scene_packs/thanksgiving/08_hearty_thanksgiving_greeting_winsch.jpg",
           "title": "Hearty Thanksgiving Greeting (Winsch)",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:%22Hearty_Thanksgiving_Greeting.%22.jpg"
         },
         {
-          "filename": "10_the_thanksgiving_turkey_campbell.jpg",
-          "path": "scene_packs/thanksgiving/10_the_thanksgiving_turkey_campbell.jpg",
+          "filename": "09_the_thanksgiving_turkey_campbell.jpg",
+          "path": "scene_packs/thanksgiving/09_the_thanksgiving_turkey_campbell.jpg",
           "title": "The Thanksgiving Turkey (Campbell)",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Thanksgiving_turkey_-_Alfcamp,_Elizabeth,_N.J._LCCN90710727.jpg"
         },
         {
-          "filename": "11_thanksgiving_dinner_hotel_marlborough.jpg",
-          "path": "scene_packs/thanksgiving/11_thanksgiving_dinner_hotel_marlborough.jpg",
+          "filename": "10_thanksgiving_dinner_hotel_marlborough.jpg",
+          "path": "scene_packs/thanksgiving/10_thanksgiving_dinner_hotel_marlborough.jpg",
           "title": "Thanksgiving Dinner (Hotel Marlborough)",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:THANKSGIVING_DAY_DINNER_(held_by)_HOTEL_MARLBOROUGH_(at)_NY_(HOTEL)_(NYPL_Hades-270314-474964).jpg"
@@ -631,49 +624,57 @@
           "filename": "01_bunny_basket_landscape.jpg",
           "path": "scene_packs/easter/01_bunny_basket_landscape.jpg",
           "title": "Easter Bunny and Basket",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "02_decorated_eggs_landscape.jpg",
           "path": "scene_packs/easter/02_decorated_eggs_landscape.jpg",
           "title": "Vibrant Easter Eggs in Spring Grass",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "03_bunny_portrait_tall.jpg",
           "path": "scene_packs/easter/03_bunny_portrait_tall.jpg",
           "title": "Fluffy Easter Bunny Portrait",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "04_eggs_hanging_portrait.jpg",
           "path": "scene_packs/easter/04_eggs_hanging_portrait.jpg",
           "title": "Pastel Eggs Hanging from Cherry Blossoms",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "05_egg_hunt_landscape.jpg",
           "path": "scene_packs/easter/05_egg_hunt_landscape.jpg",
           "title": "Easter Egg Hunt in the Meadow",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "06_bunny_painting_portrait.jpg",
           "path": "scene_packs/easter/06_bunny_painting_portrait.jpg",
           "title": "Whimsical Bunny Painting Easter Egg",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "07_easter_wreath_landscape.jpg",
           "path": "scene_packs/easter/07_easter_wreath_landscape.jpg",
           "title": "Rustic Spring Easter Wreath",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "08_chicks_nest_portrait.jpg",
           "path": "scene_packs/easter/08_chicks_nest_portrait.jpg",
           "title": "Fluffy Yellow Chicks in Nest",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         }
       ]
     },
@@ -689,49 +690,57 @@
           "filename": "01_nyc_times_square_landscape.jpg",
           "path": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
           "title": "New Year's Eve in Times Square",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "02_sydney_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/02_sydney_fireworks_landscape.jpg",
           "title": "Sydney Harbour Fireworks Celebration",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "03_champagne_toast_portrait.jpg",
           "path": "scene_packs/new_years/03_champagne_toast_portrait.jpg",
           "title": "Champagne Toast at Midnight",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "04_ball_drop_portrait.jpg",
           "path": "scene_packs/new_years/04_ball_drop_portrait.jpg",
           "title": "One Times Square Ball Drop",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "05_paris_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/05_paris_fireworks_landscape.jpg",
           "title": "Eiffel Tower Fireworks Display",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "06_sparkler_close_up_portrait.jpg",
           "path": "scene_packs/new_years/06_sparkler_close_up_portrait.jpg",
           "title": "Glowing New Year Sparkler",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "07_london_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/07_london_fireworks_landscape.jpg",
           "title": "London Eye Fireworks Spectacular",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         },
         {
           "filename": "08_confetti_party_portrait.jpg",
           "path": "scene_packs/new_years/08_confetti_party_portrait.jpg",
           "title": "New Year's Eve Celebration Party",
-          "source": "AI Generated"
+          "source": "AI Generated (Antigravity)",
+          "commons_url": null
         }
       ]
     },
@@ -1115,7 +1124,7 @@
           "path": "scene_packs/presidents/41_bill_clinton.jpg",
           "title": "Bill Clinton",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Bill_Clinton.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Barack_Obama_and_Bill_Clinton.jpg"
         },
         {
           "filename": "42_george_w_bush.jpg",
