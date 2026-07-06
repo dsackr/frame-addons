@@ -482,7 +482,7 @@ PACKS = [
         "id": "christmas",
         "name": "Christmas",
         "description": "Vibrant, high-contrast Christmas scenes optimized for Spectra 6 displays.",
-        "categories": ["seasons"],
+        "categories": ["seasons", "AI Art"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_christmas_tree.jpg", "title": "Christmas Tree"},
@@ -501,7 +501,7 @@ PACKS = [
         "id": "halloween",
         "name": "Halloween",
         "description": "Spooky-cute, vibrant Halloween illustrations optimized for Spectra 6 displays.",
-        "categories": ["seasons"],
+        "categories": ["seasons", "AI Art"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_jack_o_lanterns.jpg", "title": "Jack-o'-Lanterns"},
@@ -520,7 +520,7 @@ PACKS = [
         "id": "independence_day",
         "name": "Independence Day",
         "description": "Patriotic Americana and vibrant July 4th displays optimized for Spectra 6 displays.",
-        "categories": ["seasons"],
+        "categories": ["seasons", "AI Art"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_statue_of_liberty.jpg", "title": "Statue of Liberty"},
@@ -558,7 +558,7 @@ PACKS = [
         "id": "easter",
         "name": "Easter",
         "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
-        "categories": ["seasons"],
+        "categories": ["seasons", "AI Art"],
         "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
         "local_images": [
             {"filename": "01_bunny_basket_landscape.jpg", "title": "Easter Bunny and Basket"},
@@ -575,7 +575,7 @@ PACKS = [
         "id": "new_years",
         "name": "New Year's",
         "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
-        "categories": ["seasons"],
+        "categories": ["seasons", "AI Art"],
         "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
         "local_images": [
             {"filename": "01_nyc_times_square_landscape.jpg", "title": "New Year's Eve in Times Square"},

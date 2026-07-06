@@ -670,9 +670,13 @@
       "id": "christmas",
       "name": "Christmas",
       "description": "Vibrant, high-contrast Christmas scenes optimized for Spectra 6 displays.",
-      "category": "seasons",
+      "category": [
+        "seasons",
+        "AI Art"
+      ],
       "categories": [
-        "seasons"
+        "seasons",
+        "AI Art"
       ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/christmas/01_christmas_tree.jpg",
@@ -753,9 +757,13 @@
       "id": "halloween",
       "name": "Halloween",
       "description": "Spooky-cute, vibrant Halloween illustrations optimized for Spectra 6 displays.",
-      "category": "seasons",
+      "category": [
+        "seasons",
+        "AI Art"
+      ],
       "categories": [
-        "seasons"
+        "seasons",
+        "AI Art"
       ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/halloween/01_jack_o_lanterns.jpg",
@@ -836,9 +844,13 @@
       "id": "independence_day",
       "name": "Independence Day",
       "description": "Patriotic Americana and vibrant July 4th displays optimized for Spectra 6 displays.",
-      "category": "seasons",
+      "category": [
+        "seasons",
+        "AI Art"
+      ],
       "categories": [
-        "seasons"
+        "seasons",
+        "AI Art"
       ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/independence_day/01_statue_of_liberty.jpg",
@@ -1002,9 +1014,13 @@
       "id": "easter",
       "name": "Easter",
       "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
-      "category": "seasons",
+      "category": [
+        "seasons",
+        "AI Art"
+      ],
       "categories": [
-        "seasons"
+        "seasons",
+        "AI Art"
       ],
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/easter/01_bunny_basket_landscape.jpg",
@@ -1071,9 +1087,13 @@
       "id": "new_years",
       "name": "New Year's",
       "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
-      "category": "seasons",
+      "category": [
+        "seasons",
+        "AI Art"
+      ],
       "categories": [
-        "seasons"
+        "seasons",
+        "AI Art"
       ],
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
