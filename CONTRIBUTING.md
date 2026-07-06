@@ -32,7 +32,9 @@ Open `scripts/build_scene_pack.py` and add a new dictionary to the `PACKS` list:
         "id": "my_new_pack",
         "name": "My New Pack Name",
         "description": "A brief description of what this pack contains.",
-        "category": "art", # Either "art" or "seasonal"
+        # Packs can appear in multiple Add-ons categories. Categories are
+        # tags, not folders, so pick every category that applies.
+        "categories": ["famous_artists"],
         "queries": [
             # Option A: Fuzzy Search (finds the best match for the query)
             ("Claude Monet Water Lilies painting", "Water Lilies", "Monet"),
@@ -46,6 +48,8 @@ Open `scripts/build_scene_pack.py` and add a new dictionary to the `PACKS` list:
 * **Query (First value):** The search term or the exact `File:Name.jpg` from Wikimedia Commons.
 * **Display Title (Second value):** The name shown to the user on the dashboard.
 * **Artist Keyword (Third value):** Used for fuzzy matching to verify the artist's name in metadata. Use `""` (empty string) if you are targeting a specific filename directly.
+
+Current category tags are `famous_artists`, `nature`, `architecture`, `seasons`, `history`, and `speed`. The Add-ons page builds its Art Packs category tiles from the tags in `scene_packs/index.json`, so a pack with `["speed", "nature"]` appears in both categories.
 
 ### 2. Generate the Assets
 Run the build script to download, downsize, and register the pack:

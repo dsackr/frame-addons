@@ -198,6 +198,28 @@ def _slugify(text: str) -> str:
     return text[:60] or "image"
 
 
+def _pack_categories(pack: dict) -> list[str]:
+    """Return the pack's category tags, preserving authored order."""
+    raw_categories = pack.get("categories", pack.get("category", []))
+    if isinstance(raw_categories, str):
+        raw_categories = [raw_categories]
+
+    categories: list[str] = []
+    for category in raw_categories if isinstance(raw_categories, list) else []:
+        if not isinstance(category, str):
+            continue
+        category = category.strip()
+        if category and category not in categories:
+            categories.append(category)
+    return categories or ["famous_artists"]
+
+
+def _pack_category_compat(pack: dict) -> str | list[str]:
+    """Compatibility shape for integrations still reading `category`."""
+    categories = _pack_categories(pack)
+    return categories[0] if len(categories) == 1 else categories
+
+
 def _download_and_resize(url: str, dest_path: str) -> None:
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(req, timeout=60) as resp:
@@ -236,7 +258,8 @@ def build_pack(pack: dict) -> dict:
             "id": pack_id,
             "name": pack["name"],
             "description": pack["description"],
-            "category": pack["category"],
+            "category": _pack_category_compat(pack),
+            "categories": _pack_categories(pack),
             "license": pack.get("license", "AI Generated artwork (Public Domain CC0 equivalent)"),
             "cover": images[0]["path"],
             "images": images,
@@ -285,7 +308,8 @@ def build_pack(pack: dict) -> dict:
         "id": pack_id,
         "name": pack["name"],
         "description": pack["description"],
-        "category": pack["category"],
+        "category": _pack_category_compat(pack),
+        "categories": _pack_categories(pack),
         "license": "Public domain (verified per-image via Wikimedia Commons)",
         "cover": images[0]["path"],
         "images": images,
@@ -297,7 +321,7 @@ PACKS = [
         "id": "monet",
         "name": "Claude Monet",
         "description": "Impressionist gardens, water lilies, and shifting light.",
-        "category": "art",
+        "categories": ["famous_artists"],
         "queries": [
             ("Claude Monet Impression Sunrise painting", "Impression, Sunrise", "Monet"),
             ("Claude Monet Water Lilies Google Art Project", "Water Lilies", "Monet"),
@@ -315,7 +339,7 @@ PACKS = [
         "id": "davinci",
         "name": "Leonardo da Vinci",
         "description": "Renaissance portraits, studies, and sacred scenes.",
-        "category": "art",
+        "categories": ["famous_artists"],
         "queries": [
             ("Leonardo da Vinci Mona Lisa painting", "Mona Lisa", "Vinci"),
             ("Leonardo da Vinci The Last Supper painting", "The Last Supper", "Vinci"),
@@ -331,7 +355,7 @@ PACKS = [
         "id": "van_gogh",
         "name": "Vincent van Gogh",
         "description": "Bold color and brushwork from Post-Impressionism's icon.",
-        "category": "art",
+        "categories": ["famous_artists"],
         "queries": [
             ("Vincent van Gogh Starry Night painting MoMA", "The Starry Night", "Gogh"),
             ("Vincent van Gogh Sunflowers painting National Gallery", "Sunflowers", "Gogh"),
@@ -348,7 +372,7 @@ PACKS = [
         "id": "classic_art",
         "name": "Classic Art",
         "description": "Famous public-domain masterworks spanning centuries and continents.",
-        "category": "art",
+        "categories": ["famous_artists"],
         "queries": [
             ("Johannes Vermeer Girl with a Pearl Earring painting", "Girl with a Pearl Earring", "Vermeer"),
             ("Katsushika Hokusai Great Wave off Kanagawa print", "The Great Wave off Kanagawa", "Hokusai"),
@@ -365,7 +389,7 @@ PACKS = [
         "id": "christmas",
         "name": "Christmas",
         "description": "Vibrant, high-contrast Christmas scenes optimized for Spectra 6 displays.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_christmas_tree.jpg", "title": "Christmas Tree"},
@@ -384,7 +408,7 @@ PACKS = [
         "id": "halloween",
         "name": "Halloween",
         "description": "Spooky-cute, vibrant Halloween illustrations optimized for Spectra 6 displays.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_jack_o_lanterns.jpg", "title": "Jack-o'-Lanterns"},
@@ -403,7 +427,7 @@ PACKS = [
         "id": "independence_day",
         "name": "Independence Day",
         "description": "Patriotic Americana and vibrant July 4th displays optimized for Spectra 6 displays.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "license": "AI Generated / Public Domain",
         "local_images": [
             {"filename": "01_statue_of_liberty.jpg", "title": "Statue of Liberty"},
@@ -422,7 +446,7 @@ PACKS = [
         "id": "thanksgiving",
         "name": "Thanksgiving",
         "description": "Harvest abundance, fruit still lifes, and warm autumn scenes.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "queries": [
             ("George Henry Durrie Home to Thanksgiving", "Home to Thanksgiving (Durrie)", "Durrie"),
             ("File:The Harvesters.jpg", "The Harvesters (Brueghel)", "brueghel"),
@@ -441,7 +465,7 @@ PACKS = [
         "id": "easter",
         "name": "Easter",
         "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
         "local_images": [
             {"filename": "01_bunny_basket_landscape.jpg", "title": "Easter Bunny and Basket"},
@@ -458,7 +482,7 @@ PACKS = [
         "id": "new_years",
         "name": "New Year's",
         "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
         "local_images": [
             {"filename": "01_nyc_times_square_landscape.jpg", "title": "New Year's Eve in Times Square"},
@@ -475,7 +499,7 @@ PACKS = [
         "id": "valentines_day",
         "name": "Valentine's Day",
         "description": "Iconic romantic masterworks and classic Cupid and heart illustrations.",
-        "category": "seasonal",
+        "categories": ["seasons"],
         "queries": [
             ("Jean-Leon Gerome - Pygmalion and Galatea", "Pygmalion and Galatea (Gerome)", "Gerome"),
             ("1880 Pierre Auguste Cot - The Storm", "The Storm (Cot)", "Cot"),
@@ -494,7 +518,7 @@ PACKS = [
         "id": "presidents",
         "name": "US Presidents",
         "description": "Official, public-domain portraits of the Presidents of the United States.",
-        "category": "art",
+        "categories": ["history"],
         "queries": [
             ("File:Gilbert Stuart Williamstown Portrait of George Washington (3x4 cropped).jpg", "George Washington", ""),
             ("File:John Adams A18236 (cropped).jpg", "John Adams", ""),
@@ -547,7 +571,7 @@ PACKS = [
         "id": "wonders",
         "name": "7 Wonders of the World",
         "description": "Stunning landscapes of the New Seven Wonders of the World plus the Great Pyramid of Giza.",
-        "category": "art",
+        "categories": ["nature"],
         "queries": [
             ("File:The Great Wall of China at Jinshanling.jpg", "Great Wall of China", ""),
             ("File:The Monastery, Petra, Jordan8.jpg", "Petra", ""),

@@ -5,6 +5,9 @@
       "name": "Claude Monet",
       "description": "Impressionist gardens, water lilies, and shifting light.",
       "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/monet/01_impression_sunrise.jpg",
       "images": [
@@ -85,6 +88,9 @@
       "name": "Leonardo da Vinci",
       "description": "Renaissance portraits, studies, and sacred scenes.",
       "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/davinci/01_mona_lisa.jpg",
       "images": [
@@ -151,6 +157,9 @@
       "name": "Vincent van Gogh",
       "description": "Bold color and brushwork from Post-Impressionism's icon.",
       "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/van_gogh/01_the_starry_night.jpg",
       "images": [
@@ -224,6 +233,9 @@
       "name": "Classic Art",
       "description": "Famous public-domain masterworks spanning centuries and continents.",
       "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/classic_art/01_girl_with_a_pearl_earring.jpg",
       "images": [
@@ -297,6 +309,9 @@
       "name": "Christmas",
       "description": "Vibrant, high-contrast Christmas scenes optimized for Spectra 6 displays.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/christmas/01_christmas_tree.jpg",
       "images": [
@@ -377,6 +392,9 @@
       "name": "Halloween",
       "description": "Spooky-cute, vibrant Halloween illustrations optimized for Spectra 6 displays.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/halloween/01_jack_o_lanterns.jpg",
       "images": [
@@ -457,6 +475,9 @@
       "name": "Independence Day",
       "description": "Patriotic Americana and vibrant July 4th displays optimized for Spectra 6 displays.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "AI Generated / Public Domain",
       "cover": "scene_packs/independence_day/01_statue_of_liberty.jpg",
       "images": [
@@ -537,6 +558,9 @@
       "name": "Thanksgiving",
       "description": "Harvest abundance, fruit still lifes, and warm autumn scenes.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/thanksgiving/01_home_to_thanksgiving_durrie.jpg",
       "images": [
@@ -617,6 +641,9 @@
       "name": "Easter",
       "description": "Vibrant and cheerful Easter scenes featuring the Easter Bunny, colorful eggs, and spring blossoms.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/easter/01_bunny_basket_landscape.jpg",
       "images": [
@@ -683,6 +710,9 @@
       "name": "New Year's",
       "description": "Vibrant fireworks, stunning cityscape celebrations, and festive New Year's Eve scenes.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "AI-generated (Creative Commons CC0 Public Domain Dedication)",
       "cover": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
       "images": [
@@ -749,6 +779,9 @@
       "name": "Valentine's Day",
       "description": "Iconic romantic masterworks and classic Cupid and heart illustrations.",
       "category": "seasons",
+      "categories": [
+        "seasons"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/valentines_day/01_pygmalion_and_galatea_gerome.jpg",
       "images": [
@@ -836,6 +869,9 @@
       "name": "US Presidents",
       "description": "Official, public-domain portraits of the Presidents of the United States.",
       "category": "history",
+      "categories": [
+        "history"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/presidents/01_george_washington.jpg",
       "images": [
@@ -1161,6 +1197,9 @@
       "name": "7 Wonders of the World",
       "description": "Stunning landscapes of the New Seven Wonders of the World plus the Great Pyramid of Giza.",
       "category": "nature",
+      "categories": [
+        "nature"
+      ],
       "license": "Public domain (verified per-image via Wikimedia Commons)",
       "cover": "scene_packs/wonders/01_great_wall_of_china.jpg",
       "images": [
@@ -1227,6 +1266,9 @@
       "name": "Canyons",
       "description": "Breathtaking views of the Grand Canyon and glowing sandstone paths of Antelope Canyon.",
       "category": "nature",
+      "categories": [
+        "nature"
+      ],
       "license": "Public domain",
       "cover": "scene_packs/canyons/preview_cover.jpg",
       "images": [
@@ -1272,6 +1314,9 @@
       "name": "Famous Architecture",
       "description": "Iconic structural wonders including the Golden Gate Bridge and the Great Pyramids of Giza.",
       "category": "architecture",
+      "categories": [
+        "architecture"
+      ],
       "license": "Public domain",
       "cover": "scene_packs/architecture/preview_cover.jpg",
       "images": [
@@ -1317,6 +1362,9 @@
       "name": "Muscle Cars",
       "description": "High-speed modern and classic performance vehicles including Mustang, Porsche, Lamborghini, Bugatti, and Dodge Charger.",
       "category": "speed",
+      "categories": [
+        "speed"
+      ],
       "license": "Public domain",
       "cover": "scene_packs/muscle_cars/preview_cover.jpg",
       "images": [
@@ -1361,7 +1409,14 @@
       "id": "fast_animals",
       "name": "Fast Animals",
       "description": "Nature's high-speed hunters and runners, featuring an eagle, cheetah, greyhound, falcon, and sailfish.",
-      "category": ["speed", "nature"],
+      "category": [
+        "speed",
+        "nature"
+      ],
+      "categories": [
+        "speed",
+        "nature"
+      ],
       "license": "Public domain",
       "cover": "scene_packs/animals/preview_cover.jpg",
       "images": [
@@ -1407,6 +1462,9 @@
       "name": "Daily Agenda",
       "description": "Displays your daily Google/iCal calendar agenda, status, and local weather forecast.",
       "category": "productivity",
+      "categories": [
+        "productivity"
+      ],
       "type": "widget",
       "script_url": "addons/daily_agenda/agenda_renderer.py",
       "cover": "addons/daily_agenda/preview_cover.jpg",
@@ -1432,6 +1490,9 @@
       "name": "Quote of the Day",
       "description": "Displays an inspiring quote daily, fetched from the web or a local custom list, formatted on a premium decorative layout.",
       "category": "productivity",
+      "categories": [
+        "productivity"
+      ],
       "type": "widget",
       "script_url": "addons/quote_of_the_day/quote_renderer.py",
       "cover": "addons/quote_of_the_day/preview_cover.jpg",
@@ -1457,6 +1518,9 @@
       "name": "Scripture of the Day",
       "description": "Displays an inspiring daily Bible verse in your chosen translation (NIV, KJV, WEB, BBE, etc.) on a premium layout.",
       "category": "productivity",
+      "categories": [
+        "productivity"
+      ],
       "type": "widget",
       "script_url": "addons/scripture_of_the_day/scripture_renderer.py",
       "cover": "addons/scripture_of_the_day/preview_cover.jpg",
