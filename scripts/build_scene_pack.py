@@ -75,6 +75,7 @@ _EXCLUDE_TITLE_PATTERNS = re.compile(
 # (bit us once already: a Van Gogh "Starry Night" query's top-scoring hit by
 # raw pixel count was a 29696x5595 zoomify tile strip).
 MAX_ASPECT_RATIO = 2.5
+RETIRED_PACK_IDS = {"tv_shows"}
 
 
 def _api_get(params: dict) -> dict:
@@ -771,14 +772,14 @@ PACKS = [
         ],
     },
     {
-        "id": "tv_shows",
-        "name": "TV Shows",
-        "description": "Personal-use TV and sci-fi favorites with poster, title-card, or promotional cast images.",
+        "id": "cheers",
+        "name": "Cheers",
+        "description": "A personal-use Cheers TV show pack with cast metadata and a promotional cast image.",
         "categories": ["TV Shows"],
-        "license": "Mixed public-domain text logos and low-resolution Wikipedia fair-use/non-free promotional images; see per-image notes.",
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
         "local_images": [
             {
-                "filename": "01_cheers.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Cheers",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:Cheers_original_cast_1982-86_(1983).jpg",
@@ -798,8 +799,17 @@ PACKS = [
                     "Kirstie Alley",
                 ],
             },
+        ],
+    },
+    {
+        "id": "friends",
+        "name": "Friends",
+        "description": "A personal-use Friends TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "02_friends.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Friends",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:Friends_season_one_cast.jpg",
@@ -815,8 +825,17 @@ PACKS = [
                     "David Schwimmer",
                 ],
             },
+        ],
+    },
+    {
+        "id": "the_big_bang_theory",
+        "name": "The Big Bang Theory",
+        "description": "A personal-use The Big Bang Theory TV show pack with cast metadata and a promotional image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "03_the_big_bang_theory.jpg",
+                "filename": "01_poster.jpg",
                 "title": "The Big Bang Theory",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:The_Big_Bang_Theory_Poster.jpg",
@@ -834,8 +853,17 @@ PACKS = [
                     "Kevin Sussman",
                 ],
             },
+        ],
+    },
+    {
+        "id": "how_i_met_your_mother",
+        "name": "How I Met Your Mother",
+        "description": "A personal-use How I Met Your Mother TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "04_how_i_met_your_mother.jpg",
+                "filename": "01_cast.jpg",
                 "title": "How I Met Your Mother",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:How_I_Met_Your_Mother_(cast).jpg",
@@ -851,8 +879,17 @@ PACKS = [
                     "Cristin Milioti",
                 ],
             },
+        ],
+    },
+    {
+        "id": "doctor_who",
+        "name": "Doctor Who",
+        "description": "A personal-use Doctor Who TV show pack with cast metadata and a title-card image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free title-card image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "05_doctor_who.jpg",
+                "filename": "01_title_card.jpg",
                 "title": "Doctor Who",
                 "source": "Wikipedia non-free title-card image",
                 "source_url": "https://en.wikipedia.org/wiki/File:Doctor_Who_title_card.png",
@@ -876,8 +913,17 @@ PACKS = [
                     "Ncuti Gatwa",
                 ],
             },
+        ],
+    },
+    {
+        "id": "star_wars",
+        "name": "Star Wars",
+        "description": "A personal-use Star Wars pack with cast metadata and a poster image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free film poster image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "06_star_wars.jpg",
+                "filename": "01_poster.jpg",
                 "title": "Star Wars",
                 "source": "Wikipedia non-free film poster image",
                 "source_url": "https://en.wikipedia.org/wiki/File:StarWarsMoviePoster1977.jpg",
@@ -896,8 +942,17 @@ PACKS = [
                     "James Earl Jones",
                 ],
             },
+        ],
+    },
+    {
+        "id": "star_trek",
+        "name": "Star Trek",
+        "description": "A personal-use Star Trek TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "07_star_trek.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Star Trek",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:ST_TOS_Cast.jpg",
@@ -916,8 +971,17 @@ PACKS = [
                     "Grace Lee Whitney",
                 ],
             },
+        ],
+    },
+    {
+        "id": "star_trek_the_next_generation",
+        "name": "Star Trek: The Next Generation",
+        "description": "A personal-use Star Trek: The Next Generation TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "08_star_trek_the_next_generation.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Star Trek: The Next Generation",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:ST_TNG_Season_One_Cast.jpg",
@@ -936,8 +1000,17 @@ PACKS = [
                     "Wil Wheaton",
                 ],
             },
+        ],
+    },
+    {
+        "id": "stargate_sg1",
+        "name": "Stargate SG-1",
+        "description": "A personal-use Stargate SG-1 TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "09_stargate_sg1.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Stargate SG-1",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:Stargate_SG-1_cast_minus_Jonas_Quinn.jpg",
@@ -957,8 +1030,17 @@ PACKS = [
                     "Beau Bridges",
                 ],
             },
+        ],
+    },
+    {
+        "id": "stargate_atlantis",
+        "name": "Stargate Atlantis",
+        "description": "A personal-use Stargate Atlantis TV show pack with cast metadata and a promotional cast image.",
+        "categories": ["TV Shows"],
+        "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+        "local_images": [
             {
-                "filename": "10_stargate_atlantis.jpg",
+                "filename": "01_cast.jpg",
                 "title": "Stargate Atlantis",
                 "source": "Wikipedia non-free promotional image",
                 "source_url": "https://en.wikipedia.org/wiki/File:Stargate_Atlantis_season_4_cast_photo.jpg",
@@ -1018,7 +1100,7 @@ def main() -> None:
             )
         index_packs.append(entry)
     for pack_id, entry in existing_by_id.items():
-        if pack_id not in known_ids:
+        if pack_id not in known_ids and pack_id not in RETIRED_PACK_IDS:
             index_packs.append(entry)
 
     with open(index_path, "w", encoding="utf-8") as f:

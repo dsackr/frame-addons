@@ -2045,19 +2045,19 @@
       ]
     },
     {
-      "id": "tv_shows",
-      "name": "TV Shows",
-      "description": "Personal-use TV and sci-fi favorites with poster, title-card, or promotional cast images.",
+      "id": "cheers",
+      "name": "Cheers",
+      "description": "A personal-use Cheers TV show pack with cast metadata and a promotional cast image.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Mixed public-domain text logos and low-resolution Wikipedia fair-use/non-free promotional images; see per-image notes.",
-      "cover": "scene_packs/tv_shows/01_cheers.jpg",
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/cheers/01_cast.jpg",
       "images": [
         {
-          "filename": "01_cheers.jpg",
-          "path": "scene_packs/tv_shows/01_cheers.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/cheers/01_cast.jpg",
           "title": "Cheers",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:Cheers_original_cast_1982-86_(1983).jpg",
@@ -2077,10 +2077,23 @@
             "Bebe Neuwirth",
             "Kirstie Alley"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "friends",
+      "name": "Friends",
+      "description": "A personal-use Friends TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/friends/01_cast.jpg",
+      "images": [
         {
-          "filename": "02_friends.jpg",
-          "path": "scene_packs/tv_shows/02_friends.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/friends/01_cast.jpg",
           "title": "Friends",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:Friends_season_one_cast.jpg",
@@ -2096,10 +2109,23 @@
             "Matthew Perry",
             "David Schwimmer"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "the_big_bang_theory",
+      "name": "The Big Bang Theory",
+      "description": "A personal-use The Big Bang Theory TV show pack with cast metadata and a promotional image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/the_big_bang_theory/01_poster.jpg",
+      "images": [
         {
-          "filename": "03_the_big_bang_theory.jpg",
-          "path": "scene_packs/tv_shows/03_the_big_bang_theory.jpg",
+          "filename": "01_poster.jpg",
+          "path": "scene_packs/the_big_bang_theory/01_poster.jpg",
           "title": "The Big Bang Theory",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:The_Big_Bang_Theory_Poster.jpg",
@@ -2117,10 +2143,23 @@
             "Melissa Rauch",
             "Kevin Sussman"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "how_i_met_your_mother",
+      "name": "How I Met Your Mother",
+      "description": "A personal-use How I Met Your Mother TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/how_i_met_your_mother/01_cast.jpg",
+      "images": [
         {
-          "filename": "04_how_i_met_your_mother.jpg",
-          "path": "scene_packs/tv_shows/04_how_i_met_your_mother.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/how_i_met_your_mother/01_cast.jpg",
           "title": "How I Met Your Mother",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:How_I_Met_Your_Mother_(cast).jpg",
@@ -2136,10 +2175,23 @@
             "Alyson Hannigan",
             "Cristin Milioti"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "doctor_who",
+      "name": "Doctor Who",
+      "description": "A personal-use Doctor Who TV show pack with cast metadata and a title-card image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free title-card image; see per-image notes.",
+      "cover": "scene_packs/doctor_who/01_title_card.jpg",
+      "images": [
         {
-          "filename": "05_doctor_who.jpg",
-          "path": "scene_packs/tv_shows/05_doctor_who.jpg",
+          "filename": "01_title_card.jpg",
+          "path": "scene_packs/doctor_who/01_title_card.jpg",
           "title": "Doctor Who",
           "source": "Wikipedia non-free title-card image",
           "commons_url": "https://en.wikipedia.org/wiki/File:Doctor_Who_title_card.png",
@@ -2163,10 +2215,23 @@
             "Jodie Whittaker",
             "Ncuti Gatwa"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "star_wars",
+      "name": "Star Wars",
+      "description": "A personal-use Star Wars pack with cast metadata and a poster image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free film poster image; see per-image notes.",
+      "cover": "scene_packs/star_wars/01_poster.jpg",
+      "images": [
         {
-          "filename": "06_star_wars.jpg",
-          "path": "scene_packs/tv_shows/06_star_wars.jpg",
+          "filename": "01_poster.jpg",
+          "path": "scene_packs/star_wars/01_poster.jpg",
           "title": "Star Wars",
           "source": "Wikipedia non-free film poster image",
           "commons_url": "https://en.wikipedia.org/wiki/File:StarWarsMoviePoster1977.jpg",
@@ -2185,10 +2250,23 @@
             "David Prowse",
             "James Earl Jones"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "star_trek",
+      "name": "Star Trek",
+      "description": "A personal-use Star Trek TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/star_trek/01_cast.jpg",
+      "images": [
         {
-          "filename": "07_star_trek.jpg",
-          "path": "scene_packs/tv_shows/07_star_trek.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/star_trek/01_cast.jpg",
           "title": "Star Trek",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:ST_TOS_Cast.jpg",
@@ -2207,10 +2285,23 @@
             "Majel Barrett",
             "Grace Lee Whitney"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "star_trek_the_next_generation",
+      "name": "Star Trek: The Next Generation",
+      "description": "A personal-use Star Trek: The Next Generation TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/star_trek_the_next_generation/01_cast.jpg",
+      "images": [
         {
-          "filename": "08_star_trek_the_next_generation.jpg",
-          "path": "scene_packs/tv_shows/08_star_trek_the_next_generation.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/01_cast.jpg",
           "title": "Star Trek: The Next Generation",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:ST_TNG_Season_One_Cast.jpg",
@@ -2229,10 +2320,23 @@
             "Brent Spiner",
             "Wil Wheaton"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "stargate_sg1",
+      "name": "Stargate SG-1",
+      "description": "A personal-use Stargate SG-1 TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/stargate_sg1/01_cast.jpg",
+      "images": [
         {
-          "filename": "09_stargate_sg1.jpg",
-          "path": "scene_packs/tv_shows/09_stargate_sg1.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/stargate_sg1/01_cast.jpg",
           "title": "Stargate SG-1",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:Stargate_SG-1_cast_minus_Jonas_Quinn.jpg",
@@ -2252,10 +2356,23 @@
             "Claudia Black",
             "Beau Bridges"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "stargate_atlantis",
+      "name": "Stargate Atlantis",
+      "description": "A personal-use Stargate Atlantis TV show pack with cast metadata and a promotional cast image.",
+      "category": "TV Shows",
+      "categories": [
+        "TV Shows"
+      ],
+      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "cover": "scene_packs/stargate_atlantis/01_cast.jpg",
+      "images": [
         {
-          "filename": "10_stargate_atlantis.jpg",
-          "path": "scene_packs/tv_shows/10_stargate_atlantis.jpg",
+          "filename": "01_cast.jpg",
+          "path": "scene_packs/stargate_atlantis/01_cast.jpg",
           "title": "Stargate Atlantis",
           "source": "Wikipedia non-free promotional image",
           "commons_url": "https://en.wikipedia.org/wiki/File:Stargate_Atlantis_season_4_cast_photo.jpg",
