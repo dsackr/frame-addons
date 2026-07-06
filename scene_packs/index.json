@@ -1361,7 +1361,7 @@
       "id": "fast_animals",
       "name": "Fast Animals",
       "description": "Nature's high-speed hunters and runners, featuring an eagle, cheetah, greyhound, falcon, and sailfish.",
-      "category": "speed",
+      "category": ["speed", "nature"],
       "license": "Public domain",
       "cover": "scene_packs/animals/preview_cover.jpg",
       "images": [
