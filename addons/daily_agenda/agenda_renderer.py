@@ -22,8 +22,8 @@ from PIL import Image, ImageDraw, ImageFont
 # Constants & Color Palette
 # ---------------------------------------------------------------------------
 # Exact RGB values expected by the Spectra 6 hardware to avoid dithering noise
-COLOR_BLACK = (25, 30, 33)      # Primary text, timeline lines
-COLOR_WHITE = (232, 232, 232)  # Background
+COLOR_BLACK = (0, 0, 0)         # Primary text, timeline lines
+COLOR_WHITE = (255, 255, 255)   # Background
 COLOR_YELLOW = (239, 222, 68)   # Sun, highlights
 COLOR_RED = (178, 19, 24)      # Alert icons, meetings, agenda title
 COLOR_BLUE = (33, 87, 186)     # Cloud outlines, rain drops, weather detail
@@ -103,13 +103,20 @@ def load_font(font_name="Outfit", font_style="Regular", size=24) -> ImageFont.Im
     font_dir = os.path.join(script_dir, "fonts")
     os.makedirs(font_dir, exist_ok=True)
     
-    # We download the variable font Outfit[wght].ttf since static ones aren't stored in ofl/outfit
-    font_path = os.path.join(font_dir, "Outfit-Variable.ttf")
+    style_map = {
+        "Regular": "Regular",
+        "Medium": "Medium",
+        "SemiBold": "SemiBold",
+        "Bold": "Bold"
+    }
+    style_suffix = style_map.get(font_style, "Regular")
+    font_filename = f"Outfit-{style_suffix}.ttf"
+    font_path = os.path.join(font_dir, font_filename)
     
     if not os.path.exists(font_path):
-        url = "https://raw.githubusercontent.com/google/fonts/main/ofl/outfit/Outfit%5Bwght%5D.ttf"
+        url = f"https://raw.githubusercontent.com/Outfitio/Outfit-Fonts/main/fonts/ttf/{font_filename}"
         try:
-            print(f"Downloading Outfit variable font from Google Fonts...")
+            print(f"Downloading {font_filename} font from Google Fonts (Outfitio)...")
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=10) as response:
                 with open(font_path, "wb") as f:
@@ -437,8 +444,8 @@ def render_portrait(width: int, height: int, events: list[dict], weather: dict, 
     font_bold_huge = load_font("Outfit", "Bold", 72)
     font_bold_lg = load_font("Outfit", "Bold", 48)
     font_bold_md = load_font("Outfit", "Bold", 36)
-    font_regular_md = load_font("Outfit", "Regular", 28)
-    font_regular_sm = load_font("Outfit", "Regular", 22)
+    font_regular_md = load_font("Outfit", "SemiBold", 28)
+    font_regular_sm = load_font("Outfit", "SemiBold", 22)
     
     now = datetime.datetime.now(target_tz)
     
@@ -550,8 +557,8 @@ def render_landscape(width: int, height: int, events: list[dict], weather: dict,
     font_bold_huge = load_font("Outfit", "Bold", 42)
     font_bold_lg = load_font("Outfit", "Bold", 28)
     font_bold_md = load_font("Outfit", "Bold", 22)
-    font_regular_md = load_font("Outfit", "Regular", 18)
-    font_regular_sm = load_font("Outfit", "Regular", 15)
+    font_regular_md = load_font("Outfit", "SemiBold", 18)
+    font_regular_sm = load_font("Outfit", "SemiBold", 15)
     
     now = datetime.datetime.now(target_tz)
     
