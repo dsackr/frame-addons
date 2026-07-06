@@ -1243,6 +1243,27 @@
           "title": "Antelope Canyon Light Beam",
           "source": "Generative Art",
           "commons_url": ""
+        },
+        {
+          "filename": "03_bryce_canyon.jpg",
+          "path": "scene_packs/canyons/03_bryce_canyon.jpg",
+          "title": "Bryce Canyon Amphitheater",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Sunrise_Point_Bryce_Canyon_November_2018_002.jpg"
+        },
+        {
+          "filename": "04_zion_canyon.jpg",
+          "path": "scene_packs/canyons/04_zion_canyon.jpg",
+          "title": "Zion Canyon View",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Zion_Canyon,_Zion_National_Park.JPG"
+        },
+        {
+          "filename": "05_waimea_canyon.jpg",
+          "path": "scene_packs/canyons/05_waimea_canyon.jpg",
+          "title": "Waimea Canyon, Kauai",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Waimea_Canyon,_Kaua%CA%BBi.jpg"
         }
       ]
     },
@@ -1267,6 +1288,27 @@
           "title": "Great Pyramids of Giza at Sunset",
           "source": "Generative Art",
           "commons_url": ""
+        },
+        {
+          "filename": "03_eiffel_tower.jpg",
+          "path": "scene_packs/architecture/03_eiffel_tower.jpg",
+          "title": "Eiffel Tower in Paris",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+        },
+        {
+          "filename": "04_taj_mahal.jpg",
+          "path": "scene_packs/architecture/04_taj_mahal.jpg",
+          "title": "Taj Mahal Sunset",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Sunset.jpg"
+        },
+        {
+          "filename": "05_colosseum.jpg",
+          "path": "scene_packs/architecture/05_colosseum.jpg",
+          "title": "Colosseum in Rome",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome-April_2007-1-_copie_2B.jpg"
         }
       ]
     },
