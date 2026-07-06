@@ -19,8 +19,8 @@ from PIL import Image, ImageDraw, ImageFont
 # ---------------------------------------------------------------------------
 # Constants & Color Palette
 # ---------------------------------------------------------------------------
-COLOR_BLACK = (25, 30, 33)      # Scripture text, borders, reference
-COLOR_WHITE = (232, 232, 232)  # Background canvas
+COLOR_BLACK = (0, 0, 0)         # Scripture text, borders, reference
+COLOR_WHITE = (255, 255, 255)   # Background canvas
 COLOR_RED = (178, 19, 24)      # Decorative icons (cross/leaves)
 COLOR_BLUE = (33, 87, 186)     # Translation badge
 COLOR_YELLOW = (239, 222, 68)   # Accent color (unused here)
@@ -60,12 +60,20 @@ def load_font(font_name="Outfit", font_style="Regular", size=24) -> ImageFont.Im
     font_dir = os.path.join(script_dir, "fonts")
     os.makedirs(font_dir, exist_ok=True)
     
-    font_path = os.path.join(font_dir, "Outfit-Variable.ttf")
+    style_map = {
+        "Regular": "Regular",
+        "Medium": "Medium",
+        "SemiBold": "SemiBold",
+        "Bold": "Bold"
+    }
+    style_suffix = style_map.get(font_style, "Regular")
+    font_filename = f"Outfit-{style_suffix}.ttf"
+    font_path = os.path.join(font_dir, font_filename)
     
     if not os.path.exists(font_path):
-        url = "https://raw.githubusercontent.com/google/fonts/main/ofl/outfit/Outfit%5Bwght%5D.ttf"
+        url = f"https://raw.githubusercontent.com/Outfitio/Outfit-Fonts/main/fonts/ttf/{font_filename}"
         try:
-            print(f"Downloading Outfit variable font from Google Fonts...")
+            print(f"Downloading {font_filename} font from Google Fonts (Outfitio)...")
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
             with urllib.request.urlopen(req, timeout=10) as response:
                 with open(font_path, "wb") as f:
@@ -211,7 +219,7 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
         ref_y_offset = 45
         
     font_quote = load_font("Outfit", "Bold", quote_font_size)
-    font_ref = load_font("Outfit", "Regular", ref_font_size)
+    font_ref = load_font("Outfit", "SemiBold", ref_font_size)
     font_badge = load_font("Outfit", "Bold", badge_font_size)
     
     # 1. Draw double borders
