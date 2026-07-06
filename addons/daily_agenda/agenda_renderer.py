@@ -260,6 +260,23 @@ def fetch_ha_events(config: dict, target_tz) -> list[dict]:
     events.sort(key=lambda x: x["start"])
     return events
 
+def get_coordinates_from_location(location: str) -> tuple[float, float] | None:
+    """Look up latitude and longitude using Open-Meteo's free Geocoding API."""
+    import urllib.parse
+    query = urllib.parse.quote(location)
+    url = f"https://geocoding-api.open-meteo.com/v1/search?name={query}&count=1"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "FraimicAgendaAddon/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as response:
+            data = json.loads(response.read().decode("utf-8"))
+            results = data.get("results")
+            if results and len(results) > 0:
+                res = results[0]
+                return float(res["latitude"]), float(res["longitude"])
+    except Exception as e:
+        print(f"Error during location geocoding lookup: {e}")
+    return None
+
 # ---------------------------------------------------------------------------
 # Weather Fetcher (Open-Meteo)
 # ---------------------------------------------------------------------------
@@ -745,12 +762,21 @@ def main():
     if weather_conf.get("enabled", True):
         lat = weather_conf.get("latitude")
         lon = weather_conf.get("longitude")
+        zip_code = weather_conf.get("zip_code")
+        
+        if (lat is None or lon is None) and zip_code:
+            print(f"Resolving coordinates for location '{zip_code}'...")
+            coords = get_coordinates_from_location(zip_code)
+            if coords:
+                lat, lon = coords
+                print(f"Resolved coordinates: {lat}, {lon}")
+                
         temp_unit = weather_conf.get("temp_unit", "fahrenheit")
         api_url = weather_conf.get("api_url")
         if lat is not None and lon is not None:
             weather = fetch_weather(lat, lon, temp_unit, api_url)
         else:
-            print("Warning: Latitude/longitude coordinates missing for weather forecast.")
+            print("Warning: Location coordinates missing for weather forecast.")
             
     # 3. Query Frame Status
     frame_conf = config.get("frame", {})

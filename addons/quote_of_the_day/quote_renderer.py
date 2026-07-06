@@ -111,29 +111,51 @@ def wrap_text(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, m
 # ---------------------------------------------------------------------------
 # Quote Fetcher
 # ---------------------------------------------------------------------------
-def fetch_quote(source_type: str, custom_quotes: list[dict], api_url: str = None) -> dict:
-    """Retrieve quote from API or local custom list, falling back to built-ins if needed."""
-    if source_type == "custom" and custom_quotes:
-        print("Selecting quote from custom list...")
-        # Select randomly or pick based on day of year
-        day_of_year = datetime.datetime.now().timetuple().tm_yday
-        index = day_of_year % len(custom_quotes)
-        return custom_quotes[index]
+def fetch_quote(quote_feed: str, custom_quotes: list[dict], api_url: str = None) -> dict:
+    """Retrieve quote from chosen API feed or local custom list, falling back to built-ins if needed."""
+    if quote_feed == "custom":
+        if api_url:
+            print(f"Fetching daily quote from custom API: {api_url}")
+            url = api_url
+        elif custom_quotes:
+            print("Selecting quote from custom list...")
+            day_of_year = datetime.datetime.now().timetuple().tm_yday
+            index = day_of_year % len(custom_quotes)
+            return custom_quotes[index]
+        else:
+            print("Warning: custom feed selected but no custom_quotes or custom API URL. Falling back to ZenQuotes.")
+            url = api_url or "https://zenquotes.io/api/today"
+    elif quote_feed == "favqs":
+        print("Fetching daily quote from FavQs API...")
+        url = api_url or "https://favqs.com/api/qotd"
+    else:  # Default/zenquotes/api
+        print("Fetching daily quote from ZenQuotes API...")
+        url = api_url or "https://zenquotes.io/api/today"
         
-    # Attempt API fetch
-    print("Fetching daily quote from ZenQuotes API...")
-    url = api_url or "https://zenquotes.io/api/today"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "FraimicQuoteAddon/1.0"})
         with urllib.request.urlopen(req, timeout=10) as response:
             data = json.loads(response.read().decode("utf-8"))
             
-        # ZenQuotes returns a list: [{"q": "...", "a": "..."}]
-        if isinstance(data, list) and len(data) > 0:
+        if "favqs.com" in url or quote_feed == "favqs":
+            # FavQs returns {"quote": {"body": "...", "author": "..."}}
+            quote_data = data.get("quote", {})
             return {
-                "q": data[0].get("q", ""),
-                "a": data[0].get("a", "Unknown")
+                "q": quote_data.get("body", ""),
+                "a": quote_data.get("author", "Unknown")
             }
+        else:
+            # ZenQuotes returns a list: [{"q": "...", "a": "..."}]
+            if isinstance(data, list) and len(data) > 0:
+                return {
+                    "q": data[0].get("q", ""),
+                    "a": data[0].get("a", "Unknown")
+                }
+            elif isinstance(data, dict):
+                return {
+                    "q": data.get("q", data.get("quote", data.get("body", ""))),
+                    "a": data.get("a", data.get("author", "Unknown"))
+                }
     except Exception as e:
         print(f"Error fetching quote from API: {e}. Falling back to default list.")
         
@@ -351,11 +373,11 @@ def main():
         config = json.load(f)
         
     # 1. Fetch Quote
-    source_type = config.get("quote_source", "api")
+    quote_feed = config.get("quote_feed", config.get("quote_source", "zenquotes"))
     custom_quotes = config.get("custom_quotes", [])
     api_url = config.get("quote_api_url")  # Option to override for testing
     
-    quote_data = fetch_quote(source_type, custom_quotes, api_url)
+    quote_data = fetch_quote(quote_feed, custom_quotes, api_url)
     quote = quote_data.get("q", "").strip()
     author = quote_data.get("a", "Unknown").strip()
     
