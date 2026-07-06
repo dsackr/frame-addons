@@ -683,7 +683,7 @@ PACKS = [
             ("File:Jimmy Carter presidential portrait (cropped 1).jpg", "Jimmy Carter", ""),
             ("File:Official Portrait of President Reagan 1981-cropped.jpg", "Ronald Reagan", ""),
             ("File:George H. W. Bush presidential portrait (cropped 2).jpg", "George H. W. Bush", ""),
-            ("File:Bill Clinton.jpg", "Bill Clinton", ""),
+            ("File:Bill Clinton (cropped 4).jpg", "Bill Clinton", ""),
             ("File:George-W-Bush.jpeg", "George W. Bush", ""),
             ("File:President Barack Obama, 2012 portrait crop.jpg", "Barack Obama", ""),
             ("File:Donald Trump official portrait (3x4a).jpg", "Donald Trump", ""),
