@@ -153,6 +153,216 @@
       ]
     },
     {
+      "id": "michelangelo",
+      "name": "Michelangelo",
+      "description": "High-contrast sculpture photography of Michelangelo's marble masterworks.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain artworks with Wikimedia Commons public-domain/Creative Commons photography; see per-image links",
+      "cover": "scene_packs/michelangelo/01_david.jpg",
+      "images": [
+        {
+          "filename": "01_david.jpg",
+          "path": "scene_packs/michelangelo/01_david.jpg",
+          "title": "David",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_Fir_JBU004.jpg",
+          "license": "CC BY 3.0",
+          "attribution": "J\u00f6rg Bittner Unna"
+        },
+        {
+          "filename": "02_david_right_view.jpg",
+          "path": "scene_packs/michelangelo/02_david_right_view.jpg",
+          "title": "David (Right View)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_-_right_view_2.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Commonists"
+        },
+        {
+          "filename": "03_piet.jpg",
+          "path": "scene_packs/michelangelo/03_piet.jpg",
+          "title": "Piet\u00e0",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg",
+          "license": "CC BY 2.5",
+          "attribution": "Stanislav Traykov"
+        },
+        {
+          "filename": "04_moses.jpg",
+          "path": "scene_packs/michelangelo/04_moses.jpg",
+          "title": "Moses",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Moses_(Rome).jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Livioandronico2013"
+        },
+        {
+          "filename": "05_bacchus.jpg",
+          "path": "scene_packs/michelangelo/05_bacchus.jpg",
+          "title": "Bacchus",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo_Bacchus.jpg",
+          "license": "Public domain",
+          "attribution": "http://en.wikipedia.org/wiki/User:Attilios"
+        },
+        {
+          "filename": "06_dying_slave.jpg",
+          "path": "scene_packs/michelangelo/06_dying_slave.jpg",
+          "title": "Dying Slave",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:%27Dying_Slave%27_Michelangelo_JBU001.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "J\u00f6rg Bittner Unna"
+        },
+        {
+          "filename": "07_rebellious_slave.jpg",
+          "path": "scene_packs/michelangelo/07_rebellious_slave.jpg",
+          "title": "Rebellious Slave",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:%27Rebellious_Slave%27_Michelangelo_JBU81.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "J\u00f6rg Bittner Unna"
+        }
+      ]
+    },
+    {
+      "id": "picasso",
+      "name": "Pablo Picasso",
+      "description": "Commons-reusable early Picasso works, ceramics, and archival imagery.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/picasso/01_the_blue_room.jpg",
+      "images": [
+        {
+          "filename": "01_the_blue_room.jpg",
+          "path": "scene_packs/picasso/01_the_blue_room.jpg",
+          "title": "The Blue Room",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Room,_by_Pablo_Picasso.jpg",
+          "license": "Public domain",
+          "attribution": "Pablo Picasso"
+        },
+        {
+          "filename": "02_boy_holding_a_blue_vase.jpg",
+          "path": "scene_packs/picasso/02_boy_holding_a_blue_vase.jpg",
+          "title": "Boy Holding a Blue Vase",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Boy_Holding_a_Blue_Vase,_by_Pablo_Picasso,_1905,_oil_on_canvas_-_Hyde_Collection_-_Glens_Falls,_NY_-_20180224_123602.jpg",
+          "license": "Public domain",
+          "attribution": "Daderot"
+        },
+        {
+          "filename": "03_child_on_a_ball_stamp.jpg",
+          "path": "scene_packs/picasso/03_child_on_a_ball_stamp.jpg",
+          "title": "Child on a Ball (Stamp)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Soviet_Union_1971_CPA_4024_stamp_(Child_on_Ball_(Pablo_Picasso)).jpg",
+          "license": "Public domain",
+          "attribution": "USSR Post"
+        },
+        {
+          "filename": "04_picasso_ceramic.jpg",
+          "path": "scene_packs/picasso/04_picasso_ceramic.jpg",
+          "title": "Picasso Ceramic",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Pablo_Picasso%27s_ceramic3.jpg",
+          "license": "CC0",
+          "attribution": "Suohros"
+        },
+        {
+          "filename": "05_picasso_in_the_studio.jpg",
+          "path": "scene_packs/picasso/05_picasso_in_the_studio.jpg",
+          "title": "Picasso in the Studio",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Pablo_Picasso_dando_instrucciones_a_una_modelo_en_su_taller_de_pintura.jpg",
+          "license": "Public domain",
+          "attribution": "Unknown author"
+        }
+      ]
+    },
+    {
+      "id": "donatello",
+      "name": "Donatello",
+      "description": "Open-licensed sculpture photography from the Early Renaissance master.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain artworks with Wikimedia Commons Creative Commons photography; see per-image links",
+      "cover": "scene_packs/donatello/01_david_marble.jpg",
+      "images": [
+        {
+          "filename": "01_david_marble.jpg",
+          "path": "scene_packs/donatello/01_david_marble.jpg",
+          "title": "David (Marble)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Marble_David_by_Donatello-Bargello.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Yair Haklai"
+        },
+        {
+          "filename": "02_david_bronze.jpg",
+          "path": "scene_packs/donatello/02_david_bronze.jpg",
+          "title": "David (Bronze)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Bargello_Donatello_David_03.JPG",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Miguel Hermoso Cuesta"
+        },
+        {
+          "filename": "03_penitent_magdalene.jpg",
+          "path": "scene_packs/donatello/03_penitent_magdalene.jpg",
+          "title": "Penitent Magdalene",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Donatello,_maria_maddalena_02.JPG",
+          "license": "CC BY 2.5",
+          "attribution": "sailko"
+        },
+        {
+          "filename": "04_saint_george.jpg",
+          "path": "scene_packs/donatello/04_saint_george.jpg",
+          "title": "Saint George",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:St._Georg,_Donatello,_1416-17,_Bargello_Florenz-01.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Rufus46"
+        },
+        {
+          "filename": "05_equestrian_statue_of_gattamelata.jpg",
+          "path": "scene_packs/donatello/05_equestrian_statue_of_gattamelata.jpg",
+          "title": "Equestrian Statue of Gattamelata",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Statue_of_Gattamelata_by_Donatello_-_Padua_2016_(2).jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Jos\u00e9 Luiz"
+        },
+        {
+          "filename": "06_judith_and_holofernes.jpg",
+          "path": "scene_packs/donatello/06_judith_and_holofernes.jpg",
+          "title": "Judith and Holofernes",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Giuditta_di_donatello_04.JPG",
+          "license": "CC BY-SA 3.0",
+          "attribution": "sailko"
+        },
+        {
+          "filename": "07_the_feast_of_herod.jpg",
+          "path": "scene_packs/donatello/07_the_feast_of_herod.jpg",
+          "title": "The Feast of Herod",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Baptismal_font_of_the_Siena_Baptistry_la-test_battista_presenta.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "MatthiasKabel"
+        }
+      ]
+    },
+    {
       "id": "van_gogh",
       "name": "Vincent van Gogh",
       "description": "Bold color and brushwork from Post-Impressionism's icon.",
@@ -225,6 +435,158 @@
           "title": "Almond Blossoms",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Amandelbloesem_-_s0176V1962_-_Van_Gogh_Museum.jpg"
+        }
+      ]
+    },
+    {
+      "id": "rembrandt",
+      "name": "Rembrandt",
+      "description": "Baroque portraits, dramatic histories, and luminous Dutch masterworks.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain (verified per-image via Wikimedia Commons)",
+      "cover": "scene_packs/rembrandt/01_the_night_watch.jpg",
+      "images": [
+        {
+          "filename": "01_the_night_watch.jpg",
+          "path": "scene_packs/rembrandt/01_the_night_watch.jpg",
+          "title": "The Night Watch",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "02_the_anatomy_lesson_of_dr_nicolaes_tulp.jpg",
+          "path": "scene_packs/rembrandt/02_the_anatomy_lesson_of_dr_nicolaes_tulp.jpg",
+          "title": "The Anatomy Lesson of Dr. Nicolaes Tulp",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "03_self_portrait.jpg",
+          "path": "scene_packs/rembrandt/03_self_portrait.jpg",
+          "title": "Self-Portrait",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "04_the_jewish_bride.jpg",
+          "path": "scene_packs/rembrandt/04_the_jewish_bride.jpg",
+          "title": "The Jewish Bride",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Het_Joodse_bruidje.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "05_the_return_of_the_prodigal_son.jpg",
+          "path": "scene_packs/rembrandt/05_the_return_of_the_prodigal_son.jpg",
+          "title": "The Return of the Prodigal Son",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "06_the_syndics_of_the_drapers_guild.jpg",
+          "path": "scene_packs/rembrandt/06_the_syndics_of_the_drapers_guild.jpg",
+          "title": "The Syndics of the Drapers' Guild",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_(waardijns)_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "07_bathsheba_at_her_bath.jpg",
+          "path": "scene_packs/rembrandt/07_bathsheba_at_her_bath.jpg",
+          "title": "Bathsheba at Her Bath",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_016.jpg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        },
+        {
+          "filename": "08_the_storm_on_the_sea_of_galilee.jpg",
+          "path": "scene_packs/rembrandt/08_the_storm_on_the_sea_of_galilee.jpg",
+          "title": "The Storm on the Sea of Galilee",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Christ_in_the_Storm_on_the_Sea_of_Galilee.jpeg",
+          "license": "Public domain",
+          "attribution": "Rembrandt"
+        }
+      ]
+    },
+    {
+      "id": "hokusai",
+      "name": "Katsushika Hokusai",
+      "description": "Bold ukiyo-e prints, Mount Fuji views, waterfalls, and crisp linework.",
+      "category": "famous_artists",
+      "categories": [
+        "famous_artists"
+      ],
+      "license": "Public domain (verified per-image via Wikimedia Commons)",
+      "cover": "scene_packs/hokusai/01_the_great_wave_off_kanagawa.jpg",
+      "images": [
+        {
+          "filename": "01_the_great_wave_off_kanagawa.jpg",
+          "path": "scene_packs/hokusai/01_the_great_wave_off_kanagawa.jpg",
+          "title": "The Great Wave off Kanagawa",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_The_Great_Wave_off_the_Coast_of_Kanagawa_LCCN2008660568.jpg",
+          "license": "Public domain",
+          "attribution": "Katsushika, Hokusai, 1760-1849, artist"
+        },
+        {
+          "filename": "02_fine_wind_clear_morning.jpg",
+          "path": "scene_packs/hokusai/02_fine_wind_clear_morning.jpg",
+          "title": "Fine Wind, Clear Morning",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_Fine_Wind,_Clear_Morning_(Gaif%C5%AB_kaisei)_-_Google_Art_Project.jpg",
+          "license": "Public domain",
+          "attribution": "Katsushika Hokusai"
+        },
+        {
+          "filename": "03_ejiri_in_suruga_province.jpg",
+          "path": "scene_packs/hokusai/03_ejiri_in_suruga_province.jpg",
+          "title": "Ejiri in Suruga Province",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Ejiri_in_the_Suruga_province.jpg",
+          "license": "Public domain",
+          "attribution": "Katsushika Hokusai"
+        },
+        {
+          "filename": "04_kajikazawa_in_kai_province.jpg",
+          "path": "scene_packs/hokusai/04_kajikazawa_in_kai_province.jpg",
+          "title": "Kajikazawa in Kai Province",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Kajikazawa_in_Kai_province.jpg",
+          "license": "Public domain",
+          "attribution": "Katsushika Hokusai"
+        },
+        {
+          "filename": "05_amida_falls_on_the_kiso_road.jpg",
+          "path": "scene_packs/hokusai/05_amida_falls_on_the_kiso_road.jpg",
+          "title": "Amida Falls on the Kiso Road",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai,_la_cascata_di_kamida_ga_taki_nella_provincia_di_mino,_dalla_serie_tour_delle_cascate_in_varie_province,_1833.jpg",
+          "license": "CC BY 3.0",
+          "attribution": "Katsushika Hokusai"
+        },
+        {
+          "filename": "06_yoshitsune_s_horse_washing_falls.jpg",
+          "path": "scene_packs/hokusai/06_yoshitsune_s_horse_washing_falls.jpg",
+          "title": "Yoshitsune's Horse-Washing Falls",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_Hokusai,_Yoshitsune_Umarai_waterfall_at_Yoshino_in_Wash%C5%AB,_ca._1833.jpg",
+          "license": "Public domain",
+          "attribution": "Katsushika Hokusai"
         }
       ]
     },
@@ -1258,6 +1620,82 @@
           "title": "Great Pyramid of Giza",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_from_southeast_corner.JPG"
+        }
+      ]
+    },
+    {
+      "id": "skylines",
+      "name": "City Skylines",
+      "description": "Famous city skylines from New York, Shanghai, Tokyo, London, Dubai, Sydney, and Frankfurt.",
+      "category": "architecture",
+      "categories": [
+        "architecture"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/skylines/01_new_york_city.jpg",
+      "images": [
+        {
+          "filename": "01_new_york_city.jpg",
+          "path": "scene_packs/skylines/01_new_york_city.jpg",
+          "title": "New York City",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Jersey_City_September_2020_panorama.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "King of Hearts"
+        },
+        {
+          "filename": "02_shanghai.jpg",
+          "path": "scene_packs/skylines/02_shanghai.jpg",
+          "title": "Shanghai",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_panorama.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "King of Hearts"
+        },
+        {
+          "filename": "03_tokyo.jpg",
+          "path": "scene_packs/skylines/03_tokyo.jpg",
+          "title": "Tokyo",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Tokyo_-_Sunset_Skyline.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Fred Cherrygarden"
+        },
+        {
+          "filename": "04_london.jpg",
+          "path": "scene_packs/skylines/04_london.jpg",
+          "title": "London",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:City_of_London_skyline_from_London_City_Hall_-_Sept_2015_-_Crop_Aligned.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "User:Colin and Kim Hansen"
+        },
+        {
+          "filename": "05_dubai.jpg",
+          "path": "scene_packs/skylines/05_dubai.jpg",
+          "title": "Dubai",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Dubai_Skyline_with_Ra%27s_Al_Khor_Wildlife_Sanctuary.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Chuck202"
+        },
+        {
+          "filename": "06_sydney.jpg",
+          "path": "scene_packs/skylines/06_sydney.jpg",
+          "title": "Sydney",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_at_night_2020.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "MDRX"
+        },
+        {
+          "filename": "07_frankfurt.jpg",
+          "path": "scene_packs/skylines/07_frankfurt.jpg",
+          "title": "Frankfurt",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Skyline_Frankfurt_am_Main_2015.jpg",
+          "license": "CC BY-SA 3.0 de",
+          "attribution": "Christian Wolf (www.c-w-design.de)"
         }
       ]
     },

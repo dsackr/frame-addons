@@ -109,7 +109,7 @@ def _strip_html(text: str) -> str:
 
 
 def _imageinfo(titles: list[str]) -> dict[str, dict]:
-    """Return {title: {url, width, height, mime, license_ok, artist_text}}."""
+    """Return image metadata keyed by Commons file title."""
     if not titles:
         return {}
     data = _api_get(
@@ -128,11 +128,23 @@ def _imageinfo(titles: list[str]) -> dict[str, dict]:
             continue
         info = infos[0]
         meta = info.get("extmetadata", {}) or {}
-        license_name = str(meta.get("LicenseShortName", {}).get("value", "")).lower()
-        usage_terms = str(meta.get("UsageTerms", {}).get("value", "")).lower()
-        license_ok = "public domain" in license_name or "public domain" in usage_terms
+        license_name = _strip_html(str(meta.get("LicenseShortName", {}).get("value", ""))).strip()
+        usage_terms = _strip_html(str(meta.get("UsageTerms", {}).get("value", ""))).strip()
+        license_haystack = f"{license_name} {usage_terms}".lower()
+        license_ok = any(
+            term in license_haystack
+            for term in (
+                "public domain",
+                "cc0",
+                "creative commons zero",
+                "cc by",
+                "cc-by",
+                "creative commons attribution",
+            )
+        )
+        artist_display = _strip_html(str(meta.get("Artist", {}).get("value", ""))).strip()
         artist_text = _strip_accents(
-            _strip_html(str(meta.get("Artist", {}).get("value", "")))
+            artist_display
         ).lower()
         out[title] = {
             "url": info.get("url"),
@@ -140,15 +152,17 @@ def _imageinfo(titles: list[str]) -> dict[str, dict]:
             "height": info.get("height", 0),
             "mime": info.get("mime"),
             "license_ok": license_ok,
+            "license_short_name": license_name,
             "page_url": info.get("descriptionurl"),
+            "artist_display": artist_display,
             "artist_text": artist_text,
         }
     return out
 
 
 def _pick_best(query: str, artist_keyword: str, seen_urls: set[str]) -> dict | None:
-    candidates = _search_candidates(query, limit=8)
     is_exact_file = query.startswith("File:")
+    candidates = [query] if is_exact_file else _search_candidates(query, limit=8)
     if not is_exact_file:
         candidates = [c for c in candidates if not _EXCLUDE_TITLE_PATTERNS.search(c)]
     if not candidates:
@@ -159,7 +173,7 @@ def _pick_best(query: str, artist_keyword: str, seen_urls: set[str]) -> dict | N
     scored = []
     for title in candidates:
         info = infos.get(title)
-        if not info or (not is_exact_file and not info["license_ok"]):
+        if not info or not info["license_ok"]:
             continue
         if info["mime"] not in ("image/jpeg", "image/png"):
             continue
@@ -289,15 +303,18 @@ def build_pack(pack: dict) -> dict:
             print(f"  ! download/resize failed for {best['title']!r}: {err}", file=sys.stderr)
             continue
 
-        images.append(
-            {
-                "filename": filename,
-                "path": f"scene_packs/{pack_id}/{filename}",
-                "title": display_title,
-                "source": "Wikimedia Commons",
-                "commons_url": best["page_url"],
-            }
-        )
+        image_entry = {
+            "filename": filename,
+            "path": f"scene_packs/{pack_id}/{filename}",
+            "title": display_title,
+            "source": "Wikimedia Commons",
+            "commons_url": best["page_url"],
+        }
+        if best.get("license_short_name"):
+            image_entry["license"] = best["license_short_name"]
+        if best.get("artist_display"):
+            image_entry["attribution"] = best["artist_display"]
+        images.append(image_entry)
         print(f"  + {filename}  <-  {best['title']}")
         time.sleep(0.3)  # be polite to the Commons API
 
@@ -310,7 +327,7 @@ def build_pack(pack: dict) -> dict:
         "description": pack["description"],
         "category": _pack_category_compat(pack),
         "categories": _pack_categories(pack),
-        "license": "Public domain (verified per-image via Wikimedia Commons)",
+        "license": pack.get("license", "Public domain (verified per-image via Wikimedia Commons)"),
         "cover": images[0]["path"],
         "images": images,
     }
@@ -352,6 +369,52 @@ PACKS = [
         ],
     },
     {
+        "id": "michelangelo",
+        "name": "Michelangelo",
+        "description": "High-contrast sculpture photography of Michelangelo's marble masterworks.",
+        "categories": ["famous_artists"],
+        "license": "Public domain artworks with Wikimedia Commons public-domain/Creative Commons photography; see per-image links",
+        "queries": [
+            ("File:'David' by Michelangelo Fir JBU004.jpg", "David", ""),
+            ("File:Michelangelo's David - right view 2.jpg", "David (Right View)", ""),
+            ("File:Michelangelo's Pieta 5450 cropncleaned edit.jpg", "Pietà", ""),
+            ("File:Michelangelo's Moses (Rome).jpg", "Moses", ""),
+            ("File:Michelangelo Bacchus.jpg", "Bacchus", ""),
+            ("File:'Dying Slave' Michelangelo JBU001.jpg", "Dying Slave", ""),
+            ("File:'Rebellious Slave' Michelangelo JBU81.jpg", "Rebellious Slave", ""),
+        ],
+    },
+    {
+        "id": "picasso",
+        "name": "Pablo Picasso",
+        "description": "Commons-reusable early Picasso works, ceramics, and archival imagery.",
+        "categories": ["famous_artists"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("File:The Blue Room, by Pablo Picasso.jpg", "The Blue Room", ""),
+            ("File:Boy Holding a Blue Vase, by Pablo Picasso, 1905, oil on canvas - Hyde Collection - Glens Falls, NY - 20180224 123602.jpg", "Boy Holding a Blue Vase", ""),
+            ("File:The Soviet Union 1971 CPA 4024 stamp (Child on Ball (Pablo Picasso)).jpg", "Child on a Ball (Stamp)", ""),
+            ("File:Pablo Picasso's ceramic3.jpg", "Picasso Ceramic", ""),
+            ("File:Pablo Picasso dando instrucciones a una modelo en su taller de pintura.jpg", "Picasso in the Studio", ""),
+        ],
+    },
+    {
+        "id": "donatello",
+        "name": "Donatello",
+        "description": "Open-licensed sculpture photography from the Early Renaissance master.",
+        "categories": ["famous_artists"],
+        "license": "Public domain artworks with Wikimedia Commons Creative Commons photography; see per-image links",
+        "queries": [
+            ("File:Marble David by Donatello-Bargello.jpg", "David (Marble)", ""),
+            ("File:Bargello Donatello David 03.JPG", "David (Bronze)", ""),
+            ("File:Donatello, maria maddalena 02.JPG", "Penitent Magdalene", ""),
+            ("File:St. Georg, Donatello, 1416-17, Bargello Florenz-01.jpg", "Saint George", ""),
+            ("File:Statue of Gattamelata by Donatello - Padua 2016 (2).jpg", "Equestrian Statue of Gattamelata", ""),
+            ("File:Giuditta di donatello 04.JPG", "Judith and Holofernes", ""),
+            ("File:Baptismal font of the Siena Baptistry la-test battista presenta.jpg", "The Feast of Herod", ""),
+        ],
+    },
+    {
         "id": "van_gogh",
         "name": "Vincent van Gogh",
         "description": "Bold color and brushwork from Post-Impressionism's icon.",
@@ -366,6 +429,36 @@ PACKS = [
             ("Vincent van Gogh Self-Portrait painting Orsay", "Self-Portrait", "Gogh"),
             ("Vincent van Gogh The Potato Eaters painting", "The Potato Eaters", "Gogh"),
             ("Vincent van Gogh Almond Blossoms painting", "Almond Blossoms", "Gogh"),
+        ],
+    },
+    {
+        "id": "rembrandt",
+        "name": "Rembrandt",
+        "description": "Baroque portraits, dramatic histories, and luminous Dutch masterworks.",
+        "categories": ["famous_artists"],
+        "queries": [
+            ("Rembrandt The Night Watch painting", "The Night Watch", "Rembrandt"),
+            ("Rembrandt The Anatomy Lesson of Dr Nicolaes Tulp painting", "The Anatomy Lesson of Dr. Nicolaes Tulp", "Rembrandt"),
+            ("Rembrandt Self-Portrait with Beret and Turned-Up Collar painting", "Self-Portrait", "Rembrandt"),
+            ("Rembrandt The Jewish Bride painting", "The Jewish Bride", "Rembrandt"),
+            ("Rembrandt The Return of the Prodigal Son painting", "The Return of the Prodigal Son", "Rembrandt"),
+            ("Rembrandt Syndics of the Drapers Guild painting", "The Syndics of the Drapers' Guild", "Rembrandt"),
+            ("Rembrandt Bathsheba at Her Bath painting", "Bathsheba at Her Bath", "Rembrandt"),
+            ("Rembrandt The Storm on the Sea of Galilee painting", "The Storm on the Sea of Galilee", "Rembrandt"),
+        ],
+    },
+    {
+        "id": "hokusai",
+        "name": "Katsushika Hokusai",
+        "description": "Bold ukiyo-e prints, Mount Fuji views, waterfalls, and crisp linework.",
+        "categories": ["famous_artists"],
+        "queries": [
+            ("Katsushika Hokusai The Great Wave off Kanagawa print", "The Great Wave off Kanagawa", "Hokusai"),
+            ("Katsushika Hokusai Fine Wind Clear Morning print", "Fine Wind, Clear Morning", "Hokusai"),
+            ("Katsushika Hokusai Ejiri in Suruga Province print", "Ejiri in Suruga Province", "Hokusai"),
+            ("Katsushika Hokusai Kajikazawa in Kai Province print", "Kajikazawa in Kai Province", "Hokusai"),
+            ("Katsushika Hokusai Amida Falls on the Kiso Road print", "Amida Falls on the Kiso Road", "Hokusai"),
+            ("Katsushika Hokusai The Waterfall Where Yoshitsune Washed his Horse at Yoshino print", "Yoshitsune's Horse-Washing Falls", "Hokusai"),
         ],
     },
     {
@@ -583,6 +676,22 @@ PACKS = [
             ("File:Great Pyramid of Giza.jpg", "Great Pyramid of Giza", ""),
         ],
     },
+    {
+        "id": "skylines",
+        "name": "City Skylines",
+        "description": "Famous city skylines from New York, Shanghai, Tokyo, London, Dubai, Sydney, and Frankfurt.",
+        "categories": ["architecture"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("File:Lower Manhattan from Jersey City September 2020 panorama.jpg", "New York City", ""),
+            ("File:Pudong Shanghai November 2017 panorama.jpg", "Shanghai", ""),
+            ("File:Tokyo - Sunset Skyline.jpg", "Tokyo", ""),
+            ("File:City of London skyline from London City Hall - Sept 2015 - Crop Aligned.jpg", "London", ""),
+            ("File:Dubai Skyline with Ra's Al Khor Wildlife Sanctuary.jpg", "Dubai", ""),
+            ("File:Sydney skyline at night 2020.jpg", "Sydney", ""),
+            ("File:Skyline Frankfurt am Main 2015.jpg", "Frankfurt", ""),
+        ],
+    },
 ]
 
 
@@ -604,9 +713,10 @@ def main() -> None:
 
     index_path = os.path.join(PACKS_DIR, "index.json")
     existing_by_id: dict[str, dict] = {}
-    if requested_ids and os.path.exists(index_path):
-        # Only rebuilding a subset -- keep every other pack's existing
-        # entry untouched instead of dropping it from the catalog.
+    if os.path.exists(index_path):
+        # Keep existing entries for packs not rebuilt in this run. Some legacy
+        # packs are shipped in index.json without a PACKS definition here, so
+        # preserve those instead of dropping them.
         with open(index_path, encoding="utf-8") as f:
             existing_by_id = {p["id"]: p for p in json.load(f).get("packs", [])}
 
@@ -619,6 +729,9 @@ def main() -> None:
                 f"rebuilt this run -- pass it explicitly to build it."
             )
         index_packs.append(entry)
+    for pack_id, entry in existing_by_id.items():
+        if pack_id not in known_ids:
+            index_packs.append(entry)
 
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump({"packs": index_packs}, f, indent=2)
