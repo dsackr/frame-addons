@@ -1221,6 +1221,63 @@
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_from_southeast_corner.JPG"
         }
       ]
+    },
+    {
+      "id": "daily_agenda",
+      "name": "Daily Agenda",
+      "description": "Displays your daily Google/iCal calendar agenda, status, and local weather forecast.",
+      "category": "widgets",
+      "type": "widget",
+      "script_url": "addons/daily_agenda/agenda_renderer.py",
+      "cover": "addons/daily_agenda/preview_cover.jpg",
+      "config_schema": [
+        {
+          "name": "calendar_url",
+          "type": "string",
+          "label": "Calendar iCal URL",
+          "required": true,
+          "placeholder": "https://calendar.google.com/..."
+        },
+        {
+          "name": "latitude",
+          "type": "float",
+          "label": "Weather Latitude (optional, defaults to HA GPS)",
+          "required": false,
+          "placeholder": "e.g. 37.7749"
+        },
+        {
+          "name": "longitude",
+          "type": "float",
+          "label": "Weather Longitude (optional, defaults to HA GPS)",
+          "required": false,
+          "placeholder": "e.g. -122.4194"
+        }
+      ]
+    },
+    {
+      "id": "quote_of_the_day",
+      "name": "Quote of the Day",
+      "description": "Displays an inspiring quote daily, fetched from the web or a local custom list, formatted on a premium decorative layout.",
+      "category": "widgets",
+      "type": "widget",
+      "script_url": "addons/quote_of_the_day/quote_renderer.py",
+      "cover": "addons/quote_of_the_day/preview_cover.jpg",
+      "config_schema": [
+        {
+          "name": "quote_source",
+          "type": "string",
+          "label": "Quote Source (api or custom)",
+          "required": true,
+          "placeholder": "api"
+        },
+        {
+          "name": "quote_api_url",
+          "type": "string",
+          "label": "Quote API URL (optional)",
+          "required": false,
+          "placeholder": "https://zenquotes.io/api/today"
+        }
+      ]
     }
   ]
 }
