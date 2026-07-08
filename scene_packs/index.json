@@ -2223,12 +2223,12 @@
     {
       "id": "friends",
       "name": "Friends",
-      "description": "A personal-use Friends TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use Friends TV show pack with cast metadata, a promotional cast image, and individual cast headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and unverified web images; see per-image notes.",
       "cover": "scene_packs/friends/01_cast.jpg",
       "images": [
         {
@@ -2249,18 +2249,96 @@
             "Matthew Perry",
             "David Schwimmer"
           ]
+        },
+        {
+          "filename": "rachel.jpg",
+          "path": "scene_packs/friends/rachel.jpg",
+          "title": "Jennifer Aniston (Rachel Green)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Jennifer Aniston"
+          ]
+        },
+        {
+          "filename": "monica.png",
+          "path": "scene_packs/friends/monica.png",
+          "title": "Courteney Cox (Monica Geller)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Courteney Cox"
+          ]
+        },
+        {
+          "filename": "phoebe.png",
+          "path": "scene_packs/friends/phoebe.png",
+          "title": "Lisa Kudrow (Phoebe Buffay)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Lisa Kudrow"
+          ]
+        },
+        {
+          "filename": "joey.png",
+          "path": "scene_packs/friends/joey.png",
+          "title": "Matt LeBlanc (Joey Tribbiani)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Matt LeBlanc"
+          ]
+        },
+        {
+          "filename": "chandler.png",
+          "path": "scene_packs/friends/chandler.png",
+          "title": "Matthew Perry (Chandler Bing)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Matthew Perry"
+          ]
+        },
+        {
+          "filename": "ross.jpg",
+          "path": "scene_packs/friends/ross.jpg",
+          "title": "David Schwimmer (Ross Geller)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "David Schwimmer"
+          ]
         }
       ]
     },
     {
       "id": "the_big_bang_theory",
       "name": "The Big Bang Theory",
-      "description": "A personal-use The Big Bang Theory TV show pack with cast metadata and a promotional image.",
+      "description": "A personal-use The Big Bang Theory TV show pack with cast metadata, a promotional image, and individual cast headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and unverified web images; see per-image notes.",
       "cover": "scene_packs/the_big_bang_theory/01_poster.jpg",
       "images": [
         {
@@ -2283,18 +2361,109 @@
             "Melissa Rauch",
             "Kevin Sussman"
           ]
+        },
+        {
+          "filename": "leonard.jpg",
+          "path": "scene_packs/the_big_bang_theory/leonard.jpg",
+          "title": "Johnny Galecki (Leonard Hofstadter)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Johnny Galecki"
+          ]
+        },
+        {
+          "filename": "sheldon.jpg",
+          "path": "scene_packs/the_big_bang_theory/sheldon.jpg",
+          "title": "Jim Parsons (Sheldon Cooper)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Jim Parsons"
+          ]
+        },
+        {
+          "filename": "penny.webp",
+          "path": "scene_packs/the_big_bang_theory/penny.webp",
+          "title": "Kaley Cuoco (Penny)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Kaley Cuoco"
+          ]
+        },
+        {
+          "filename": "howard.jpg",
+          "path": "scene_packs/the_big_bang_theory/howard.jpg",
+          "title": "Simon Helberg (Howard Wolowitz)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Simon Helberg"
+          ]
+        },
+        {
+          "filename": "raj.jpg",
+          "path": "scene_packs/the_big_bang_theory/raj.jpg",
+          "title": "Kunal Nayyar (Raj Koothrappali)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Kunal Nayyar"
+          ]
+        },
+        {
+          "filename": "amy.jpg",
+          "path": "scene_packs/the_big_bang_theory/amy.jpg",
+          "title": "Mayim Bialik (Amy Farrah Fowler)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Mayim Bialik"
+          ]
+        },
+        {
+          "filename": "bernadette.jpg",
+          "path": "scene_packs/the_big_bang_theory/bernadette.jpg",
+          "title": "Melissa Rauch (Bernadette Rostenkowski)",
+          "source": "Unverified web image",
+          "commons_url": null,
+          "license": "Unknown / unverified",
+          "rights_notes": "Source and license could not be verified; kept for personal-use display only. Replace with a Wikimedia Commons-sourced, license-verified photo before any public/commercial redistribution.",
+          "image_type": "Actor headshot (unverified source)",
+          "cast": [
+            "Melissa Rauch"
+          ]
         }
       ]
     },
     {
       "id": "how_i_met_your_mother",
       "name": "How I Met Your Mother",
-      "description": "A personal-use How I Met Your Mother TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use How I Met Your Mother TV show pack with cast metadata, a promotional cast image, and individual cast headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and Wikimedia Commons CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/how_i_met_your_mother/01_cast.jpg",
       "images": [
         {
@@ -2315,18 +2484,102 @@
             "Alyson Hannigan",
             "Cristin Milioti"
           ]
+        },
+        {
+          "filename": "02_josh_radnor.jpg",
+          "path": "scene_packs/how_i_met_your_mother/02_josh_radnor.jpg",
+          "title": "Josh Radnor (Ted Mosby)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Josh_Radnor_(9448570254).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Josh_Radnor_(9448570254).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "vagueonthehow from Tadcaster, York, England",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Josh Radnor"
+          ]
+        },
+        {
+          "filename": "03_jason_segel.jpg",
+          "path": "scene_packs/how_i_met_your_mother/03_jason_segel.jpg",
+          "title": "Jason Segel (Marshall Eriksen)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jason_Segel_2011.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jason_Segel_2011.jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Eva Rinaldi",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jason Segel"
+          ]
+        },
+        {
+          "filename": "04_alyson_hannigan.jpg",
+          "path": "scene_packs/how_i_met_your_mother/04_alyson_hannigan.jpg",
+          "title": "Alyson Hannigan (Lily Aldrin)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Alyson_Hannigan_(9445491655)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Alyson_Hannigan_(9445491655)_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "vagueonthehow from Tadcaster, York, England",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Alyson Hannigan"
+          ]
+        },
+        {
+          "filename": "05_cobie_smulders.jpg",
+          "path": "scene_packs/how_i_met_your_mother/05_cobie_smulders.jpg",
+          "title": "Cobie Smulders (Robin Scherbatsky)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cobie_Smulders_(9448214924)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cobie_Smulders_(9448214924)_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "vagueonthehow",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Cobie Smulders"
+          ]
+        },
+        {
+          "filename": "06_neil_patrick_harris.jpg",
+          "path": "scene_packs/how_i_met_your_mother/06_neil_patrick_harris.jpg",
+          "title": "Neil Patrick Harris (Barney Stinson)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Neil_Patrick_Harris_(9448294366)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Neil_Patrick_Harris_(9448294366)_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "vagueonthehow from Tadcaster, York, England",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Neil Patrick Harris"
+          ]
+        },
+        {
+          "filename": "07_cristin_milioti.jpg",
+          "path": "scene_packs/how_i_met_your_mother/07_cristin_milioti.jpg",
+          "title": "Cristin Milioti (Tracy McConnell / \"The Mother\")",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cristin_Milioti_July_13,_2014_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Cristin_Milioti_July_13,_2014_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Mingle Media TV",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Cristin Milioti"
+          ]
         }
       ]
     },
     {
       "id": "doctor_who",
       "name": "Doctor Who",
-      "description": "A personal-use Doctor Who TV show pack with cast metadata and a title-card image.",
+      "description": "A personal-use Doctor Who TV show pack with cast metadata, a title-card image, and individual headshots of each actor who has played the Doctor.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free title-card image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free title-card image and Wikimedia Commons public-domain/CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/doctor_who/01_title_card.jpg",
       "images": [
         {
@@ -2355,18 +2608,214 @@
             "Jodie Whittaker",
             "Ncuti Gatwa"
           ]
+        },
+        {
+          "filename": "02_william_hartnell.jpg",
+          "path": "scene_packs/doctor_who/02_william_hartnell.jpg",
+          "title": "William Hartnell (First Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:William_Hartnell,_1946.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:William_Hartnell,_1946.jpg",
+          "license": "Public domain",
+          "attribution": "Unknown photographer",
+          "image_type": "Actor headshot",
+          "cast": [
+            "William Hartnell"
+          ]
+        },
+        {
+          "filename": "03_patrick_troughton.jpg",
+          "path": "scene_packs/doctor_who/03_patrick_troughton.jpg",
+          "title": "Patrick Troughton (Second Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Patrick_Troughton_in_1984,_2.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Patrick_Troughton_in_1984,_2.jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Mark Garland",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Patrick Troughton"
+          ]
+        },
+        {
+          "filename": "04_jon_pertwee.jpg",
+          "path": "scene_packs/doctor_who/04_jon_pertwee.jpg",
+          "title": "Jon Pertwee (Third Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Dr_Who,_John_Pertwee_(10842597324)_(cropped3).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Dr_Who,_John_Pertwee_(10842597324)_(cropped3).jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Archives New Zealand from New Zealand",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jon Pertwee"
+          ]
+        },
+        {
+          "filename": "05_tom_baker.jpg",
+          "path": "scene_packs/doctor_who/05_tom_baker.jpg",
+          "title": "Tom Baker (Fourth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Tom_Baker.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Tom_Baker.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Legend Photography",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Tom Baker"
+          ]
+        },
+        {
+          "filename": "06_peter_davison.jpg",
+          "path": "scene_packs/doctor_who/06_peter_davison.jpg",
+          "title": "Peter Davison (Fifth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Peter_Davison_(24257077900)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Davison_(24257077900)_(cropped).jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "steve cranston",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Peter Davison"
+          ]
+        },
+        {
+          "filename": "07_colin_baker.jpg",
+          "path": "scene_packs/doctor_who/07_colin_baker.jpg",
+          "title": "Colin Baker (Sixth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Colin_Baker_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Colin_Baker_(cropped).jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Gage Skidmore from Peoria, AZ, United States of America",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Colin Baker"
+          ]
+        },
+        {
+          "filename": "08_sylvester_mccoy.jpg",
+          "path": "scene_packs/doctor_who/08_sylvester_mccoy.jpg",
+          "title": "Sylvester McCoy (Seventh Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Sylvester_McCoy_in_2018.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sylvester_McCoy_in_2018.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Simon King",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Sylvester McCoy"
+          ]
+        },
+        {
+          "filename": "09_paul_mcgann.jpg",
+          "path": "scene_packs/doctor_who/09_paul_mcgann.jpg",
+          "title": "Paul McGann (Eighth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Paul_McGann.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Paul_McGann.JPG",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Tim Drury from Cambridge, Cambridgeshire",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Paul McGann"
+          ]
+        },
+        {
+          "filename": "10_christopher_eccleston.jpg",
+          "path": "scene_packs/doctor_who/10_christopher_eccleston.jpg",
+          "title": "Christopher Eccleston (Ninth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Christopher_Eccleston_by_Gage_Skidmore.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Christopher_Eccleston_by_Gage_Skidmore.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Christopher Eccleston"
+          ]
+        },
+        {
+          "filename": "11_david_tennant.jpg",
+          "path": "scene_packs/doctor_who/11_david_tennant.jpg",
+          "title": "David Tennant (Tenth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:David_Tennant_-_Los_Angeles_Comic_Con_2025.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Kevin Paul",
+          "image_type": "Actor headshot",
+          "cast": [
+            "David Tennant"
+          ]
+        },
+        {
+          "filename": "12_matt_smith.jpg",
+          "path": "scene_packs/doctor_who/12_matt_smith.jpg",
+          "title": "Matt Smith (Eleventh Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Matt_Smith_at_Los_Angeles_Comic_Con_2023-02.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Matt_Smith_at_Los_Angeles_Comic_Con_2023-02.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Kevin Paul",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Matt Smith"
+          ]
+        },
+        {
+          "filename": "13_peter_capaldi.jpg",
+          "path": "scene_packs/doctor_who/13_peter_capaldi.jpg",
+          "title": "Peter Capaldi (Twelfth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Peter_Capaldi_by_Gage_Skidmore.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Capaldi_by_Gage_Skidmore.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Peter Capaldi"
+          ]
+        },
+        {
+          "filename": "14_jodie_whittaker.jpg",
+          "path": "scene_packs/doctor_who/14_jodie_whittaker.jpg",
+          "title": "Jodie Whittaker (Thirteenth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jodie_Whittaker_(52549229052)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jodie_Whittaker_(52549229052)_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jodie Whittaker"
+          ]
+        },
+        {
+          "filename": "15_ncuti_gatwa.jpg",
+          "path": "scene_packs/doctor_who/15_ncuti_gatwa.jpg",
+          "title": "Ncuti Gatwa (Fifteenth Doctor)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Ncuti_Gatwa-65778.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ncuti_Gatwa-65778.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Harald Krichel",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Ncuti Gatwa"
+          ]
         }
       ]
     },
     {
       "id": "star_wars",
       "name": "Star Wars",
-      "description": "A personal-use Star Wars pack with cast metadata and a poster image.",
+      "description": "A personal-use Star Wars pack with cast metadata, a poster image, and individual actor headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free film poster image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free film poster image and Wikimedia Commons public-domain/CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/star_wars/01_poster.jpg",
       "images": [
         {
@@ -2390,18 +2839,130 @@
             "David Prowse",
             "James Earl Jones"
           ]
+        },
+        {
+          "filename": "02_mark_hamill.jpg",
+          "path": "scene_packs/star_wars/02_mark_hamill.jpg",
+          "title": "Mark Hamill (Luke Skywalker)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mark_Hamill_by_Gage_Skidmore_4.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Mark_Hamill_by_Gage_Skidmore_4.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Mark Hamill"
+          ]
+        },
+        {
+          "filename": "03_harrison_ford.jpg",
+          "path": "scene_packs/star_wars/03_harrison_ford.jpg",
+          "title": "Harrison Ford (Han Solo)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Harrison_Ford_by_Gage_Skidmore_4.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Harrison_Ford_by_Gage_Skidmore_4.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Harrison Ford"
+          ]
+        },
+        {
+          "filename": "04_carrie_fisher.jpg",
+          "path": "scene_packs/star_wars/04_carrie_fisher.jpg",
+          "title": "Carrie Fisher (Princess Leia)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Carrie_Fisher_2013-a_straightened.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Carrie_Fisher_2013-a_straightened.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Riccardo Ghilardi",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Carrie Fisher"
+          ]
+        },
+        {
+          "filename": "05_alec_guinness.jpg",
+          "path": "scene_packs/star_wars/05_alec_guinness.jpg",
+          "title": "Alec Guinness (Obi-Wan Kenobi)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Sir_Alec_Guinness_Allan_Warren.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sir_Alec_Guinness_Allan_Warren.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Allan Warren",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Alec Guinness"
+          ]
+        },
+        {
+          "filename": "06_anthony_daniels.jpg",
+          "path": "scene_packs/star_wars/06_anthony_daniels.jpg",
+          "title": "Anthony Daniels (C-3PO)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Anthony_Daniels_2011.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Anthony_Daniels_2011.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Major Nelson",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Anthony Daniels"
+          ]
+        },
+        {
+          "filename": "08_peter_mayhew.jpg",
+          "path": "scene_packs/star_wars/08_peter_mayhew.jpg",
+          "title": "Peter Mayhew (Chewbacca)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Peter_Mayhew_2015.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Peter_Mayhew_2015.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Florida Supercon",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Peter Mayhew"
+          ]
+        },
+        {
+          "filename": "09_david_prowse.jpg",
+          "path": "scene_packs/star_wars/09_david_prowse.jpg",
+          "title": "David Prowse (Darth Vader, physical performer)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:David_Prowse,_2006.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:David_Prowse,_2006.jpg",
+          "license": "CC BY 2.0",
+          "attribution": ".Martin.",
+          "image_type": "Actor headshot",
+          "cast": [
+            "David Prowse"
+          ]
+        },
+        {
+          "filename": "10_james_earl_jones.jpg",
+          "path": "scene_packs/star_wars/10_james_earl_jones.jpg",
+          "title": "James Earl Jones (Darth Vader, voice)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jones,_James_Earl_2.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jones,_James_Earl_2.jpg",
+          "license": "Public domain",
+          "attribution": "Carl Van Vechten",
+          "image_type": "Actor headshot",
+          "cast": [
+            "James Earl Jones"
+          ]
         }
       ]
     },
     {
       "id": "star_trek",
       "name": "Star Trek",
-      "description": "A personal-use Star Trek TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use Star Trek TV show pack with cast metadata, a promotional cast image, and individual actor headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and Wikimedia Commons public-domain/CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/star_trek/01_cast.jpg",
       "images": [
         {
@@ -2425,18 +2986,144 @@
             "Majel Barrett",
             "Grace Lee Whitney"
           ]
+        },
+        {
+          "filename": "02_william_shatner.jpg",
+          "path": "scene_packs/star_trek/02_william_shatner.jpg",
+          "title": "William Shatner (Captain Kirk)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Star_Trek_William_Shatner.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Star_Trek_William_Shatner.JPG",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "William Shatner"
+          ]
+        },
+        {
+          "filename": "03_leonard_nimoy.jpg",
+          "path": "scene_packs/star_trek/03_leonard_nimoy.jpg",
+          "title": "Leonard Nimoy (Mr. Spock)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonard_Nimoy_mid_1960s.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Leonard_Nimoy_mid_1960s.JPG",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Leonard Nimoy"
+          ]
+        },
+        {
+          "filename": "04_deforest_kelley.jpg",
+          "path": "scene_packs/star_trek/04_deforest_kelley.jpg",
+          "title": "DeForest Kelley (Dr. McCoy)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:DeForest_Kelley,_Dr._McCoy,_Star_Trek.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:DeForest_Kelley,_Dr._McCoy,_Star_Trek.jpg",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "DeForest Kelley"
+          ]
+        },
+        {
+          "filename": "05_james_doohan.jpg",
+          "path": "scene_packs/star_trek/05_james_doohan.jpg",
+          "title": "James Doohan (Scotty)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Doohan_Scotty_Star_Trek.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:James_Doohan_Scotty_Star_Trek.JPG",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "James Doohan"
+          ]
+        },
+        {
+          "filename": "06_nichelle_nichols.jpg",
+          "path": "scene_packs/star_trek/06_nichelle_nichols.jpg",
+          "title": "Nichelle Nichols (Uhura)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Nichelle_Nichols,_NASA_Recruiter_-_GPN-2004-00017.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Nichelle_Nichols,_NASA_Recruiter_-_GPN-2004-00017.jpg",
+          "license": "Public domain",
+          "attribution": "NASA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Nichelle Nichols"
+          ]
+        },
+        {
+          "filename": "07_george_takei.jpg",
+          "path": "scene_packs/star_trek/07_george_takei.jpg",
+          "title": "George Takei (Sulu)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:George_Takei_Sulu_Star_Trek.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:George_Takei_Sulu_Star_Trek.JPG",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "George Takei"
+          ]
+        },
+        {
+          "filename": "08_walter_koenig.jpg",
+          "path": "scene_packs/star_trek/08_walter_koenig.jpg",
+          "title": "Walter Koenig (Chekov)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Walter_Koenig_Star_Trek.JPG",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Walter_Koenig_Star_Trek.JPG",
+          "license": "Public domain",
+          "attribution": "NBC Television",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Walter Koenig"
+          ]
+        },
+        {
+          "filename": "09_majel_barrett.jpg",
+          "path": "scene_packs/star_trek/09_majel_barrett.jpg",
+          "title": "Majel Barrett (Nurse Chapel)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Majel_Roddenberry_Star_Trek_Convention_Las_Vegas_20080814_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Majel_Roddenberry_Star_Trek_Convention_Las_Vegas_20080814_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Beth Madison",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Majel Barrett"
+          ]
+        },
+        {
+          "filename": "10_grace_lee_whitney.jpg",
+          "path": "scene_packs/star_trek/10_grace_lee_whitney.jpg",
+          "title": "Grace Lee Whitney (Yeoman Rand)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Grace_Lee_Whitney_1976_(01).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Grace_Lee_Whitney_1976_(01).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Will Hart",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Grace Lee Whitney"
+          ]
         }
       ]
     },
     {
       "id": "star_trek_the_next_generation",
       "name": "Star Trek: The Next Generation",
-      "description": "A personal-use Star Trek: The Next Generation TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use Star Trek: The Next Generation TV show pack with cast metadata, a promotional cast image, and individual actor headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and Wikimedia Commons CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/star_trek_the_next_generation/01_cast.jpg",
       "images": [
         {
@@ -2460,18 +3147,144 @@
             "Brent Spiner",
             "Wil Wheaton"
           ]
+        },
+        {
+          "filename": "02_patrick_stewart.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/02_patrick_stewart.jpg",
+          "title": "Patrick Stewart (Captain Picard)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Patrick_Stewart_by_Gage_Skidmore_2.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Patrick Stewart"
+          ]
+        },
+        {
+          "filename": "03_jonathan_frakes.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/03_jonathan_frakes.jpg",
+          "title": "Jonathan Frakes (Commander Riker)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jonathan_Frakes_at_Galaxy_Con_Columbus.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jonathan_Frakes_at_Galaxy_Con_Columbus.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "John Manard",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jonathan Frakes"
+          ]
+        },
+        {
+          "filename": "04_levar_burton.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/04_levar_burton.jpg",
+          "title": "LeVar Burton (Geordi La Forge)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:LeVar_Burton_Photo_Op_GalaxyCon_Raleigh_2023.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:LeVar_Burton_Photo_Op_GalaxyCon_Raleigh_2023.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "LeVar Burton"
+          ]
+        },
+        {
+          "filename": "05_denise_crosby.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/05_denise_crosby.jpg",
+          "title": "Denise Crosby (Tasha Yar)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Denise_Crosby_(53373315035).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Denise_Crosby_(53373315035).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Denise Crosby"
+          ]
+        },
+        {
+          "filename": "06_michael_dorn.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/06_michael_dorn.jpg",
+          "title": "Michael Dorn (Worf)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michael_Dorn_Photo_Op_GalaxyCon_San_Jose_2024_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Michael_Dorn_Photo_Op_GalaxyCon_San_Jose_2024_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Michael Dorn"
+          ]
+        },
+        {
+          "filename": "07_gates_mcfadden.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/07_gates_mcfadden.jpg",
+          "title": "Gates McFadden (Dr. Crusher)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Gates_McFadden_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Gates_McFadden_Photo_Op_GalaxyCon_Raleigh_2025.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Super Festivals",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Gates McFadden"
+          ]
+        },
+        {
+          "filename": "08_marina_sirtis.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/08_marina_sirtis.jpg",
+          "title": "Marina Sirtis (Counselor Troi)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Marina_Sirtis_Photo_Op_GalaxyCon_Raleigh_2023.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Marina_Sirtis_Photo_Op_GalaxyCon_Raleigh_2023.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Marina Sirtis"
+          ]
+        },
+        {
+          "filename": "09_brent_spiner.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/09_brent_spiner.jpg",
+          "title": "Brent Spiner (Data)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Brent_Spiner_Photo_Op_GalaxyCon_Columbus_2025.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Brent_Spiner_Photo_Op_GalaxyCon_Columbus_2025.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Super Festivals from Ft. Lauderdale, USA",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Brent Spiner"
+          ]
+        },
+        {
+          "filename": "10_wil_wheaton.jpg",
+          "path": "scene_packs/star_trek_the_next_generation/10_wil_wheaton.jpg",
+          "title": "Wil Wheaton (Wesley Crusher)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Wil_Wheaton_Photo_Op_GalaxyCon_Raleigh_2019.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Wil_Wheaton_Photo_Op_GalaxyCon_Raleigh_2019.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Super Festivals",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Wil Wheaton"
+          ]
         }
       ]
     },
     {
       "id": "stargate_sg1",
       "name": "Stargate SG-1",
-      "description": "A personal-use Stargate SG-1 TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use Stargate SG-1 TV show pack with cast metadata, a promotional cast image, and individual actor headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and Wikimedia Commons public-domain/CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/stargate_sg1/01_cast.jpg",
       "images": [
         {
@@ -2496,18 +3309,158 @@
             "Claudia Black",
             "Beau Bridges"
           ]
+        },
+        {
+          "filename": "02_richard_dean_anderson.jpg",
+          "path": "scene_packs/stargate_sg1/02_richard_dean_anderson.jpg",
+          "title": "Richard Dean Anderson (Jack O'Neill)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Richard_Dean_Anderson_(2012).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Richard_Dean_Anderson_(2012).jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Bagl8",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Richard Dean Anderson"
+          ]
+        },
+        {
+          "filename": "03_michael_shanks.jpg",
+          "path": "scene_packs/stargate_sg1/03_michael_shanks.jpg",
+          "title": "Michael Shanks (Daniel Jackson)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Michael_Shanks_Creation_Con_2007.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Michael_Shanks_Creation_Con_2007.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Suzan Marie",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Michael Shanks"
+          ]
+        },
+        {
+          "filename": "04_amanda_tapping.jpg",
+          "path": "scene_packs/stargate_sg1/04_amanda_tapping.jpg",
+          "title": "Amanda Tapping (Samantha Carter)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Amanda_Tapping_by_Gage_Skidmore.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Amanda_Tapping_by_Gage_Skidmore.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Amanda Tapping"
+          ]
+        },
+        {
+          "filename": "05_christopher_judge.jpg",
+          "path": "scene_packs/stargate_sg1/05_christopher_judge.jpg",
+          "title": "Christopher Judge (Teal'c)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Christopher_Judge_by_Gage_Skidmore.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Christopher_Judge_by_Gage_Skidmore.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Christopher Judge"
+          ]
+        },
+        {
+          "filename": "06_don_s_davis.jpg",
+          "path": "scene_packs/stargate_sg1/06_don_s_davis.jpg",
+          "title": "Don S. Davis (General Hammond)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Don_S._Davis_DF-SD-03-14217.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Don_S._Davis_DF-SD-03-14217.jpg",
+          "license": "Public domain",
+          "attribution": "TSGT Michael R. Nixon, USAF",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Don S. Davis"
+          ]
+        },
+        {
+          "filename": "07_teryl_rothery.jpg",
+          "path": "scene_packs/stargate_sg1/07_teryl_rothery.jpg",
+          "title": "Teryl Rothery (Dr. Fraiser)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Teryl-rothery-2006.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Teryl-rothery-2006.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "CelebHeights.com",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Teryl Rothery"
+          ]
+        },
+        {
+          "filename": "08_corin_nemec.jpg",
+          "path": "scene_packs/stargate_sg1/08_corin_nemec.jpg",
+          "title": "Corin Nemec (Jonas Quinn)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Corin_Nemec_(15045413510).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Corin_Nemec_(15045413510).jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Eva Rinaldi",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Corin Nemec"
+          ]
+        },
+        {
+          "filename": "09_ben_browder.jpg",
+          "path": "scene_packs/stargate_sg1/09_ben_browder.jpg",
+          "title": "Ben Browder (Cameron Mitchell)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Ben_Browder_Headshot.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ben_Browder_Headshot.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Timebandit5565",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Ben Browder"
+          ]
+        },
+        {
+          "filename": "10_claudia_black.jpg",
+          "path": "scene_packs/stargate_sg1/10_claudia_black.jpg",
+          "title": "Claudia Black (Vala Mal Doran)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claudia_Black_San_Diego_ComicCon_2009_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Claudia_Black_San_Diego_ComicCon_2009_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Dave Fayram from Pacifica, United States",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Claudia Black"
+          ]
+        },
+        {
+          "filename": "11_beau_bridges.jpg",
+          "path": "scene_packs/stargate_sg1/11_beau_bridges.jpg",
+          "title": "Beau Bridges (General Landry)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Beau_Bridges_2011_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Beau_Bridges_2011_(cropped).jpg",
+          "license": "Public domain",
+          "attribution": "U.S. Navy photo by Mass Communication Specialist 3rd Class Mikelle'D. Smith",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Beau Bridges"
+          ]
         }
       ]
     },
     {
       "id": "stargate_atlantis",
       "name": "Stargate Atlantis",
-      "description": "A personal-use Stargate Atlantis TV show pack with cast metadata and a promotional cast image.",
+      "description": "A personal-use Stargate Atlantis TV show pack with cast metadata, a promotional cast image, and individual actor headshots.",
       "category": "TV Shows",
       "categories": [
         "TV Shows"
       ],
-      "license": "Low-resolution Wikipedia fair-use/non-free promotional image; see per-image notes.",
+      "license": "Mix of Wikipedia fair-use/non-free promotional image and Wikimedia Commons CC-licensed photos; see per-image notes.",
       "cover": "scene_packs/stargate_atlantis/01_cast.jpg",
       "images": [
         {
@@ -2530,6 +3483,146 @@
             "Paul McGillion",
             "Jewel Staite",
             "Robert Picardo",
+            "Amanda Tapping"
+          ]
+        },
+        {
+          "filename": "02_joe_flanigan.jpg",
+          "path": "scene_packs/stargate_atlantis/02_joe_flanigan.jpg",
+          "title": "Joe Flanigan (John Sheppard)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Joe_Flanigan_Comic_Con_2008.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Joe_Flanigan_Comic_Con_2008.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Jean",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Joe Flanigan"
+          ]
+        },
+        {
+          "filename": "03_torri_higginson.jpg",
+          "path": "scene_packs/stargate_atlantis/03_torri_higginson.jpg",
+          "title": "Torri Higginson (Elizabeth Weir)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Torri_Higginson_2014_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Torri_Higginson_2014_(cropped).jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Patrick Subotkiewiez",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Torri Higginson"
+          ]
+        },
+        {
+          "filename": "04_rachel_luttrell.jpg",
+          "path": "scene_packs/stargate_atlantis/04_rachel_luttrell.jpg",
+          "title": "Rachel Luttrell (Teyla Emmagan)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rsz_rachel4.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Rsz_rachel4.jpg",
+          "license": "CC BY-SA 4.0",
+          "attribution": "Serenafaye",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Rachel Luttrell"
+          ]
+        },
+        {
+          "filename": "05_rainbow_sun_francks.jpg",
+          "path": "scene_packs/stargate_atlantis/05_rainbow_sun_francks.jpg",
+          "title": "Rainbow Sun Francks (Aiden Ford)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Rainbow_sun_francks.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Rainbow_sun_francks.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Lee Snowden",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Rainbow Sun Francks"
+          ]
+        },
+        {
+          "filename": "06_david_hewlett.jpg",
+          "path": "scene_packs/stargate_atlantis/06_david_hewlett.jpg",
+          "title": "David Hewlett (Rodney McKay)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:David-hewlett-vancouver-300.png",
+          "source_url": "https://commons.wikimedia.org/wiki/File:David-hewlett-vancouver-300.png",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Andwhatsnext, aka Nancy J Price",
+          "image_type": "Actor headshot",
+          "cast": [
+            "David Hewlett"
+          ]
+        },
+        {
+          "filename": "07_jason_momoa.jpg",
+          "path": "scene_packs/stargate_atlantis/07_jason_momoa.jpg",
+          "title": "Jason Momoa (Ronon Dex)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jason_Momoa_(42867509995)_(cropped).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jason_Momoa_(42867509995)_(cropped).jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "Gage Skidmore from Peoria, AZ, United States of America",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jason Momoa"
+          ]
+        },
+        {
+          "filename": "08_paul_mcgillion.jpg",
+          "path": "scene_packs/stargate_atlantis/08_paul_mcgillion.jpg",
+          "title": "Paul McGillion (Carson Beckett)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Paul_McGillion_by_Gage_Skidmore_2.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Paul_McGillion_by_Gage_Skidmore_2.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Paul McGillion"
+          ]
+        },
+        {
+          "filename": "09_jewel_staite.jpg",
+          "path": "scene_packs/stargate_atlantis/09_jewel_staite.jpg",
+          "title": "Jewel Staite (Jennifer Keller)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jewel_Staite_2015.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Jewel_Staite_2015.jpg",
+          "license": "CC BY-SA 2.0",
+          "attribution": "5of7",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Jewel Staite"
+          ]
+        },
+        {
+          "filename": "10_robert_picardo.jpg",
+          "path": "scene_packs/stargate_atlantis/10_robert_picardo.jpg",
+          "title": "Robert Picardo (Richard Woolsey)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Robert_Picardo_at_53rd_Saturn_Awards_2026-01.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Robert_Picardo_at_53rd_Saturn_Awards_2026-01.jpg",
+          "license": "CC BY 4.0",
+          "attribution": "Kevin Paul",
+          "image_type": "Actor headshot",
+          "cast": [
+            "Robert Picardo"
+          ]
+        },
+        {
+          "filename": "11_amanda_tapping.jpg",
+          "path": "scene_packs/stargate_atlantis/11_amanda_tapping.jpg",
+          "title": "Amanda Tapping (Samantha Carter, crossover from SG-1)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Amanda_Tapping_by_Gage_Skidmore.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Amanda_Tapping_by_Gage_Skidmore.jpg",
+          "license": "CC BY-SA 3.0",
+          "attribution": "Gage Skidmore",
+          "image_type": "Actor headshot",
+          "cast": [
             "Amanda Tapping"
           ]
         }
