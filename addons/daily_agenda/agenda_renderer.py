@@ -433,6 +433,99 @@ def draw_weather_icon(draw: ImageDraw.ImageDraw, code: int, x: int, y: int, size
         draw_weather_icon(draw, 1, x + 10, y + 10, size - 15)
 
 # ---------------------------------------------------------------------------
+# Event Timeline Layout Helpers
+# ---------------------------------------------------------------------------
+def wrap_text(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, max_width: int) -> list[str]:
+    """Wrap words to fit within a maximum width boundary."""
+    words = text.split()
+    lines = []
+    current_line = []
+
+    for word in words:
+        test_line = " ".join(current_line + [word])
+        bbox = draw.textbbox((0, 0), test_line, font=font)
+        w = bbox[2] - bbox[0]
+
+        if w <= max_width:
+            current_line.append(word)
+        else:
+            if current_line:
+                lines.append(" ".join(current_line))
+                current_line = [word]
+            else:
+                lines.append(word)
+                current_line = []
+
+    if current_line:
+        lines.append(" ".join(current_line))
+
+    return lines
+
+def wrap_text_max_lines(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, max_width: int, max_lines: int) -> list[str]:
+    """Word-wrap, then cap to max_lines -- marking the last line with an
+    ellipsis if anything had to be dropped, instead of chopping mid-word."""
+    lines = wrap_text(text, draw, font, max_width)
+    if len(lines) <= max_lines:
+        return lines
+    truncated = lines[:max_lines]
+    truncated[-1] = truncated[-1].rstrip() + "…"
+    return truncated
+
+def layout_events(
+    draw: ImageDraw.ImageDraw,
+    events: list[dict],
+    font_time: ImageFont.ImageFont,
+    font_title: ImageFont.ImageFont,
+    font_sub: ImageFont.ImageFont,
+    wrap_width: int,
+    time_line_h: int,
+    title_line_h: int,
+    sub_line_h: int,
+    row_gap: int,
+    max_title_lines: int = 2,
+) -> list[dict]:
+    """Word-wrap each event's title/location and compute the real vertical
+    height its row needs, instead of every event claiming the same fixed
+    slot regardless of how much text it actually has."""
+    laid_out = []
+    for ev in events:
+        is_all_day = ev.get("all_day", False)
+        if is_all_day:
+            time_lbl = "ALL DAY"
+        else:
+            time_lbl = f"{ev['start'].strftime('%-I:%M %p')} - {ev['end'].strftime('%-I:%M %p')}"
+
+        title_lines = wrap_text_max_lines(ev["summary"], draw, font_title, wrap_width, max_title_lines)
+
+        sub_raw = (ev.get("location") or ev.get("description", "")).split("\n")[0].strip()
+        sub_lines = wrap_text_max_lines(sub_raw, draw, font_sub, wrap_width, 1) if sub_raw else []
+
+        row_height = time_line_h + len(title_lines) * title_line_h + len(sub_lines) * sub_line_h + row_gap
+        laid_out.append({
+            "time_lbl": time_lbl,
+            "is_all_day": is_all_day,
+            "title_lines": title_lines,
+            "sub_lines": sub_lines,
+            "row_height": row_height,
+        })
+    return laid_out
+
+def fit_events_to_height(laid_out: list[dict], available_height: int) -> tuple[list[dict], int]:
+    """Accumulate laid-out event rows until the available vertical space
+    runs out, so the timeline shows as many events as actually fit today
+    instead of a fixed per-orientation cap. Always shows at least one event
+    (even if it overflows slightly) rather than rendering an empty timeline."""
+    total = 0
+    visible = []
+    for item in laid_out:
+        if visible and total + item["row_height"] > available_height:
+            break
+        total += item["row_height"]
+        visible.append(item)
+    hidden = len(laid_out) - len(visible)
+    return visible, hidden
+
+# ---------------------------------------------------------------------------
 # Pillow Rendering Engine
 # ---------------------------------------------------------------------------
 def render_portrait(width: int, height: int, events: list[dict], weather: dict, frame_stats: dict, target_tz) -> Image.Image:
@@ -477,55 +570,57 @@ def render_portrait(width: int, height: int, events: list[dict], weather: dict, 
     # 3. Agenda Title
     draw.text((80, 330), "TODAY'S SCHEDULE", fill=COLOR_RED, font=font_bold_lg)
     
-    # 4. Events Timeline
+    # 4. Events Timeline -- sized to how many events there actually are
+    # today, not a fixed per-orientation cap. Each event's row height comes
+    # from its own wrapped title/location instead of every event claiming
+    # the same fixed slot, so a light day spaces out and a busy day still
+    # fits without hard-truncating text mid-word.
     start_y = 450
     timeline_x = 120
-    
+    bottom_boundary = height - 140  # leaves room for the footer line + status text
+    time_line_h, title_line_h, sub_line_h, row_gap = 34, 46, 32, 36
+
     if not events:
-        draw.text((width // 2, 750), "No events scheduled for today.", 
+        draw.text((width // 2, 750), "No events scheduled for today.",
                   fill=COLOR_BLUE, font=font_bold_md, anchor="ma")
-        draw.text((width // 2, 810), "Enjoy your free day!", 
+        draw.text((width // 2, 810), "Enjoy your free day!",
                   fill=COLOR_BLACK, font=font_regular_md, anchor="ma")
     else:
-        # Limit to 7 events to fit layout heights safely
-        display_events = events[:7]
-        
-        # Calculate line length
-        end_y = start_y + (len(display_events) - 1) * 150 + 20
-        draw.line((timeline_x, start_y + 10, timeline_x, end_y), fill=COLOR_BLACK, width=3)
-        
-        for i, ev in enumerate(display_events):
-            curr_y = start_y + i * 150
-            
-            # Determine dot color
-            is_all_day = ev.get("all_day", False)
-            dot_color = COLOR_GREEN if is_all_day else COLOR_BLUE
-            
-            # Dot on the line
-            draw.ellipse((timeline_x - 10, curr_y + 8, timeline_x + 10, curr_y + 28), 
+        wrap_width = width - timeline_x - 40 - 80
+        laid_out = layout_events(
+            draw, events, font_regular_sm, font_bold_md, font_regular_sm, wrap_width,
+            time_line_h, title_line_h, sub_line_h, row_gap, max_title_lines=2
+        )
+        # Reserve room for a "+N more" note in case not everything fits.
+        display_events, hidden_count = fit_events_to_height(laid_out, bottom_boundary - start_y - 40)
+
+        curr_y = start_y
+        row_tops = []
+        for item in display_events:
+            row_tops.append(curr_y)
+            curr_y += item["row_height"]
+        content_bottom = curr_y - row_gap
+
+        draw.line((timeline_x, start_y + 10, timeline_x, content_bottom + 10), fill=COLOR_BLACK, width=3)
+
+        for item, row_y in zip(display_events, row_tops):
+            dot_color = COLOR_GREEN if item["is_all_day"] else COLOR_BLUE
+            draw.ellipse((timeline_x - 10, row_y + 8, timeline_x + 10, row_y + 28),
                          fill=dot_color, outline=COLOR_BLACK, width=2)
-            
-            # Time tag
-            if is_all_day:
-                time_lbl = "ALL DAY"
-            else:
-                time_lbl = f"{ev['start'].strftime('%-I:%M %p')} - {ev['end'].strftime('%-I:%M %p')}"
-            draw.text((timeline_x + 40, curr_y), time_lbl, fill=COLOR_RED, font=font_regular_sm)
-            
-            # Title
-            title_txt = ev["summary"]
-            # Truncate text if too long
-            if len(title_txt) > 42:
-                title_txt = title_txt[:39] + "..."
-            draw.text((timeline_x + 40, curr_y + 30), title_txt, fill=COLOR_BLACK, font=font_bold_md)
-            
-            # Subtitle (location or description)
-            sub_lbl = ev.get("location") or ev.get("description", "")
-            sub_lbl = sub_lbl.split("\n")[0].strip() # first line only
-            if sub_lbl:
-                if len(sub_lbl) > 55:
-                    sub_lbl = sub_lbl[:52] + "..."
-                draw.text((timeline_x + 40, curr_y + 76), sub_lbl, fill=COLOR_BLUE, font=font_regular_sm)
+
+            draw.text((timeline_x + 40, row_y), item["time_lbl"], fill=COLOR_RED, font=font_regular_sm)
+
+            line_y = row_y + time_line_h
+            for line in item["title_lines"]:
+                draw.text((timeline_x + 40, line_y), line, fill=COLOR_BLACK, font=font_bold_md)
+                line_y += title_line_h
+            for line in item["sub_lines"]:
+                draw.text((timeline_x + 40, line_y), line, fill=COLOR_BLUE, font=font_regular_sm)
+                line_y += sub_line_h
+
+        if hidden_count:
+            draw.text((timeline_x + 40, content_bottom + 10), f"+ {hidden_count} more today",
+                       fill=COLOR_BLUE, font=font_regular_sm)
 
     # 5. Footer Line
     draw.line((80, height - 100, width - 80, height - 100), fill=COLOR_BLACK, width=2)
@@ -599,53 +694,55 @@ def render_landscape(width: int, height: int, events: list[dict], weather: dict,
     update_str = f"Updated: {now.strftime('%-I:%M %p')}"
     draw.text((40, 410), update_str, fill=COLOR_BLACK, font=font_regular_sm)
     
-    # Right Column (Agenda Events)
+    # Right Column (Agenda Events) -- sized to how many events there
+    # actually are today, not a fixed 3-event cap (see layout_events /
+    # fit_events_to_height, shared with render_portrait).
     draw.text((330, 40), "TODAY'S SCHEDULE", fill=COLOR_RED, font=font_bold_lg)
-    
+
     start_y = 100
     timeline_x = 350
-    
+    bottom_boundary = height - 20
+    time_line_h, title_line_h, sub_line_h, row_gap = 20, 26, 20, 24
+
     if not events:
         draw.text((550, 220), "No events scheduled.", fill=COLOR_BLUE, font=font_bold_md, anchor="ma")
         draw.text((550, 250), "Enjoy your day!", fill=COLOR_BLACK, font=font_regular_md, anchor="ma")
     else:
-        # Limit to 3 events due to landscape height limits
-        display_events = events[:3]
-        
-        end_y = start_y + (len(display_events) - 1) * 110 + 20
-        draw.line((timeline_x, start_y + 10, timeline_x, end_y), fill=COLOR_BLACK, width=2)
-        
-        for i, ev in enumerate(display_events):
-            curr_y = start_y + i * 110
-            
-            is_all_day = ev.get("all_day", False)
-            dot_color = COLOR_GREEN if is_all_day else COLOR_BLUE
-            
-            # Dot
-            draw.ellipse((timeline_x - 6, curr_y + 6, timeline_x + 6, curr_y + 18), 
+        wrap_width = width - timeline_x - 25 - 20
+        laid_out = layout_events(
+            draw, events, font_regular_sm, font_bold_md, font_regular_sm, wrap_width,
+            time_line_h, title_line_h, sub_line_h, row_gap, max_title_lines=2
+        )
+        display_events, hidden_count = fit_events_to_height(laid_out, bottom_boundary - start_y - 24)
+
+        curr_y = start_y
+        row_tops = []
+        for item in display_events:
+            row_tops.append(curr_y)
+            curr_y += item["row_height"]
+        content_bottom = curr_y - row_gap
+
+        draw.line((timeline_x, start_y + 10, timeline_x, content_bottom + 10), fill=COLOR_BLACK, width=2)
+
+        for item, row_y in zip(display_events, row_tops):
+            dot_color = COLOR_GREEN if item["is_all_day"] else COLOR_BLUE
+            draw.ellipse((timeline_x - 6, row_y + 6, timeline_x + 6, row_y + 18),
                          fill=dot_color, outline=COLOR_BLACK, width=2)
-            
-            # Time
-            if is_all_day:
-                time_lbl = "ALL DAY"
-            else:
-                time_lbl = f"{ev['start'].strftime('%-I:%M %p')} - {ev['end'].strftime('%-I:%M %p')}"
-            draw.text((timeline_x + 25, curr_y), time_lbl, fill=COLOR_RED, font=font_regular_sm)
-            
-            # Title
-            title_txt = ev["summary"]
-            if len(title_txt) > 30:
-                title_txt = title_txt[:27] + "..."
-            draw.text((timeline_x + 25, curr_y + 20), title_txt, fill=COLOR_BLACK, font=font_bold_md)
-            
-            # Location
-            loc_txt = ev.get("location") or ev.get("description", "")
-            loc_txt = loc_txt.split("\n")[0].strip()
-            if loc_txt:
-                if len(loc_txt) > 40:
-                    loc_txt = loc_txt[:37] + "..."
-                draw.text((timeline_x + 25, curr_y + 48), loc_txt, fill=COLOR_BLUE, font=font_regular_sm)
-                
+
+            draw.text((timeline_x + 25, row_y), item["time_lbl"], fill=COLOR_RED, font=font_regular_sm)
+
+            line_y = row_y + time_line_h
+            for line in item["title_lines"]:
+                draw.text((timeline_x + 25, line_y), line, fill=COLOR_BLACK, font=font_bold_md)
+                line_y += title_line_h
+            for line in item["sub_lines"]:
+                draw.text((timeline_x + 25, line_y), line, fill=COLOR_BLUE, font=font_regular_sm)
+                line_y += sub_line_h
+
+        if hidden_count:
+            draw.text((timeline_x + 25, content_bottom + 10), f"+ {hidden_count} more",
+                       fill=COLOR_BLUE, font=font_regular_sm)
+
     return img
 
 # ---------------------------------------------------------------------------
