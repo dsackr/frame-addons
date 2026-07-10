@@ -3837,18 +3837,39 @@
       "cover": "addons/daily_agenda/preview_cover.jpg",
       "config_schema": [
         {
+          "name": "calendar_source",
+          "type": "select",
+          "label": "Calendar Source",
+          "default": "ha",
+          "options": [
+            { "value": "ha", "label": "Home Assistant Calendar" },
+            { "value": "ical", "label": "Google Calendar / iCal URL" }
+          ]
+        },
+        {
+          "name": "ha_calendar_entity",
+          "type": "entity",
+          "domain": "calendar",
+          "label": "Home Assistant Calendar",
+          "required": false,
+          "show_if": { "field": "calendar_source", "equals": "ha" }
+        },
+        {
           "name": "calendar_url",
           "type": "string",
           "label": "Calendar iCal URL",
           "required": true,
-          "placeholder": "https://calendar.google.com/..."
+          "placeholder": "https://calendar.google.com/...",
+          "help": "To get this: Open Google Calendar on desktop, go to **Settings** > click your calendar name in the left panel > scroll down to **Integrate calendar** > copy the **Secret address in iCal format**.",
+          "show_if": { "field": "calendar_source", "equals": "ical" }
         },
         {
           "name": "zip_code",
           "type": "string",
           "label": "ZIP Code or City Name",
           "required": false,
-          "placeholder": "e.g. 90210 or London"
+          "placeholder": "e.g. 90210 or London",
+          "group": "weather"
         }
       ]
     },
@@ -3866,17 +3887,22 @@
       "config_schema": [
         {
           "name": "quote_feed",
-          "type": "string",
+          "type": "select",
           "label": "Quote Feed",
-          "required": true,
-          "placeholder": "zenquotes"
+          "default": "zenquotes",
+          "options": [
+            { "value": "zenquotes", "label": "ZenQuotes (Inspirational)" },
+            { "value": "favqs", "label": "FavQs (General)" },
+            { "value": "custom", "label": "Custom API URL..." }
+          ]
         },
         {
           "name": "quote_api_url",
           "type": "string",
           "label": "Custom Quote API URL",
-          "required": false,
-          "placeholder": "https://..."
+          "required": true,
+          "placeholder": "https://...",
+          "show_if": { "field": "quote_feed", "equals": "custom" }
         }
       ]
     },
@@ -3894,17 +3920,28 @@
       "config_schema": [
         {
           "name": "bible_translation",
-          "type": "string",
+          "type": "select",
           "label": "Bible Translation",
-          "required": true,
-          "placeholder": "niv"
+          "default": "niv",
+          "options": [
+            { "value": "niv", "label": "NIV (New International Version)" },
+            { "value": "kjv", "label": "KJV (King James Version)" },
+            { "value": "web", "label": "WEB (World English Bible)" },
+            { "value": "bbe", "label": "BBE (Bible in Basic English)" },
+            { "value": "oeb", "label": "OEB (Open English Bible)" },
+            { "value": "rvr1960", "label": "RVR1960 (Spanish Reina Valera)" },
+            { "value": "almeida", "label": "Almeida (Portuguese João Ferreira)" }
+          ]
         },
         {
           "name": "scripture_source",
-          "type": "string",
+          "type": "select",
           "label": "Scripture Source",
-          "required": true,
-          "placeholder": "daily_api"
+          "default": "daily_api",
+          "options": [
+            { "value": "daily_api", "label": "Daily Verse of the Day" },
+            { "value": "custom_list", "label": "Custom list configured in JSON" }
+          ]
         }
       ]
     }
