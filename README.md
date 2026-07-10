@@ -12,6 +12,7 @@ By hosting these resources separately, users can discover and install new conten
 * **`addons/`**: Custom layout scripts, diagnostics, and widgets to display dynamic information on your canvas.
   * **[Daily Agenda](file:///Users/dsackrider/repos/frame-addons/addons/daily_agenda/README.md)**: Reads your Google Calendar (via direct iCal or Home Assistant API) and weather forecast, rendering a beautiful dashboard natively in e-ink Spectra 6 colors.
   * **[Quote of the Day](file:///Users/dsackrider/repos/frame-addons/addons/quote_of_the_day/README.md)**: Displays an inspiring quote daily, fetched from the web or a local custom list, formatted on a premium decorative layout.
+  * **[Scripture of the Day](file:///Users/dsackrider/repos/frame-addons/addons/scripture_of_the_day/README.md)**: Displays an inspiring daily Bible verse, fetched from the web or a local custom list, formatted on a premium decorative layout.
 
 
 

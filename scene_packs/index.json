@@ -3870,6 +3870,17 @@
           "required": false,
           "placeholder": "e.g. 90210 or London",
           "group": "weather"
+        },
+        {
+          "name": "temp_unit",
+          "type": "select",
+          "label": "Temperature Unit",
+          "default": "fahrenheit",
+          "group": "weather",
+          "options": [
+            { "value": "fahrenheit", "label": "Fahrenheit (°F)" },
+            { "value": "celsius", "label": "Celsius (°C)" }
+          ]
         }
       ]
     },
@@ -3900,8 +3911,18 @@
           "name": "quote_api_url",
           "type": "string",
           "label": "Custom Quote API URL",
-          "required": true,
+          "required": false,
           "placeholder": "https://...",
+          "help": "Leave blank to use the custom quotes list below instead.",
+          "show_if": { "field": "quote_feed", "equals": "custom" }
+        },
+        {
+          "name": "custom_quotes",
+          "type": "json",
+          "label": "Custom Quotes List",
+          "required": false,
+          "placeholder": "[{\"q\": \"Quote text\", \"a\": \"Author\"}]",
+          "help": "A JSON array of **{\"q\": \"quote text\", \"a\": \"author\"}** objects. One is shown per day, cycling through the list. Only used if no Custom Quote API URL is set above.",
           "show_if": { "field": "quote_feed", "equals": "custom" }
         }
       ]
@@ -3942,6 +3963,15 @@
             { "value": "daily_api", "label": "Daily Verse of the Day" },
             { "value": "custom_list", "label": "Custom list configured in JSON" }
           ]
+        },
+        {
+          "name": "custom_scriptures",
+          "type": "json",
+          "label": "Custom Scriptures List",
+          "required": false,
+          "placeholder": "[{\"q\": \"Verse text\", \"r\": \"Book 1:1\", \"t\": \"KJV\"}]",
+          "help": "A JSON array of **{\"q\": \"verse text\", \"r\": \"reference\", \"t\": \"translation\"}** objects. One is shown per day, cycling through the list.",
+          "show_if": { "field": "scripture_source", "equals": "custom_list" }
         }
       ]
     }
