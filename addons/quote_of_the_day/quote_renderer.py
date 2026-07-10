@@ -113,8 +113,56 @@ def wrap_text(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, m
                 
     if current_line:
         lines.append(" ".join(current_line))
-        
+
     return lines
+
+def fit_text_to_box(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    max_width: int,
+    max_height: int,
+    font_loader,
+    max_size: int,
+    min_size: int = 16,
+    step: int = 2,
+    line_spacing_ratio: float = 0.28,
+):
+    """Find the largest font size in [min_size, max_size] whose word-wrapped
+    text fits inside max_width x max_height, so the quote fills whatever
+    room a given frame orientation leaves for it -- a short quote renders
+    big, a long one shrinks only as much as it has to, and the same logic
+    naturally scales across resolutions instead of picking from a fixed
+    per-orientation size table. max_size is deliberately generous (a short
+    quote should be allowed to grow large); the width check below is what
+    actually stops it once a wrapped line would run past max_width, since
+    wrap_text's own "force a too-wide single word onto its own line" escape
+    hatch doesn't shrink that word to fit."""
+    size = max_size
+    while size >= min_size:
+        font = font_loader(size)
+        lines = wrap_text(text, draw, font, max_width)
+        line_spacing = max(int(size * line_spacing_ratio), 4)
+        heights = []
+        total = 0
+        max_line_width = 0
+        for line in lines:
+            bbox = draw.textbbox((0, 0), line, font=font)
+            heights.append(bbox[3] - bbox[1])
+            total += heights[-1]
+            max_line_width = max(max_line_width, bbox[2] - bbox[0])
+        total += line_spacing * (len(lines) - 1)
+        if total <= max_height and max_line_width <= max_width:
+            return font, lines, heights, line_spacing, total
+        size -= step
+
+    # Even the floor size overflows (an unusually long quote) -- use it
+    # anyway rather than shrinking past readability.
+    font = font_loader(min_size)
+    lines = wrap_text(text, draw, font, max_width)
+    line_spacing = max(int(min_size * line_spacing_ratio), 4)
+    heights = [draw.textbbox((0, 0), line, font=font)[3] - draw.textbbox((0, 0), line, font=font)[1] for line in lines]
+    total = sum(heights) + line_spacing * (len(lines) - 1)
+    return font, lines, heights, line_spacing, total
 
 # ---------------------------------------------------------------------------
 # Quote Fetcher
@@ -181,34 +229,40 @@ def render_quote_image(width: int, height: int, quote: str, author: str) -> Imag
     draw = ImageDraw.Draw(img)
     
     is_landscape = width > height
-    
+
+    # Structural layout (margins, decorative offsets) still differs by
+    # orientation -- but quote_font_size is no longer one of these fixed
+    # values. It's auto-fit below to whatever room this orientation leaves,
+    # so the same short quote renders bigger on a portrait frame than on a
+    # squatter landscape one, and a long quote shrinks only as needed,
+    # instead of every quote sharing one static size per orientation.
     if is_landscape:
         border_outer_margin = 20
         border_inner_margin = 26
-        quote_font_size = 36
         author_font_size = 24
         footer_font_size = 14
-        quote_marks_size = 120
+        quote_marks_size = 100  # decorative flourish, sized off the canvas, not the fitted quote font
         wrap_width = width - 240  # 560px wrap
-        line_spacing = 10
         quote_marks_y_offset = 30
         author_y_offset = 30
+        max_quote_font_size = 220  # generous ceiling -- the width/height fit below is what actually caps it
+        min_quote_font_size = 20
     else:
         border_outer_margin = 40
         border_inner_margin = 50
-        quote_font_size = 52
         author_font_size = 34
         footer_font_size = 20
-        quote_marks_size = 180
+        quote_marks_size = 150
         wrap_width = width - 360  # 840px wrap
-        line_spacing = 16
         quote_marks_y_offset = 70
         author_y_offset = 50
-        
-    font_quote = load_font("Outfit", "Bold", quote_font_size)
+        max_quote_font_size = 400
+        min_quote_font_size = 28
+
     font_author = load_font("Outfit", "SemiBold", author_font_size)
     font_footer = load_font("Outfit", "SemiBold", footer_font_size)
-    
+    font_quote_marks = load_font("Outfit", "Bold", quote_marks_size)
+
     # 1. Draw borders
     # Outer
     draw.rectangle(
@@ -220,29 +274,31 @@ def render_quote_image(width: int, height: int, quote: str, author: str) -> Imag
         (border_inner_margin, border_inner_margin, width - border_inner_margin, height - border_inner_margin),
         outline=COLOR_BLACK, width=1
     )
-    
-    # 2. Word wrap the quote
-    wrapped_lines = wrap_text(quote, draw, font_quote, wrap_width)
-    
-    # Calculate vertical heights
-    line_heights = []
-    total_text_height = 0
-    for line in wrapped_lines:
-        bbox = draw.textbbox((0, 0), line, font=font_quote)
-        h = bbox[3] - bbox[1]
-        line_heights.append(h)
-        total_text_height += h
-    total_text_height += line_spacing * (len(wrapped_lines) - 1)
-    
+
+    # 2. Auto-fit the quote's font size to the room left after reserving
+    # space for the (fixed-size) opening quote mark above and the author +
+    # footer band below -- this reserve is independent of max_quote_font_size
+    # so raising that ceiling to let short quotes grow doesn't also shrink
+    # the room being fit into.
+    top_reserved = quote_marks_y_offset + quote_marks_size * 0.6
+    bottom_reserved = author_y_offset + author_font_size + footer_font_size + 60
+    available_height = (height - 2 * border_inner_margin) - top_reserved - bottom_reserved
+
+    font_quote, wrapped_lines, line_heights, line_spacing, total_text_height = fit_text_to_box(
+        draw, quote, wrap_width, available_height,
+        font_loader=lambda size: load_font("Outfit", "Bold", size),
+        max_size=max_quote_font_size, min_size=min_quote_font_size
+    )
+
     total_block_height = total_text_height + author_y_offset + author_font_size
     start_y = (height - total_block_height) // 2
-    
+
     # 3. Draw Opening Quote Mark (top-left)
     draw.text(
         (border_inner_margin + 40, start_y - quote_marks_y_offset),
-        "“", fill=COLOR_RED, font=load_font("Outfit", "Bold", quote_marks_size)
+        "“", fill=COLOR_RED, font=font_quote_marks
     )
-    
+
     # 4. Draw Quote Lines (centered)
     current_y = start_y
     for i, line in enumerate(wrapped_lines):
@@ -251,26 +307,26 @@ def render_quote_image(width: int, height: int, quote: str, author: str) -> Imag
             line, fill=COLOR_BLACK, font=font_quote, anchor="ma"
         )
         current_y += line_heights[i] + line_spacing
-        
+
     # 5. Draw Author (aligned right)
     author_y = current_y + author_y_offset
     draw.text(
         (width - (border_inner_margin + 60), author_y),
         f"— {author}", fill=COLOR_BLACK, font=font_author, anchor="ra"
     )
-    
+
     # Draw Closing Quote Mark (bottom-right)
     draw.text(
         (width - (border_inner_margin + 40 + quote_marks_size // 2), author_y + author_font_size // 2),
-        "”", fill=COLOR_RED, font=load_font("Outfit", "Bold", quote_marks_size)
+        "”", fill=COLOR_RED, font=font_quote_marks
     )
-    
+
     # 6. Draw Footer Label
     draw.text(
         (width // 2, height - border_inner_margin - 30),
         "QUOTE OF THE DAY", fill=COLOR_BLUE, font=font_footer, anchor="ma"
     )
-    
+
     return img
 
 # ---------------------------------------------------------------------------

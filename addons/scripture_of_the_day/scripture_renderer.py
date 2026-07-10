@@ -111,8 +111,56 @@ def wrap_text(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, m
                 
     if current_line:
         lines.append(" ".join(current_line))
-        
+
     return lines
+
+def fit_text_to_box(
+    draw: ImageDraw.ImageDraw,
+    text: str,
+    max_width: int,
+    max_height: int,
+    font_loader,
+    max_size: int,
+    min_size: int = 16,
+    step: int = 2,
+    line_spacing_ratio: float = 0.28,
+):
+    """Find the largest font size in [min_size, max_size] whose word-wrapped
+    text fits inside max_width x max_height, so the verse fills whatever
+    room a given frame orientation leaves for it -- a short verse renders
+    big, a long one shrinks only as much as it has to, and the same logic
+    naturally scales across resolutions instead of picking from a fixed
+    per-orientation size table. max_size is deliberately generous (a short
+    verse should be allowed to grow large); the width check below is what
+    actually stops it once a wrapped line would run past max_width, since
+    wrap_text's own "force a too-wide single word onto its own line" escape
+    hatch doesn't shrink that word to fit."""
+    size = max_size
+    while size >= min_size:
+        font = font_loader(size)
+        lines = wrap_text(text, draw, font, max_width)
+        line_spacing = max(int(size * line_spacing_ratio), 4)
+        heights = []
+        total = 0
+        max_line_width = 0
+        for line in lines:
+            bbox = draw.textbbox((0, 0), line, font=font)
+            heights.append(bbox[3] - bbox[1])
+            total += heights[-1]
+            max_line_width = max(max_line_width, bbox[2] - bbox[0])
+        total += line_spacing * (len(lines) - 1)
+        if total <= max_height and max_line_width <= max_width:
+            return font, lines, heights, line_spacing, total
+        size -= step
+
+    # Even the floor size overflows (an unusually long passage) -- use it
+    # anyway rather than shrinking past readability.
+    font = font_loader(min_size)
+    lines = wrap_text(text, draw, font, max_width)
+    line_spacing = max(int(min_size * line_spacing_ratio), 4)
+    heights = [draw.textbbox((0, 0), line, font=font)[3] - draw.textbbox((0, 0), line, font=font)[1] for line in lines]
+    total = sum(heights) + line_spacing * (len(lines) - 1)
+    return font, lines, heights, line_spacing, total
 
 # ---------------------------------------------------------------------------
 # Scripture Fetcher
@@ -194,34 +242,39 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
     draw = ImageDraw.Draw(img)
     
     is_landscape = width > height
-    
+
+    # Structural layout (margins, emblem, decorative offsets) still differs
+    # by orientation -- but quote_font_size is no longer one of these fixed
+    # values. It's auto-fit below to whatever room this orientation leaves,
+    # so a short verse renders bigger on a portrait frame than on a
+    # squatter landscape one, and a long passage shrinks only as needed,
+    # instead of every verse sharing one static size per orientation.
     if is_landscape:
         border_outer_margin = 20
         border_inner_margin = 26
-        quote_font_size = 32
         ref_font_size = 22
         badge_font_size = 14
         emblem_size = 30
         wrap_width = width - 200
-        line_spacing = 8
         emblem_y_offset = 35
         ref_y_offset = 25
+        max_quote_font_size = 200  # generous ceiling -- the width/height fit below is what actually caps it
+        min_quote_font_size = 18
     else:
         border_outer_margin = 40
         border_inner_margin = 50
-        quote_font_size = 46
         ref_font_size = 30
         badge_font_size = 18
         emblem_size = 50
         wrap_width = width - 300
-        line_spacing = 14
         emblem_y_offset = 80
         ref_y_offset = 45
-        
-    font_quote = load_font("Outfit", "Bold", quote_font_size)
+        max_quote_font_size = 350
+        min_quote_font_size = 24
+
     font_ref = load_font("Outfit", "SemiBold", ref_font_size)
     font_badge = load_font("Outfit", "Bold", badge_font_size)
-    
+
     # 1. Draw double borders
     draw.rectangle(
         (border_outer_margin, border_outer_margin, width - border_outer_margin, height - border_outer_margin),
@@ -254,22 +307,19 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
         fill=COLOR_RED
     )
     
-    # 3. Word wrap the scripture text
-    # Clean up double quotes and wrap
+    # 3. Clean up quote marks, then auto-fit the verse's font size to the
+    # vertical room left after the emblem above and the reference below.
     clean_quote = quote.replace('"', '').replace('“', '').replace('”', '').strip()
     clean_quote = f"“ {clean_quote} ”"
-    wrapped_lines = wrap_text(clean_quote, draw, font_quote, wrap_width)
-    
-    # Calculate text heights and draw
-    line_heights = []
-    total_text_height = 0
-    for line in wrapped_lines:
-        bbox = draw.textbbox((0, 0), line, font=font_quote)
-        h = bbox[3] - bbox[1]
-        line_heights.append(h)
-        total_text_height += h
-    total_text_height += line_spacing * (len(wrapped_lines) - 1)
-    
+
+    available_height = (height - border_inner_margin) - (cy + emblem_size) - ref_y_offset - ref_font_size - 30
+
+    font_quote, wrapped_lines, line_heights, line_spacing, total_text_height = fit_text_to_box(
+        draw, clean_quote, wrap_width, available_height,
+        font_loader=lambda size: load_font("Outfit", "Bold", size),
+        max_size=max_quote_font_size, min_size=min_quote_font_size
+    )
+
     # Draw scripture centered
     start_y = cy + emblem_size + (height - border_inner_margin - (cy + emblem_size) - total_text_height - ref_y_offset - 30) // 2
     curr_y = start_y
