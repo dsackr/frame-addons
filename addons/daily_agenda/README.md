@@ -9,7 +9,7 @@ A Python utility that queries Google Calendar and local weather forecasts, rende
 * **High-Contrast, Crisp Drawing**: Draws elements natively in the e-ink display's exact physical color values, ensuring that text and weather graphics are razor-sharp with zero fuzzy dithering noise.
 * **Dual Calendar Input**:
   * **iCal URL (Recommended for simplicity)**: Directly parses Google Calendar's private iCal address without requiring API registration or developer setups.
-  * **Home Assistant API**: Fetches events from any calendar entity synced to your Home Assistant instance.
+  * **Configured Calendars**: Fetches events from one or more `calendar.*` entities already set up in your Home Assistant instance -- Google Calendar, Local Calendar, CalDAV, or any other calendar integration.
 * **Open-Meteo Weather**: Integrates current temperature, daily high/lows, and weather condition details using a keyless, public API.
 * **Frame Info Diagnostics**: Queries the frame's `/api/info` REST endpoint to check battery and WiFi levels, overlaying them right onto your dashboard screen.
 * **Automated Layout Resizing**: Supports both **Portrait** (`1200 x 1600`) and **Landscape** (`800 x 480`) layout frames, automatically adapting visual column designs to make the best use of screen dimensions.
@@ -32,7 +32,7 @@ cp config.example.json config.json
 Edit `config.json` with your details:
 * **`calendar`**:
   * Set `source_type` to `"ical"` and enter your Google Calendar private iCal address in `ical_url` (see below for instructions on how to get it).
-  * Alternatively, set `source_type` to `"ha"` and supply your Home Assistant URL, Long-Lived Access Token, and calendar entity ID.
+  * Alternatively, set `source_type` to `"ha"` and supply your Home Assistant URL, Long-Lived Access Token, and one or more calendar entity IDs in `ha_calendar_entities` (a list -- events from all of them are merged together).
 * **`weather`**: Set coordinates for local forecasts.
 * **`frame`**: Set the local IP address or host name of your frame, its resolution, and the byte layout (e.g. `split_half` for `1200x1600` or `sequential` for `800x480`).
 * **`timezone`**: Specify your IANA Timezone name (e.g. `America/Los_Angeles`).

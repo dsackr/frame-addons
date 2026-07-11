@@ -232,30 +232,39 @@ def fetch_ha_events(config: dict, target_tz) -> list[dict]:
         print("Fetching calendar from Home Assistant API...")
         ha_url = config.get("ha_url")
         token = config.get("ha_token")
-        entity = config.get("ha_calendar_entity")
-        
-        if not (ha_url and token and entity):
+        # ha_calendar_entities (plural) is the current config_schema field --
+        # one or more entities the user picked from the "Configured
+        # Calendars" checklist (any calendar integration: Google Calendar,
+        # Local Calendar, CalDAV, etc., not specifically Google). Falls back
+        # to the older singular ha_calendar_entity for configs saved before
+        # multi-select existed.
+        entities = config.get("ha_calendar_entities")
+        if not entities:
+            legacy_entity = config.get("ha_calendar_entity")
+            entities = [legacy_entity] if legacy_entity else []
+
+        if not (ha_url and token and entities):
             print("Warning: Home Assistant connection credentials missing. No calendar events loaded.")
             return []
-            
+
         ha_url = ha_url.rstrip("/")
         now = datetime.datetime.now(target_tz)
         start_str = now.replace(hour=0, minute=0, second=0).isoformat()
         end_str = now.replace(hour=23, minute=59, second=59).isoformat()
-        
-        url = f"{ha_url}/api/calendars/{entity}?start={urllib.parse.quote(start_str)}&end={urllib.parse.quote(end_str)}"
-        headers = {
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json"
-        }
-        
-        try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=15) as response:
-                data = json.loads(response.read().decode("utf-8"))
-        except Exception as e:
-            print(f"Error fetching from Home Assistant Calendar API: {e}")
-            return []
+
+        data = []
+        for entity in entities:
+            url = f"{ha_url}/api/calendars/{entity}?start={urllib.parse.quote(start_str)}&end={urllib.parse.quote(end_str)}"
+            headers = {
+                "Authorization": f"Bearer {token}",
+                "Content-Type": "application/json"
+            }
+            try:
+                req = urllib.request.Request(url, headers=headers)
+                with urllib.request.urlopen(req, timeout=15) as response:
+                    data.extend(json.loads(response.read().decode("utf-8")))
+            except Exception as e:
+                print(f"Error fetching from Home Assistant Calendar API ({entity}): {e}")
         
     events = []
     for item in data:
@@ -269,10 +278,13 @@ def fetch_ha_events(config: dict, target_tz) -> list[dict]:
             start_dt = datetime.datetime.strptime(start_raw, "%Y-%m-%d").replace(tzinfo=target_tz)
             end_dt = datetime.datetime.strptime(end_raw, "%Y-%m-%d").replace(tzinfo=target_tz)
         else:
-            # Parse ISO-8601 with timezone offsets (e.g. 2026-07-06T09:00:00-07:00)
-            # Python's fromisoformat handles offsets natively in Python 3.7+
-            start_dt = datetime.datetime.fromisoformat(start_raw).astimezone(target_tz)
-            end_dt = datetime.datetime.fromisoformat(end_raw).astimezone(target_tz)
+            # Parse ISO-8601 with timezone offsets (e.g. 2026-07-06T09:00:00-07:00).
+            # fromisoformat handles numeric offsets natively in Python 3.7+, but
+            # only accepts a trailing "Z" (UTC) from Python 3.11 -- normalize it
+            # to "+00:00" so this still works on older Python (e.g. 3.9) against
+            # calendar APIs that return "Z"-suffixed times.
+            start_dt = datetime.datetime.fromisoformat(start_raw.replace("Z", "+00:00")).astimezone(target_tz)
+            end_dt = datetime.datetime.fromisoformat(end_raw.replace("Z", "+00:00")).astimezone(target_tz)
             
         events.append({
             "summary": item.get("summary", "No Title"),

@@ -88,6 +88,31 @@ END:VCALENDAR`;
 
         res.writeHead(200, { 'Content-Type': 'text/calendar' });
         res.end(icsData);
+      }
+      // Mock Home Assistant REST calendar API -- /api/calendars/<entity_id>
+      else if (req.method === 'GET' && url.pathname.startsWith('/api/calendars/')) {
+        const entity = decodeURIComponent(url.pathname.slice('/api/calendars/'.length));
+        const today = new Date();
+        const start = new Date(today);
+        start.setHours(13, 0, 0, 0);
+        const end = new Date(today);
+        end.setHours(14, 0, 0, 0);
+
+        const eventsByEntity = {
+          'calendar.personal': [{
+            summary: 'Personal Calendar Event',
+            start: { dateTime: start.toISOString() },
+            end: { dateTime: end.toISOString() },
+          }],
+          'calendar.family': [{
+            summary: 'Family Calendar Event',
+            start: { dateTime: start.toISOString() },
+            end: { dateTime: end.toISOString() },
+          }],
+        };
+
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify(eventsByEntity[entity] || []));
       } else {
         res.writeHead(404);
         res.end('Not Found');
@@ -212,6 +237,53 @@ test.describe('Daily Agenda Add-on Tests', () => {
     expect(fs.existsSync(BIN_PATH)).toBe(true);
 
     // Landscape 800x480 4bpp sequential should be exactly 800 * 480 / 2 = 192,000 bytes
+    expect(lastUploadedImage).not.toBeNull();
+    expect(lastUploadedImage.length).toBe(192000);
+  });
+
+  test('should merge events from multiple configured calendars (source_type "ha")', async () => {
+    // "Configured Calendars" lets a user pick more than one calendar.* entity
+    // (Google Calendar, Local Calendar, CalDAV, whatever) -- ha_calendar_entities
+    // is a list, and events from every entity in it should be fetched and merged.
+    const mockConfig = {
+      calendar: {
+        source_type: "ha",
+        ha_url: `http://localhost:${PORT}`,
+        ha_token: "test-token",
+        ha_calendar_entities: ["calendar.personal", "calendar.family"]
+      },
+      weather: {
+        enabled: true,
+        latitude: 37.7749,
+        longitude: -122.4194,
+        temp_unit: "fahrenheit",
+        api_url: `http://localhost:${PORT}/v1/forecast`
+      },
+      frame: {
+        ip_address: `localhost:${PORT}`,
+        resolution: [800, 480],
+        layout: "sequential"
+      },
+      timezone: "America/Los_Angeles"
+    };
+
+    fs.writeFileSync(CONFIG_PATH, JSON.stringify(mockConfig, null, 2));
+
+    console.log("Running agenda_renderer.py with multiple HA calendar entities...");
+    const { stdout, stderr } = await execPromise(`python3 ${path.join(AGENDA_DIR, 'agenda_renderer.py')}`);
+
+    console.log("stdout:", stdout);
+    if (stderr) console.error("stderr:", stderr);
+
+    expect(fs.existsSync(PREVIEW_PATH)).toBe(true);
+    expect(fs.existsSync(BIN_PATH)).toBe(true);
+
+    // Both entities must have been queried -- proof the list was actually
+    // iterated, not just the first one.
+    const paths = requestsLog.map((r) => r.path);
+    expect(paths).toContain('/api/calendars/calendar.personal');
+    expect(paths).toContain('/api/calendars/calendar.family');
+
     expect(lastUploadedImage).not.toBeNull();
     expect(lastUploadedImage.length).toBe(192000);
   });

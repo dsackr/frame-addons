@@ -2258,16 +2258,18 @@
           "label": "Calendar Source",
           "default": "ha",
           "options": [
-            { "value": "ha", "label": "Home Assistant Calendar" },
+            { "value": "ha", "label": "Configured Calendars" },
             { "value": "ical", "label": "Google Calendar / iCal URL" }
           ]
         },
         {
-          "name": "ha_calendar_entity",
+          "name": "ha_calendar_entities",
           "type": "entity",
           "domain": "calendar",
-          "label": "Home Assistant Calendar",
+          "multiple": true,
+          "label": "Configured Calendars",
           "required": false,
+          "help": "Pick one or more calendars already set up in Home Assistant -- Google Calendar, Local Calendar, CalDAV, or any other calendar integration. Events from all selected calendars are merged together. Leave all unchecked to use the first available calendar.",
           "show_if": { "field": "calendar_source", "equals": "ha" }
         },
         {
