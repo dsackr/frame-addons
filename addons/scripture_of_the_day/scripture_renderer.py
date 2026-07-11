@@ -114,9 +114,23 @@ def wrap_text(text: str, draw: ImageDraw.ImageDraw, font: ImageFont.ImageFont, m
 
     return lines
 
-def fit_text_to_box(
+def _wrapped_block_metrics(draw: ImageDraw.ImageDraw, lines: list[str], font: ImageFont.ImageFont, line_spacing: int) -> tuple[list[int], int, int]:
+    """Per-line heights, total block height (with inter-line spacing), and the widest line."""
+    heights = []
+    total = 0
+    max_line_width = 0
+    for line in lines:
+        bbox = draw.textbbox((0, 0), line, font=font)
+        heights.append(bbox[3] - bbox[1])
+        total += heights[-1]
+        max_line_width = max(max_line_width, bbox[2] - bbox[0])
+    total += line_spacing * (len(lines) - 1)
+    return heights, total, max_line_width
+
+def fit_quote_and_reference_to_box(
     draw: ImageDraw.ImageDraw,
-    text: str,
+    quote_text: str,
+    ref_text: str,
     max_width: int,
     max_height: int,
     font_loader,
@@ -124,43 +138,42 @@ def fit_text_to_box(
     min_size: int = 16,
     step: int = 2,
     line_spacing_ratio: float = 0.28,
+    block_gap_ratio: float = 0.5,
 ):
-    """Find the largest font size in [min_size, max_size] whose word-wrapped
-    text fits inside max_width x max_height, so the verse fills whatever
-    room a given frame orientation leaves for it -- a short verse renders
-    big, a long one shrinks only as much as it has to, and the same logic
-    naturally scales across resolutions instead of picking from a fixed
-    per-orientation size table. max_size is deliberately generous (a short
-    verse should be allowed to grow large); the width check below is what
-    actually stops it once a wrapped line would run past max_width, since
-    wrap_text's own "force a too-wide single word onto its own line" escape
-    hatch doesn't shrink that word to fit."""
+    """Find the largest font size in [min_size, max_size] at which the verse
+    AND its reference -- both set at that same size, so the reference reads
+    as co-equal with the verse rather than a footnote -- still word-wrap to
+    fit inside max_width x max_height together. Mirrors fit_text_to_box's
+    shrink-from-a-generous-ceiling approach in quote_of_the_day, just fitting
+    two stacked text blocks instead of one."""
     size = max_size
     while size >= min_size:
         font = font_loader(size)
-        lines = wrap_text(text, draw, font, max_width)
         line_spacing = max(int(size * line_spacing_ratio), 4)
-        heights = []
-        total = 0
-        max_line_width = 0
-        for line in lines:
-            bbox = draw.textbbox((0, 0), line, font=font)
-            heights.append(bbox[3] - bbox[1])
-            total += heights[-1]
-            max_line_width = max(max_line_width, bbox[2] - bbox[0])
-        total += line_spacing * (len(lines) - 1)
-        if total <= max_height and max_line_width <= max_width:
-            return font, lines, heights, line_spacing, total
+        block_gap = max(int(size * block_gap_ratio), 8)
+
+        quote_lines = wrap_text(quote_text, draw, font, max_width)
+        ref_lines = wrap_text(ref_text, draw, font, max_width)
+        quote_heights, quote_total, quote_max_w = _wrapped_block_metrics(draw, quote_lines, font, line_spacing)
+        ref_heights, ref_total, ref_max_w = _wrapped_block_metrics(draw, ref_lines, font, line_spacing)
+
+        total_height = quote_total + block_gap + ref_total
+        max_line_width = max(quote_max_w, ref_max_w)
+        if total_height <= max_height and max_line_width <= max_width:
+            return font, quote_lines, quote_heights, ref_lines, ref_heights, line_spacing, block_gap, total_height
         size -= step
 
     # Even the floor size overflows (an unusually long passage) -- use it
     # anyway rather than shrinking past readability.
     font = font_loader(min_size)
-    lines = wrap_text(text, draw, font, max_width)
     line_spacing = max(int(min_size * line_spacing_ratio), 4)
-    heights = [draw.textbbox((0, 0), line, font=font)[3] - draw.textbbox((0, 0), line, font=font)[1] for line in lines]
-    total = sum(heights) + line_spacing * (len(lines) - 1)
-    return font, lines, heights, line_spacing, total
+    block_gap = max(int(min_size * block_gap_ratio), 8)
+    quote_lines = wrap_text(quote_text, draw, font, max_width)
+    ref_lines = wrap_text(ref_text, draw, font, max_width)
+    quote_heights, quote_total, _ = _wrapped_block_metrics(draw, quote_lines, font, line_spacing)
+    ref_heights, ref_total, _ = _wrapped_block_metrics(draw, ref_lines, font, line_spacing)
+    total_height = quote_total + block_gap + ref_total
+    return font, quote_lines, quote_heights, ref_lines, ref_heights, line_spacing, block_gap, total_height
 
 # ---------------------------------------------------------------------------
 # Scripture Fetcher
@@ -237,42 +250,38 @@ def fetch_scripture(translation: str, custom_scriptures: list[dict], source_type
 # Visual Composition Renderer
 # ---------------------------------------------------------------------------
 def render_scripture_image(width: int, height: int, quote: str, reference: str, translation: str) -> Image.Image:
-    """Compose the scripture layout with double borders, decorative cross emblem, and reference."""
+    """Compose the scripture layout with double borders and a reference set
+    co-equal in size with the verse itself (no decorative emblem)."""
     img = Image.new("RGB", (width, height), COLOR_WHITE)
     draw = ImageDraw.Draw(img)
-    
+
     is_landscape = width > height
 
-    # Structural layout (margins, emblem, decorative offsets) still differs
-    # by orientation -- but quote_font_size is no longer one of these fixed
-    # values. It's auto-fit below to whatever room this orientation leaves,
-    # so a short verse renders bigger on a portrait frame than on a
-    # squatter landscape one, and a long passage shrinks only as needed,
-    # instead of every verse sharing one static size per orientation.
+    # Structural layout (margins, top/bottom padding) still differs by
+    # orientation -- but the verse and reference font size is auto-fit below
+    # to whatever room this orientation leaves, so a short verse renders
+    # bigger on a portrait frame than on a squatter landscape one, and a
+    # long passage shrinks only as needed, instead of every verse sharing
+    # one static size per orientation.
     if is_landscape:
         border_outer_margin = 20
         border_inner_margin = 26
-        ref_font_size = 22
         badge_font_size = 14
-        emblem_size = 30
         wrap_width = width - 200
-        emblem_y_offset = 35
-        ref_y_offset = 25
+        top_padding = 25
+        bottom_padding = 55  # keeps the last line clear of the translation badge
         max_quote_font_size = 200  # generous ceiling -- the width/height fit below is what actually caps it
         min_quote_font_size = 18
     else:
         border_outer_margin = 40
         border_inner_margin = 50
-        ref_font_size = 30
         badge_font_size = 18
-        emblem_size = 50
         wrap_width = width - 300
-        emblem_y_offset = 80
-        ref_y_offset = 45
+        top_padding = 40
+        bottom_padding = 80
         max_quote_font_size = 350
         min_quote_font_size = 24
 
-    font_ref = load_font("Outfit", "SemiBold", ref_font_size)
     font_badge = load_font("Outfit", "Bold", badge_font_size)
 
     # 1. Draw double borders
@@ -284,71 +293,57 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
         (border_inner_margin, border_inner_margin, width - border_inner_margin, height - border_inner_margin),
         outline=COLOR_BLACK, width=1
     )
-    
-    # 2. Draw Decorative Emblem (Classic Cross emblem representation)
-    # We draw a clean geometric representation of a decorative cross in RED at the top center
-    cx = width // 2
-    cy = border_inner_margin + emblem_y_offset
-    
-    # Cross dimensions
-    v_len = emblem_size
-    v_w = emblem_size // 4
-    h_len = emblem_size * 2 // 3
-    h_w = v_w
-    
-    # Vertical bar
-    draw.rectangle(
-        (cx - v_w // 2, cy - v_len // 3, cx + v_w // 2, cy + v_len * 2 // 3),
-        fill=COLOR_RED
-    )
-    # Horizontal bar
-    draw.rectangle(
-        (cx - h_len // 2, cy - h_w // 2, cx + h_len // 2, cy + h_w // 2),
-        fill=COLOR_RED
-    )
-    
-    # 3. Clean up quote marks, then auto-fit the verse's font size to the
-    # vertical room left after the emblem above and the reference below.
+
+    # 2. Clean up quote marks, then auto-fit the verse and its reference --
+    # both measured at the same candidate size, so the reference reads as
+    # co-equal with the verse instead of a footnote -- to the room between
+    # the borders (minus a small top/bottom padding).
     clean_quote = quote.replace('"', '').replace('“', '').replace('”', '').strip()
     clean_quote = f"“ {clean_quote} ”"
+    clean_ref = reference.strip()
 
-    available_height = (height - border_inner_margin) - (cy + emblem_size) - ref_y_offset - ref_font_size - 30
+    content_top = border_inner_margin + top_padding
+    available_height = (height - border_inner_margin - bottom_padding) - content_top
 
-    font_quote, wrapped_lines, line_heights, line_spacing, total_text_height = fit_text_to_box(
-        draw, clean_quote, wrap_width, available_height,
+    (font_quote, quote_lines, quote_heights, ref_lines, ref_heights,
+     line_spacing, block_gap, total_height) = fit_quote_and_reference_to_box(
+        draw, clean_quote, clean_ref, wrap_width, available_height,
         font_loader=lambda size: load_font("Outfit", "Bold", size),
         max_size=max_quote_font_size, min_size=min_quote_font_size
     )
+    # SemiBold at the same point size the fit found for the (Bold) verse --
+    # SemiBold glyphs run slightly narrower than Bold, so reusing the Bold
+    # wrap decisions here is a conservative choice that can't overflow.
+    font_ref = load_font("Outfit", "SemiBold", getattr(font_quote, "size", min_quote_font_size))
 
-    # Draw scripture centered
-    start_y = cy + emblem_size + (height - border_inner_margin - (cy + emblem_size) - total_text_height - ref_y_offset - 30) // 2
-    curr_y = start_y
-    for i, line in enumerate(wrapped_lines):
+    # 3. Draw the verse, then its reference, centered together as one block
+    curr_y = content_top + (available_height - total_height) // 2
+    for i, line in enumerate(quote_lines):
         bbox = draw.textbbox((0, 0), line, font=font_quote)
         w = bbox[2] - bbox[0]
         x = (width - w) // 2
         draw.text((x, curr_y), line, fill=COLOR_BLACK, font=font_quote)
-        curr_y += line_heights[i] + line_spacing
-        
-    # 4. Draw Reference
-    clean_ref = reference.strip()
-    bbox_ref = draw.textbbox((0, 0), clean_ref, font=font_ref)
-    w_ref = bbox_ref[2] - bbox_ref[0]
-    rx = (width - w_ref) // 2
-    ry = curr_y + ref_y_offset
-    draw.text((rx, ry), clean_ref, fill=COLOR_BLACK, font=font_ref)
-    
-    # 5. Draw Translation Badge in bottom right corner
+        curr_y += quote_heights[i] + line_spacing
+
+    curr_y += block_gap - line_spacing  # swap the quote loop's trailing line gap for the wider block gap
+    for i, line in enumerate(ref_lines):
+        bbox = draw.textbbox((0, 0), line, font=font_ref)
+        w = bbox[2] - bbox[0]
+        x = (width - w) // 2
+        draw.text((x, curr_y), line, fill=COLOR_BLACK, font=font_ref)
+        curr_y += ref_heights[i] + line_spacing
+
+    # 4. Draw Translation Badge in bottom right corner
     badge_text = translation.upper().strip()
     bbox_b = draw.textbbox((0, 0), badge_text, font=font_badge)
     bw = bbox_b[2] - bbox_b[0] + 16
     bh = bbox_b[3] - bbox_b[1] + 10
     bx = width - border_inner_margin - bw - 15
     by = height - border_inner_margin - bh - 15
-    
+
     draw.rectangle((bx, by, bx + bw, by + bh), fill=COLOR_BLUE)
     draw.text((bx + 8, by + 5), badge_text, fill=COLOR_WHITE, font=font_badge)
-    
+
     return img
 
 # ---------------------------------------------------------------------------
