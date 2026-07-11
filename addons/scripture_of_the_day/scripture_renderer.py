@@ -354,50 +354,75 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
 # ---------------------------------------------------------------------------
 # Spectra 6 Byte Packing
 # ---------------------------------------------------------------------------
-def encode_spectra6_bin(img: Image.Image, layout_type: str = "split_half") -> bytes:
-    """Encode RGB image into Spectra 6 4-bit binary layout."""
-    width, height = img.size
-    pixels = img.load()
-    
-    # Map each pixel to nearest Spectra 6 index
-    color_indices = []
+def get_closest_nibble(r: int, g: int, b: int) -> int:
+    """Map any RGB value to the closest hardware-supported Spectra 6 color code."""
+    min_dist = float("inf")
+    best_nibble = 1  # Default to white
+
+    for i, color in enumerate(SPECTRA6_REAL_WORLD_RGB):
+        dist = (r - color[0])**2 + (g - color[1])**2 + (b - color[2])**2
+        if dist < min_dist:
+            min_dist = dist
+            best_nibble = SPECTRA6_NIBBLE_VALUES[i]
+
+    return best_nibble
+
+def pack_row_half(image: Image.Image, y: int, start_x: int, end_x: int) -> bytes:
+    """Pack an interval of pixels into 4-bit nibbles (2 pixels per byte)."""
+    out = bytearray()
+    pixels = image.load()
+    width = image.width
+
+    for x in range(start_x, end_x, 2):
+        r, g, b = pixels[x, y][:3]
+        high_nibble = get_closest_nibble(r, g, b)
+
+        odd_x = x + 1
+        if odd_x < end_x and odd_x < width:
+            r2, g2, b2 = pixels[odd_x, y][:3]
+            low_nibble = get_closest_nibble(r2, g2, b2)
+        else:
+            low_nibble = 1  # Pad missing pixel with White (nibble 1)
+
+        out.append((high_nibble << 4) | low_nibble)
+
+    return bytes(out)
+
+def pack_split_halves(image: Image.Image) -> bytes:
+    """Pack portrait/split-half display buffers (e.g. 13.3" 1200x1600):
+    every row's left-half pixels first for the whole image, then every
+    row's right-half pixels -- not "first half of the pixel stream, second
+    half of the pixel stream", which is what the previous implementation
+    here actually did despite its name (identical to plain sequential
+    packing), scrambling left/right on any panel that expects this format."""
+    width, height = image.size
+    half = width // 2
+
+    left_bytes = bytearray()
+    right_bytes = bytearray()
+
     for y in range(height):
-        for x in range(width):
-            r, g, b = pixels[x, y]
-            
-            # Find closest color in our palette
-            min_dist = float("inf")
-            best_idx = 0
-            for idx, spec_rgb in enumerate(SPECTRA6_REAL_WORLD_RGB):
-                dist = (r - spec_rgb[0])**2 + (g - spec_rgb[1])**2 + (b - spec_rgb[2])**2
-                if dist < min_dist:
-                    min_dist = dist
-                    best_idx = idx
-            
-            # Convert palette index to physical hardware nibble value
-            color_indices.append(SPECTRA6_NIBBLE_VALUES[best_idx])
-            
-    # Pack nibbles into bytes
-    output_bytes = bytearray()
-    
+        left_bytes.extend(pack_row_half(image, y, 0, half))
+        right_bytes.extend(pack_row_half(image, y, half, width))
+
+    return bytes(left_bytes) + bytes(right_bytes)
+
+def pack_sequential(image: Image.Image) -> bytes:
+    """Pack landscape/sequential display buffers (e.g. 7.3" 800x480)."""
+    width, height = image.size
+    out = bytearray()
+
+    for y in range(height):
+        out.extend(pack_row_half(image, y, 0, width))
+
+    return bytes(out)
+
+def encode_spectra6_bin(img: Image.Image, layout_type: str = "split_half") -> bytes:
+    """Convert rendered PIL image to the raw packed 4bpp binary format."""
     if layout_type == "split_half":
-        # First half of the file is even pixels (high nibbles), second half is odd pixels (low nibbles)
-        num_pixels = width * height
-        half_pixels = num_pixels // 2
-        for i in range(half_pixels):
-            even_val = color_indices[2 * i]
-            odd_val = color_indices[2 * i + 1]
-            packed_byte = (even_val << 4) | (odd_val & 0x0F)
-            output_bytes.append(packed_byte)
-    else:  # "sequential"
-        # Standard sequential pixel packing
-        for i in range(0, len(color_indices), 2):
-            pix1 = color_indices[i]
-            pix2 = color_indices[i+1] if i+1 < len(color_indices) else 0
-            packed_byte = (pix1 << 4) | (pix2 & 0x0F)
-            output_bytes.append(packed_byte)
-            
-    return bytes(output_bytes)
+        return pack_split_halves(img)
+    else:
+        return pack_sequential(img)
 
 def upload_bin_to_frame(frame_ip: str, binary_bytes: bytes) -> bool:
     """Upload packed binary payload to Fraimic frame endpoint."""
