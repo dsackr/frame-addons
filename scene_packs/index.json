@@ -2045,6 +2045,95 @@
       ]
     },
     {
+      "id": "aviation",
+      "name": "Famous Planes",
+      "description": "Iconic aircraft spanning the first powered flight to supersonic airliners.",
+      "category": [
+        "history",
+        "speed"
+      ],
+      "categories": [
+        "history",
+        "speed"
+      ],
+      "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+      "cover": "scene_packs/aviation/01_first_flight_wright_flyer_1903.jpg",
+      "images": [
+        {
+          "filename": "01_first_flight_wright_flyer_1903.jpg",
+          "path": "scene_packs/aviation/01_first_flight_wright_flyer_1903.jpg",
+          "title": "First Flight (Wright Flyer, 1903)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:First_flight2.jpg",
+          "license": "Public domain",
+          "attribution": "John T. Daniels"
+        },
+        {
+          "filename": "02_spirit_of_st_louis.jpg",
+          "path": "scene_packs/aviation/02_spirit_of_st_louis.jpg",
+          "title": "Spirit of St. Louis",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Charles_Lindbergh_and_airplane_%22Spirit_of_St._Louis%22_LCCN2016888581.jpg",
+          "license": "Public domain",
+          "attribution": "Harris &amp; Ewing, photographer"
+        },
+        {
+          "filename": "03_supermarine_spitfire.jpg",
+          "path": "scene_packs/aviation/03_supermarine_spitfire.jpg",
+          "title": "Supermarine Spitfire",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Supermarine_Spitfire_Mk_XVI_NR.jpg",
+          "license": "CC BY-SA 2.5",
+          "attribution": "ChowellsNoise reduction and shadows lifted by Diliff."
+        },
+        {
+          "filename": "04_memphis_belle_b_17_flying_fortress.jpg",
+          "path": "scene_packs/aviation/04_memphis_belle_b_17_flying_fortress.jpg",
+          "title": "Memphis Belle (B-17 Flying Fortress)",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Memphis_Belle.jpg",
+          "license": "Public domain",
+          "attribution": "Unknown authorUnknown author"
+        },
+        {
+          "filename": "05_sr_71_blackbird.jpg",
+          "path": "scene_packs/aviation/05_sr_71_blackbird.jpg",
+          "title": "SR-71 Blackbird",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg",
+          "license": "Public domain",
+          "attribution": "USAF / Judson Brohmer"
+        },
+        {
+          "filename": "06_concorde.jpg",
+          "path": "scene_packs/aviation/06_concorde.jpg",
+          "title": "Concorde",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Concorde_Sierra_Delta_%26_001.jpg",
+          "license": "CC0",
+          "attribution": "GerdeeX"
+        },
+        {
+          "filename": "07_boeing_747.jpg",
+          "path": "scene_packs/aviation/07_boeing_747.jpg",
+          "title": "Boeing 747",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Boeing_747-8_first_flight_Everett,_WA.jpg",
+          "license": "CC BY 2.0",
+          "attribution": "Boeing Dreamscape"
+        },
+        {
+          "filename": "08_air_force_one.jpg",
+          "path": "scene_packs/aviation/08_air_force_one.jpg",
+          "title": "Air Force One",
+          "source": "Wikimedia Commons",
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Air_Force_One_over_Mt._Rushmore.jpg",
+          "license": "Public domain",
+          "attribution": "U.S. Air Force File Photo."
+        }
+      ]
+    },
+    {
       "id": "canyons",
       "name": "Canyons",
       "description": "Breathtaking views of the Grand Canyon and glowing sandstone paths of Antelope Canyon.",
@@ -2258,8 +2347,14 @@
           "label": "Calendar Source",
           "default": "ha",
           "options": [
-            { "value": "ha", "label": "Configured Calendars" },
-            { "value": "ical", "label": "Google Calendar / iCal URL" }
+            {
+              "value": "ha",
+              "label": "Configured Calendars"
+            },
+            {
+              "value": "ical",
+              "label": "Google Calendar / iCal URL"
+            }
           ]
         },
         {
@@ -2270,7 +2365,10 @@
           "label": "Configured Calendars",
           "required": false,
           "help": "Pick one or more calendars already set up in Home Assistant -- Google Calendar, Local Calendar, CalDAV, or any other calendar integration. Events from all selected calendars are merged together. Leave all unchecked to use the first available calendar.",
-          "show_if": { "field": "calendar_source", "equals": "ha" }
+          "show_if": {
+            "field": "calendar_source",
+            "equals": "ha"
+          }
         },
         {
           "name": "calendar_url",
@@ -2279,7 +2377,10 @@
           "required": true,
           "placeholder": "https://calendar.google.com/...",
           "help": "To get this: Open Google Calendar on desktop, go to **Settings** > click your calendar name in the left panel > scroll down to **Integrate calendar** > copy the **Secret address in iCal format**.",
-          "show_if": { "field": "calendar_source", "equals": "ical" }
+          "show_if": {
+            "field": "calendar_source",
+            "equals": "ical"
+          }
         },
         {
           "name": "zip_code",
@@ -2296,8 +2397,14 @@
           "default": "fahrenheit",
           "group": "weather",
           "options": [
-            { "value": "fahrenheit", "label": "Fahrenheit (°F)" },
-            { "value": "celsius", "label": "Celsius (°C)" }
+            {
+              "value": "fahrenheit",
+              "label": "Fahrenheit (\u00b0F)"
+            },
+            {
+              "value": "celsius",
+              "label": "Celsius (\u00b0C)"
+            }
           ]
         }
       ]
@@ -2320,10 +2427,22 @@
           "label": "Content Type",
           "default": "quote",
           "options": [
-            { "value": "joke", "label": "Joke of the Day" },
-            { "value": "quote", "label": "Quote of the Day" },
-            { "value": "scripture", "label": "Scripture of the Day" },
-            { "value": "word", "label": "Word of the Day" }
+            {
+              "value": "joke",
+              "label": "Joke of the Day"
+            },
+            {
+              "value": "quote",
+              "label": "Quote of the Day"
+            },
+            {
+              "value": "scripture",
+              "label": "Scripture of the Day"
+            },
+            {
+              "value": "word",
+              "label": "Word of the Day"
+            }
           ]
         },
         {
@@ -2332,8 +2451,14 @@
           "label": "Visual Theme",
           "default": "classic",
           "options": [
-            { "value": "classic", "label": "Classic" },
-            { "value": "retro_atomic", "label": "Retro Atomic Age" }
+            {
+              "value": "classic",
+              "label": "Classic"
+            },
+            {
+              "value": "retro_atomic",
+              "label": "Retro Atomic Age"
+            }
           ]
         },
         {
@@ -2349,10 +2474,19 @@
           "label": "Joke Feed",
           "default": "icanhazdadjoke",
           "options": [
-            { "value": "icanhazdadjoke", "label": "icanhazdadjoke.com (Dad Jokes)" },
-            { "value": "custom", "label": "Custom API URL..." }
+            {
+              "value": "icanhazdadjoke",
+              "label": "icanhazdadjoke.com (Dad Jokes)"
+            },
+            {
+              "value": "custom",
+              "label": "Custom API URL..."
+            }
           ],
-          "show_if": { "field": "content_mode", "equals": "joke" }
+          "show_if": {
+            "field": "content_mode",
+            "equals": "joke"
+          }
         },
         {
           "name": "joke_api_url",
@@ -2361,7 +2495,10 @@
           "required": false,
           "placeholder": "https://...",
           "help": "Leave blank to use the custom jokes list below instead. Accepts either {\"joke\": \"...\"} or {\"setup\": \"...\", \"punchline\": \"...\"} response shapes.",
-          "show_if": { "field": "joke_feed", "equals": "custom" }
+          "show_if": {
+            "field": "joke_feed",
+            "equals": "custom"
+          }
         },
         {
           "name": "custom_jokes",
@@ -2370,7 +2507,10 @@
           "required": false,
           "placeholder": "[{\"setup\": \"Why did the...\", \"punchline\": \"Because...\"}]",
           "help": "A JSON array of **{\"setup\": \"...\", \"punchline\": \"...\"}** objects, or plain **{\"joke\": \"...\"}** one-liners (both shapes accepted). One is shown per day, cycling through the list. Only used if no Custom Joke API URL is set above.",
-          "show_if": { "field": "joke_feed", "equals": "custom" }
+          "show_if": {
+            "field": "joke_feed",
+            "equals": "custom"
+          }
         },
         {
           "name": "quote_feed",
@@ -2378,11 +2518,23 @@
           "label": "Quote Feed",
           "default": "zenquotes",
           "options": [
-            { "value": "zenquotes", "label": "ZenQuotes (Inspirational)" },
-            { "value": "favqs", "label": "FavQs (General)" },
-            { "value": "custom", "label": "Custom API URL..." }
+            {
+              "value": "zenquotes",
+              "label": "ZenQuotes (Inspirational)"
+            },
+            {
+              "value": "favqs",
+              "label": "FavQs (General)"
+            },
+            {
+              "value": "custom",
+              "label": "Custom API URL..."
+            }
           ],
-          "show_if": { "field": "content_mode", "equals": "quote" }
+          "show_if": {
+            "field": "content_mode",
+            "equals": "quote"
+          }
         },
         {
           "name": "quote_api_url",
@@ -2391,7 +2543,10 @@
           "required": false,
           "placeholder": "https://...",
           "help": "Leave blank to use the custom quotes list below instead.",
-          "show_if": { "field": "quote_feed", "equals": "custom" }
+          "show_if": {
+            "field": "quote_feed",
+            "equals": "custom"
+          }
         },
         {
           "name": "custom_quotes",
@@ -2400,7 +2555,10 @@
           "required": false,
           "placeholder": "[{\"q\": \"Quote text\", \"a\": \"Author\"}]",
           "help": "A JSON array of **{\"q\": \"quote text\", \"a\": \"author\"}** objects. One is shown per day, cycling through the list. Only used if no Custom Quote API URL is set above.",
-          "show_if": { "field": "quote_feed", "equals": "custom" }
+          "show_if": {
+            "field": "quote_feed",
+            "equals": "custom"
+          }
         },
         {
           "name": "bible_translation",
@@ -2408,15 +2566,39 @@
           "label": "Bible Translation",
           "default": "niv",
           "options": [
-            { "value": "niv", "label": "NIV (New International Version)" },
-            { "value": "kjv", "label": "KJV (King James Version)" },
-            { "value": "web", "label": "WEB (World English Bible)" },
-            { "value": "bbe", "label": "BBE (Bible in Basic English)" },
-            { "value": "oeb", "label": "OEB (Open English Bible)" },
-            { "value": "rvr1960", "label": "RVR1960 (Spanish Reina Valera)" },
-            { "value": "almeida", "label": "Almeida (Portuguese João Ferreira)" }
+            {
+              "value": "niv",
+              "label": "NIV (New International Version)"
+            },
+            {
+              "value": "kjv",
+              "label": "KJV (King James Version)"
+            },
+            {
+              "value": "web",
+              "label": "WEB (World English Bible)"
+            },
+            {
+              "value": "bbe",
+              "label": "BBE (Bible in Basic English)"
+            },
+            {
+              "value": "oeb",
+              "label": "OEB (Open English Bible)"
+            },
+            {
+              "value": "rvr1960",
+              "label": "RVR1960 (Spanish Reina Valera)"
+            },
+            {
+              "value": "almeida",
+              "label": "Almeida (Portuguese Jo\u00e3o Ferreira)"
+            }
           ],
-          "show_if": { "field": "content_mode", "equals": "scripture" }
+          "show_if": {
+            "field": "content_mode",
+            "equals": "scripture"
+          }
         },
         {
           "name": "scripture_source",
@@ -2424,10 +2606,19 @@
           "label": "Scripture Source",
           "default": "daily_api",
           "options": [
-            { "value": "daily_api", "label": "Daily Verse of the Day" },
-            { "value": "custom_list", "label": "Custom list configured in JSON" }
+            {
+              "value": "daily_api",
+              "label": "Daily Verse of the Day"
+            },
+            {
+              "value": "custom_list",
+              "label": "Custom list configured in JSON"
+            }
           ],
-          "show_if": { "field": "content_mode", "equals": "scripture" }
+          "show_if": {
+            "field": "content_mode",
+            "equals": "scripture"
+          }
         },
         {
           "name": "custom_scriptures",
@@ -2436,7 +2627,10 @@
           "required": false,
           "placeholder": "[{\"q\": \"Verse text\", \"r\": \"Book 1:1\", \"t\": \"KJV\"}]",
           "help": "A JSON array of **{\"q\": \"verse text\", \"r\": \"reference\", \"t\": \"translation\"}** objects. One is shown per day, cycling through the list.",
-          "show_if": { "field": "scripture_source", "equals": "custom_list" }
+          "show_if": {
+            "field": "scripture_source",
+            "equals": "custom_list"
+          }
         },
         {
           "name": "word_feed",
@@ -2444,10 +2638,19 @@
           "label": "Word Feed",
           "default": "random_word",
           "options": [
-            { "value": "random_word", "label": "Random Word + Dictionary Lookup" },
-            { "value": "custom", "label": "Custom API URL..." }
+            {
+              "value": "random_word",
+              "label": "Random Word + Dictionary Lookup"
+            },
+            {
+              "value": "custom",
+              "label": "Custom API URL..."
+            }
           ],
-          "show_if": { "field": "content_mode", "equals": "word" }
+          "show_if": {
+            "field": "content_mode",
+            "equals": "word"
+          }
         },
         {
           "name": "word_api_url",
@@ -2456,7 +2659,10 @@
           "required": false,
           "placeholder": "https://...",
           "help": "Leave blank to use the custom words list below instead. Expects a JSON response shaped like {\"word\": \"...\", \"pos\": \"...\", \"definition\": \"...\", \"example\": \"...\"}.",
-          "show_if": { "field": "word_feed", "equals": "custom" }
+          "show_if": {
+            "field": "word_feed",
+            "equals": "custom"
+          }
         },
         {
           "name": "custom_words",
@@ -2465,7 +2671,10 @@
           "required": false,
           "placeholder": "[{\"word\": \"Serendipity\", \"pos\": \"noun\", \"definition\": \"...\", \"example\": \"...\"}]",
           "help": "A JSON array of **{\"word\", \"pos\", \"definition\", \"example\"}** objects. One is shown per day, cycling through the list. Only used if no Custom Word API URL is set above.",
-          "show_if": { "field": "word_feed", "equals": "custom" }
+          "show_if": {
+            "field": "word_feed",
+            "equals": "custom"
+          }
         }
       ]
     }

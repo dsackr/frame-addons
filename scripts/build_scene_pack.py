@@ -771,6 +771,23 @@ PACKS = [
             ("File:Bran Castle cloudy.jpg", "Bran Castle", ""),
         ],
     },
+    {
+        "id": "aviation",
+        "name": "Famous Planes",
+        "description": "Iconic aircraft spanning the first powered flight to supersonic airliners.",
+        "categories": ["history", "speed"],
+        "license": "Public domain and Creative Commons media from Wikimedia Commons; see per-image links",
+        "queries": [
+            ("File:First flight2.jpg", "First Flight (Wright Flyer, 1903)", ""),
+            ("File:Charles Lindbergh and airplane \"Spirit of St. Louis\" LCCN2016888581.jpg", "Spirit of St. Louis", ""),
+            ("File:Supermarine Spitfire Mk XVI NR.jpg", "Supermarine Spitfire", ""),
+            ("File:Memphis Belle.jpg", "Memphis Belle (B-17 Flying Fortress)", ""),
+            ("File:Lockheed SR-71 Blackbird.jpg", "SR-71 Blackbird", ""),
+            ("File:Concorde Sierra Delta & 001.jpg", "Concorde", ""),
+            ("File:Boeing 747-8 first flight Everett, WA.jpg", "Boeing 747", ""),
+            ("File:Air Force One over Mt. Rushmore.jpg", "Air Force One", ""),
+        ],
+    },
 ]
 
 
