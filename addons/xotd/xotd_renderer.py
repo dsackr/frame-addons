@@ -323,15 +323,18 @@ def fit_two_blocks_to_box(
 # do) -- simpler to get right, and still reads clearly as "drop cap" at
 # this canvas size. Enabling it switches that block from centered to
 # left-aligned, since drop caps are a left/justified-text convention.
+#
+# The tile duplicates the first letter rather than replacing it: the tile
+# sits in its own row above the paragraph (not inline beside its first
+# line, which would need real per-line variable-width wrapping), so
+# removing the letter from the body text would just read as a typo --
+# "hy did the..." with no visual link back to the "W" tile above it.
+# Showing it in both places costs nothing (the tile is purely decorative)
+# and guarantees the body text is never mangled.
 # ---------------------------------------------------------------------------
-def split_first_letter(text: str) -> tuple[str, str]:
-    """(first_letter, remainder) for drop-cap use -- remainder has the
-    first letter's leading whitespace stripped so wrapping doesn't start
-    with an orphan space."""
+def first_letter_for_drop_cap(text: str) -> str:
     text = text.strip()
-    if not text:
-        return "", ""
-    return text[0], text[1:].lstrip()
+    return text[0] if text else ""
 
 def draw_drop_cap_tile(
     draw: ImageDraw.ImageDraw, letter: str, x: int, y: int, size: int,
@@ -674,10 +677,10 @@ def render_quote_image(width: int, height: int, quote: str, author: str, theme: 
     bottom_reserved = author_y_offset + author_font_size + footer_font_size + 60
     available_height = (height - 2 * border_inner_margin) - top_reserved - bottom_reserved
 
-    drop_letter, quote_body = split_first_letter(quote) if drop_cap else ("", quote)
+    drop_letter = first_letter_for_drop_cap(quote) if drop_cap else ""
 
     font_quote, wrapped_lines, line_heights, line_spacing, total_text_height = fit_text_to_box(
-        draw, quote_body, wrap_width, available_height,
+        draw, quote, wrap_width, available_height,
         font_loader=lambda size: load_font(t["headline_font"], "Bold", size),
         max_size=max_quote_font_size, min_size=min_quote_font_size
     )
@@ -794,8 +797,8 @@ def render_scripture_image(width: int, height: int, quote: str, reference: str, 
     # to the room between the borders (minus top/bottom padding, plus a
     # fixed reserve above for the drop-cap tile when enabled).
     raw_verse = quote.replace('"', '').replace('“', '').replace('”', '').strip()
-    drop_letter, verse_remainder = split_first_letter(raw_verse) if drop_cap else ("", raw_verse)
-    clean_quote = verse_remainder if drop_cap else f"“ {raw_verse} ”"
+    drop_letter = first_letter_for_drop_cap(raw_verse) if drop_cap else ""
+    clean_quote = raw_verse if drop_cap else f"“ {raw_verse} ”"
     clean_ref = reference.strip()
 
     content_top = border_inner_margin + top_padding + (dropcap_reserve if drop_cap else 0)
@@ -912,12 +915,12 @@ def render_joke_image(width: int, height: int, setup: str, punchline: str, theme
     available_height = (height - border_inner_margin - bottom_padding) - content_top
     left_x = (width - wrap_width) // 2
 
-    drop_letter, setup_body = split_first_letter(setup) if drop_cap else ("", setup)
+    drop_letter = first_letter_for_drop_cap(setup) if drop_cap else ""
 
     if punchline:
         (font_joke, setup_lines, setup_heights, punch_lines, punch_heights,
          line_spacing, block_gap, total_height) = fit_two_blocks_to_box(
-            draw, setup_body, punchline, wrap_width, available_height,
+            draw, setup, punchline, wrap_width, available_height,
             font_loader=lambda size: load_font(t["headline_font"], "Bold", size),
             max_size=max_font_size, min_size=min_font_size
         )
@@ -951,7 +954,7 @@ def render_joke_image(width: int, height: int, setup: str, punchline: str, theme
             curr_y += punch_heights[i] + line_spacing
     else:
         font_joke, lines, heights, line_spacing, total_height = fit_text_to_box(
-            draw, setup_body, wrap_width, available_height,
+            draw, setup, wrap_width, available_height,
             font_loader=lambda size: load_font(t["headline_font"], "Bold", size),
             max_size=max_font_size, min_size=min_font_size
         )
@@ -1067,9 +1070,9 @@ def render_word_image(width: int, height: int, word: str, pos: str, definition: 
     # small, independent of how much room is actually available) so it
     # always reads as secondary/caption text underneath the word rather
     # than competing with it.
-    drop_letter, definition_body = split_first_letter(definition) if drop_cap else ("", definition)
+    drop_letter = first_letter_for_drop_cap(definition) if drop_cap else ""
     font_def, def_lines, def_heights, def_line_spacing, def_total_height = fit_text_to_box(
-        draw, definition_body, wrap_width, available_total,
+        draw, definition, wrap_width, available_total,
         font_loader=lambda size: load_font(t["accent_font"], "SemiBold", size),
         max_size=max_def_font_size, min_size=min_def_font_size,
         line_spacing_ratio=0.35,
