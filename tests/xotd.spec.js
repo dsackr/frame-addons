@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const http = require('http');
 const fs = require('fs');
+const os = require('os');
 const path = require('path');
 const { exec } = require('child_process');
 const util = require('util');
@@ -128,6 +129,14 @@ function stopMockServer() {
 async function runXotd(mockConfig) {
   fs.writeFileSync(CONFIG_PATH, JSON.stringify(mockConfig, null, 2));
   const { stdout, stderr } = await execPromise(`python3 ${path.join(XOTD_DIR, 'xotd_renderer.py')}`);
+  console.log('stdout:', stdout);
+  if (stderr) console.error('stderr:', stderr);
+}
+
+async function runXotdWithArgs(mockConfig, configPath, extraArgs) {
+  fs.writeFileSync(configPath, JSON.stringify(mockConfig, null, 2));
+  const args = ['--config', configPath, ...extraArgs].join(' ');
+  const { stdout, stderr } = await execPromise(`python3 ${path.join(XOTD_DIR, 'xotd_renderer.py')} ${args}`);
   console.log('stdout:', stdout);
   if (stderr) console.error('stderr:', stderr);
 }
@@ -408,6 +417,76 @@ test.describe('xOTD Add-on', () => {
       expect(fs.existsSync(PREVIEW_PATH)).toBe(true);
       expect(lastUploadedImage).not.toBeNull();
       expect(lastUploadedImage.length).toBe(960000);
+    });
+  });
+
+  test.describe('Render-only mode & isolated config path', () => {
+    let tmpDir;
+
+    test.beforeEach(() => {
+      tmpDir = fs.mkdtempSync(path.join(os.tmpdir(), 'xotd-render-only-'));
+    });
+
+    test.afterEach(() => {
+      fs.rmSync(tmpDir, { recursive: true, force: true });
+    });
+
+    test('--render-only writes .bin/preview but makes no upload request', async () => {
+      const configPath = path.join(tmpDir, 'config.json');
+      await runXotdWithArgs(
+        {
+          frame: { ip_address: `localhost:${PORT}`, resolution: [800, 480], layout: 'sequential' },
+          content_mode: 'quote',
+          quote_feed: 'custom',
+          custom_quotes: [{ q: 'Custom quote from local JSON file.', a: 'Test Author' }],
+        },
+        configPath,
+        ['--render-only'],
+      );
+
+      expect(fs.existsSync(path.join(tmpDir, 'xotd_preview.png'))).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, 'xotd.bin'))).toBe(true);
+
+      const paths = requestsLog.map((r) => r.path);
+      expect(paths).not.toContain('/api/image');
+      expect(lastUploadedImage).toBeNull();
+
+      const binBytes = fs.readFileSync(path.join(tmpDir, 'xotd.bin'));
+      expect(binBytes.length).toBe(192000);
+    });
+
+    test('--config reads/writes at the given path instead of the script directory', async () => {
+      const configPath = path.join(tmpDir, 'config.json');
+      await runXotdWithArgs(
+        {
+          frame: { ip_address: `localhost:${PORT}`, resolution: [800, 480], layout: 'sequential' },
+          content_mode: 'joke',
+          joke_feed: 'custom',
+          custom_jokes: [{ setup: 'Custom joke setup from config.', punchline: 'Custom punchline.' }],
+        },
+        configPath,
+        ['--render-only'],
+      );
+
+      // Nothing should have been written next to the script itself.
+      expect(fs.existsSync(PREVIEW_PATH)).toBe(false);
+      expect(fs.existsSync(BIN_PATH)).toBe(false);
+      // Everything lands next to the explicit --config path instead.
+      expect(fs.existsSync(path.join(tmpDir, 'xotd_preview.png'))).toBe(true);
+      expect(fs.existsSync(path.join(tmpDir, 'xotd.bin'))).toBe(true);
+    });
+
+    test('default invocation (no flags) is unaffected: still uploads', async () => {
+      await runXotd({
+        frame: { ip_address: `localhost:${PORT}`, resolution: [800, 480], layout: 'sequential' },
+        content_mode: 'quote',
+        quote_feed: 'custom',
+        custom_quotes: [{ q: 'Custom quote from local JSON file.', a: 'Test Author' }],
+      });
+
+      const paths = requestsLog.map((r) => r.path);
+      expect(paths).toContain('/api/image');
+      expect(lastUploadedImage).not.toBeNull();
     });
   });
 });

@@ -9,6 +9,7 @@ format, and uploads it to the Fraimic e-ink canvas frame.
 
 from __future__ import annotations
 
+import argparse
 import os
 import sys
 import json
@@ -1234,9 +1235,30 @@ def upload_bin_to_frame(frame_ip: str, binary_bytes: bytes) -> bool:
 # ---------------------------------------------------------------------------
 # Main Routine
 # ---------------------------------------------------------------------------
+def parse_args(argv=None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--config",
+        default=None,
+        help="Path to config.json (default: config.json next to this script). "
+             "The .bin/preview outputs are written next to this path too, so a "
+             "caller can isolate concurrent renders in their own directories.",
+    )
+    parser.add_argument(
+        "--render-only",
+        action="store_true",
+        help="Render and pack the .bin file but skip uploading it to the frame. "
+             "Lets a caller read the .bin back off disk and send it through its "
+             "own delivery pipeline instead.",
+    )
+    return parser.parse_args(argv)
+
+
 def main():
+    args = parse_args()
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, "config.json")
+    config_path = os.path.abspath(args.config) if args.config else os.path.join(script_dir, "config.json")
+    output_dir = os.path.dirname(config_path)
 
     if not os.path.exists(config_path):
         print(f"Error: Configuration file not found at {config_path}")
@@ -1333,8 +1355,8 @@ def main():
         print(f"Generating {label} layout ({width}x{height})...")
         img = render_quote_image(width, height, quote, author, theme, drop_cap)
 
-    # Save a PNG preview next to the script for debug/visual verification
-    preview_path = os.path.join(script_dir, "xotd_preview.png")
+    # Save a PNG preview alongside the config for debug/visual verification
+    preview_path = os.path.join(output_dir, "xotd_preview.png")
     img.save(preview_path)
     print(f"Saved local PNG preview to {preview_path}")
 
@@ -1343,10 +1365,14 @@ def main():
     binary_bytes = encode_spectra6_bin(img, layout_type)
 
     # Save local bin backup
-    bin_path = os.path.join(script_dir, "xotd.bin")
+    bin_path = os.path.join(output_dir, "xotd.bin")
     with open(bin_path, "wb") as f:
         f.write(binary_bytes)
     print(f"Saved local Spectra 6 binary to {bin_path}")
+
+    if args.render_only:
+        print("--render-only set: skipping upload to frame.")
+        return
 
     # Upload
     frame_ip = frame_conf.get("ip_address", "fraimic.local")
