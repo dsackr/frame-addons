@@ -546,21 +546,22 @@ def render_portrait(width: int, height: int, events: list[dict], weather: dict, 
     draw = ImageDraw.Draw(img)
     
     # Load fonts
-    font_bold_huge = load_font("Outfit", "Bold", 72)
+    font_bold_huge = load_font("Outfit", "Bold", 92)
     font_bold_lg = load_font("Outfit", "Bold", 48)
     font_bold_md = load_font("Outfit", "Bold", 36)
     font_regular_md = load_font("Outfit", "SemiBold", 28)
     font_regular_sm = load_font("Outfit", "SemiBold", 22)
-    
+
     now = datetime.datetime.now(target_tz)
-    
-    # 1. Date Header (Left side)
-    date_str = now.strftime("%A, %B %-d").upper()
-    draw.text((80, 80), date_str, fill=COLOR_BLACK, font=font_regular_md)
-    
-    time_str = now.strftime("%-I:%M %p")
-    draw.text((80, 130), time_str, fill=COLOR_BLACK, font=font_bold_huge)
-    
+
+    # 1. Date Header (Left side) -- this display only refreshes once a
+    # day/hour, so a live clock just reads as stale/wrong. Give that space
+    # to the date instead: big weekday on top, month + day below.
+    weekday_str = now.strftime("%A").upper()
+    month_day_str = now.strftime("%B %-d").upper()
+    draw.text((80, 70), weekday_str, fill=COLOR_BLACK, font=font_bold_huge)
+    draw.text((80, 195), month_day_str, fill=COLOR_RED, font=font_bold_lg)
+
     # 2. Weather Widget (Right side)
     if weather:
         # Bounding box coordinates
@@ -661,24 +662,25 @@ def render_landscape(width: int, height: int, events: list[dict], weather: dict,
     draw = ImageDraw.Draw(img)
     
     # Load fonts
-    font_bold_huge = load_font("Outfit", "Bold", 42)
+    font_bold_huge = load_font("Outfit", "Bold", 50)
     font_bold_lg = load_font("Outfit", "Bold", 28)
     font_bold_md = load_font("Outfit", "Bold", 22)
     font_regular_md = load_font("Outfit", "SemiBold", 18)
     font_regular_sm = load_font("Outfit", "SemiBold", 15)
-    
+
     now = datetime.datetime.now(target_tz)
-    
+
     # Split column layout: Divider at x = 300
     draw.line((300, 30, 300, height - 30), fill=COLOR_BLACK, width=2)
-    
-    # Left Column (Date & Weather)
-    date_str = now.strftime("%A, %b %-d").upper()
-    draw.text((40, 40), date_str, fill=COLOR_BLACK, font=font_regular_md)
-    
-    time_str = now.strftime("%-I:%M %p")
-    draw.text((40, 70), time_str, fill=COLOR_BLACK, font=font_bold_huge)
-    
+
+    # Left Column (Date & Weather) -- no live clock (this refreshes once a
+    # day/hour, so a time-of-day reads as stale/wrong); the date gets the
+    # freed space instead, as a big weekday over the month + day.
+    weekday_str = now.strftime("%A").upper()
+    month_day_str = now.strftime("%b %-d").upper()
+    draw.text((40, 32), weekday_str, fill=COLOR_BLACK, font=font_bold_huge)
+    draw.text((40, 92), month_day_str, fill=COLOR_RED, font=font_bold_lg)
+
     if weather:
         wx, wy = 40, 140
         draw_weather_icon(draw, weather["icon_code"], wx, wy, 80)
