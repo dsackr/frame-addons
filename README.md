@@ -11,8 +11,7 @@ By hosting these resources separately, users can discover and install new conten
   * Automatically and dynamically fetched at runtime by the Home Assistant integration.
 * **`addons/`**: Custom layout scripts, diagnostics, and widgets to display dynamic information on your canvas.
   * **[Daily Agenda](file:///Users/dsackrider/repos/frame-addons/addons/daily_agenda/README.md)**: Reads your calendar (a Google/iCal URL, or one or more calendars already configured in Home Assistant) and weather forecast, rendering a beautiful dashboard natively in e-ink Spectra 6 colors.
-  * **[Quote of the Day](file:///Users/dsackrider/repos/frame-addons/addons/quote_of_the_day/README.md)**: Displays an inspiring quote daily, fetched from the web or a local custom list, formatted on a premium decorative layout.
-  * **[Scripture of the Day](file:///Users/dsackrider/repos/frame-addons/addons/scripture_of_the_day/README.md)**: Displays an inspiring daily Bible verse, fetched from the web or a local custom list, formatted on a premium decorative layout.
+  * **[xOTD (Day-of-the-Day)](file:///Users/dsackrider/repos/frame-addons/addons/xotd/README.md)**: Displays a daily joke, quote, or Bible verse -- fetched from the web or a local custom list -- on a premium decorative layout. Create multiple instances to run different content on different frames and schedules.
 
 
 

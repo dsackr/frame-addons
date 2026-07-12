@@ -1,0 +1,33 @@
+{
+  "frame": {
+    "ip_address": "fraimic.local",
+    "resolution": [1200, 1600],
+    "layout": "split_half"
+  },
+  "content_mode": "quote",
+  "theme": "classic",
+  "drop_cap": false,
+
+  "joke_feed": "icanhazdadjoke",
+  "custom_jokes": [
+    { "setup": "Why don't scientists trust atoms?", "punchline": "Because they make up everything." }
+  ],
+
+  "quote_feed": "zenquotes",
+  "custom_quotes": [
+    { "q": "The only way to do great work is to love what you do.", "a": "Steve Jobs" },
+    { "q": "Difficulties strengthen the mind, as labor does the body.", "a": "Seneca" }
+  ],
+
+  "bible_translation": "niv",
+  "scripture_source": "daily_api",
+  "custom_scriptures": [
+    { "q": "The LORD is my shepherd; I shall not want.", "r": "Psalm 23:1", "t": "KJV" },
+    { "q": "I can do all things through him who strengthens me.", "r": "Philippians 4:13", "t": "KJV" }
+  ],
+
+  "word_feed": "random_word",
+  "custom_words": [
+    { "word": "Serendipity", "pos": "noun", "definition": "The occurrence of finding pleasant or valuable things without looking for them.", "example": "A chance meeting turned into a serendipity that changed her career." }
+  ]
+}

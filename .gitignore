@@ -14,12 +14,7 @@ addons/daily_agenda/agenda.bin
 addons/daily_agenda/agenda_preview.png
 addons/daily_agenda/fonts/
 
-addons/quote_of_the_day/config.json
-addons/quote_of_the_day/quote.bin
-addons/quote_of_the_day/quote_preview.png
-addons/quote_of_the_day/fonts/
-
-addons/scripture_of_the_day/config.json
-addons/scripture_of_the_day/scripture.bin
-addons/scripture_of_the_day/scripture_preview.png
-addons/scripture_of_the_day/fonts/
+addons/xotd/config.json
+addons/xotd/xotd.bin
+addons/xotd/xotd_preview.png
+addons/xotd/fonts/
