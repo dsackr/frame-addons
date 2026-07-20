@@ -656,12 +656,15 @@ def render_portrait(width: int, height: int, events: list[dict], weather: dict, 
         sig = "Excellent" if rssi > -50 else "Good" if rssi > -70 else "Fair" if rssi > -85 else "Weak"
         stats_list.append(f"WiFi: {sig}")
         
-    status_left = " | ".join(stats_list) if stats_list else "Fraimic Canvas System Active"
-    draw.text((80, height - 70), status_left, fill=COLOR_BLACK, font=font_regular_sm)
-    
+    # When stats are missing (render-only / no frame probe), leave the left
+    # footer empty — "Fraimic Canvas System Active" was misleading branding.
+    status_left = " | ".join(stats_list) if stats_list else ""
+    if status_left:
+        draw.text((80, height - 70), status_left, fill=COLOR_BLACK, font=font_regular_sm)
+
     update_str = f"Updated: {now.strftime('%m/%d %-I:%M %p')}"
     draw.text((width - 80, height - 70), update_str, fill=COLOR_BLACK, font=font_regular_sm, anchor="ra")
-    
+
     return img
 
 def render_landscape(width: int, height: int, events: list[dict], weather: dict, frame_stats: dict, target_tz) -> Image.Image:
