@@ -30,3 +30,15 @@ integration, panel UI, FramePort drivers.
 **Do not add new `type: widget` packs** while the integration’s Content
 Platform Phases 4–5 are open (see the integration roadmap). New dynamic
 features should land as Live generators, not frame-IP widgets.
+
+## Catalog schema (marketplace foundations)
+
+See [docs/CATALOG_SCHEMA.md](docs/CATALOG_SCHEMA.md). After rebuilding packs:
+
+```bash
+python3 scripts/stamp_catalog.py
+```
+
+Community PRs: images + JSON only — use the art-pack PR template under
+`.github/PULL_REQUEST_TEMPLATE/`.
+

@@ -1,4 +1,8 @@
 {
+  "schema_version": 1,
+  "catalog_version": "1.0.0",
+  "generated_at": 1784517826,
+  "min_integration_default": "0.12.0",
   "packs": [
     {
       "id": "monet",
@@ -16,72 +20,85 @@
           "path": "scene_packs/monet/01_impression_sunrise.jpg",
           "title": "Impression, Sunrise",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Monet_-_Impression,_Sunrise.jpg",
+          "sha256": "cde85e7728d0e33dae496d36942ae7cc07b88623fca6ed663f8b417981a4d25f"
         },
         {
           "filename": "02_water_lilies.jpg",
           "path": "scene_packs/monet/02_water_lilies.jpg",
           "title": "Water Lilies",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Water_Lilies_-_Google_Art_Project.jpg",
+          "sha256": "d7257ae287e5a176fa2be8968f7a1362ba1507e795ba91b9b79a287b61c16587"
         },
         {
           "filename": "03_woman_with_a_parasol.jpg",
           "path": "scene_packs/monet/03_woman_with_a_parasol.jpg",
           "title": "Woman with a Parasol",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Femme_%C3%A0_l%27ombrelle_tourn%C3%A9e_vers_la_gauche_-_Claude_Monnet_-_Mus%C3%A9e_d%27Orsay_RF_2621.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Femme_%C3%A0_l%27ombrelle_tourn%C3%A9e_vers_la_gauche_-_Claude_Monnet_-_Mus%C3%A9e_d%27Orsay_RF_2621.jpg",
+          "sha256": "4d6e537ddf8f1caf18d73228aef4955701361ca09f344aa1decc96ed3ee14d28"
         },
         {
           "filename": "04_poppy_field_near_argenteuil.jpg",
           "path": "scene_packs/monet/04_poppy_field_near_argenteuil.jpg",
           "title": "Poppy Field near Argenteuil",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Poppy_Field_in_a_Hollow_near_Giverny_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Poppy_Field_in_a_Hollow_near_Giverny_-_Google_Art_Project.jpg",
+          "sha256": "36cc57ffd634988f9eb6dc3e2f3d34ea64d569f030c526f868ff78569ae4b0fb"
         },
         {
           "filename": "05_rouen_cathedral.jpg",
           "path": "scene_packs/monet/05_rouen_cathedral.jpg",
           "title": "Rouen Cathedral",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Rouen_Cathedral,_West_Fa%C3%A7ade_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Rouen_Cathedral,_West_Fa%C3%A7ade_-_Google_Art_Project.jpg",
+          "sha256": "a3fbe9d932f962c6e672e9d4b599fa604e6f15cab03902538fc31cb3120e34a7"
         },
         {
           "filename": "06_the_magpie.jpg",
           "path": "scene_packs/monet/06_the_magpie.jpg",
           "title": "The Magpie",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:La_Pie_de_Monet.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:La_Pie_de_Monet.jpg",
+          "sha256": "6a46f64d41ba598af308baad667c796300eac481c21778b99f4d32a74546e20d"
         },
         {
           "filename": "07_wheatstacks.jpg",
           "path": "scene_packs/monet/07_wheatstacks.jpg",
           "title": "Wheatstacks",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Meules,_Effet_de_Neige,_Le_Matin_(1891)_-_Getty_Center.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Meules,_Effet_de_Neige,_Le_Matin_(1891)_-_Getty_Center.jpg",
+          "sha256": "fceb4963f90106c911b9210c0ab4100d8f911c5182ff318d1bca5ae0bc971872"
         },
         {
           "filename": "08_the_japanese_footbridge.jpg",
           "path": "scene_packs/monet/08_the_japanese_footbridge.jpg",
           "title": "The Japanese Footbridge",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Monet_-_Ponte_Japonesa.JPG"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Monet_-_Ponte_Japonesa.JPG",
+          "sha256": "7ba237aa0d94f1a26fc66037ee14cb6ee496cc5723e5995c2470ea7dca50a4f6"
         },
         {
           "filename": "09_garden_at_sainte_adresse.jpg",
           "path": "scene_packs/monet/09_garden_at_sainte_adresse.jpg",
           "title": "Garden at Sainte-Adresse",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Jardin_%C3%A0_Sainte-Adresse.jpg",
+          "sha256": "4fa8d220d0fe1f351353a2a805ccf1b999af96548ac277b9f545b4cb7e1b31fe"
         },
         {
           "filename": "10_bridge_over_a_pond_of_water_lilies.jpg",
           "path": "scene_packs/monet/10_bridge_over_a_pond_of_water_lilies.jpg",
           "title": "Bridge over a Pond of Water Lilies",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Water-Lily_Pond_1899_Claude_Monet_Metropolitan.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Water-Lily_Pond_1899_Claude_Monet_Metropolitan.jpg",
+          "sha256": "c9a464743ff13c2be5f9fd56e6c410b98d054fd7355f48d47ec20faf841b2810"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "davinci",
@@ -99,58 +116,69 @@
           "path": "scene_packs/davinci/01_mona_lisa.jpg",
           "title": "Mona Lisa",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_natural_color.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_natural_color.jpg",
+          "sha256": "03a2da4129fcc8701ae6c58c053befb42e11755484b3e2ec7ffa8da96005525a"
         },
         {
           "filename": "02_the_last_supper.jpg",
           "path": "scene_packs/davinci/02_the_last_supper.jpg",
           "title": "The Last Supper",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Last_Supper_-_Leonardo_Da_Vinci_-_High_Resolution_32x16.jpg",
+          "sha256": "0ebcfda0e11cd7bfc43bb0656f57bbec5168f509bcc87394f7b9289de6b08555"
         },
         {
           "filename": "03_vitruvian_man.jpg",
           "path": "scene_packs/davinci/03_vitruvian_man.jpg",
           "title": "Vitruvian Man",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Da_Vinci_Vitruve_Luc_Viatour.jpg",
+          "sha256": "3be64946528db72a27e4cf90abf350e182be8138bc244b559ec9a50e5d03ce56"
         },
         {
           "filename": "04_lady_with_an_ermine.jpg",
           "path": "scene_packs/davinci/04_lady_with_an_ermine.jpg",
           "title": "Lady with an Ermine",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Dama_z_gronostajem.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Dama_z_gronostajem.jpg",
+          "sha256": "6a92f84d185238e9faa31be3d8db92565c3cd6ef10dcf60aedec82f1cf23bbc4"
         },
         {
           "filename": "05_virgin_of_the_rocks.jpg",
           "path": "scene_packs/davinci/05_virgin_of_the_rocks.jpg",
           "title": "Virgin of the Rocks",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_Da_Vinci_-_Vergine_delle_Rocce_(Louvre).jpg",
+          "sha256": "f592e0866220ad2c3990d7a47dbc3f42d78e4bba143b94f5c7a88205d7371198"
         },
         {
           "filename": "06_ginevra_de_benci.jpg",
           "path": "scene_packs/davinci/06_ginevra_de_benci.jpg",
           "title": "Ginevra de' Benci",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Ginevra_de%27_Benci_-_Google_Art_Project.jpg",
+          "sha256": "98ac5c4e1abf5b4e2d9ae22ec69a4cd55979dad4db03b90c4c82d13d5417d004"
         },
         {
           "filename": "07_the_annunciation.jpg",
           "path": "scene_packs/davinci/07_the_annunciation.jpg",
           "title": "The Annunciation",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Annunciazione_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Leonardo_da_Vinci_-_Annunciazione_-_Google_Art_Project.jpg",
+          "sha256": "12c979e19760b8649b6bc647597dcc694aaade3b958581807f44f0c69c7137eb"
         },
         {
           "filename": "08_saint_john_the_baptist.jpg",
           "path": "scene_packs/davinci/08_saint_john_the_baptist.jpg",
           "title": "Saint John the Baptist",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Saint_Jean-Baptiste,_by_Leonardo_da_Vinci,_from_C2RMF.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Saint_Jean-Baptiste,_by_Leonardo_da_Vinci,_from_C2RMF.jpg",
+          "sha256": "c3127b93ce9012bfd3b81e290c698fe15c94cb9eac834faac5e18952fb58fcf4"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "michelangelo",
@@ -170,7 +198,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:%27David%27_by_Michelangelo_Fir_JBU004.jpg",
           "license": "CC BY 3.0",
-          "attribution": "J\u00f6rg Bittner Unna"
+          "attribution": "Jörg Bittner Unna",
+          "sha256": "83f2fc8fcbda0b6d02c53c1e7dde211cba43d8380aea00c1a78dfe92e8a5328f"
         },
         {
           "filename": "02_david_right_view.jpg",
@@ -179,16 +208,18 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_David_-_right_view_2.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Commonists"
+          "attribution": "Commonists",
+          "sha256": "40b4ab368730d7f8e848b764d9b9a8f95774b5ab4060b6449f90657124ed3da7"
         },
         {
           "filename": "03_piet.jpg",
           "path": "scene_packs/michelangelo/03_piet.jpg",
-          "title": "Piet\u00e0",
+          "title": "Pietà",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Pieta_5450_cropncleaned_edit.jpg",
           "license": "CC BY 2.5",
-          "attribution": "Stanislav Traykov"
+          "attribution": "Stanislav Traykov",
+          "sha256": "70af501d84f9ceb18c0146e53ce506d107839049ac8d4002745ca17f57ce71ef"
         },
         {
           "filename": "04_moses.jpg",
@@ -197,7 +228,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo%27s_Moses_(Rome).jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Livioandronico2013"
+          "attribution": "Livioandronico2013",
+          "sha256": "a56b5f28c5f2e45f33e286c2402e2ce2d1cbeadaec2606aa9816531c58ab1cb1"
         },
         {
           "filename": "05_bacchus.jpg",
@@ -206,7 +238,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Michelangelo_Bacchus.jpg",
           "license": "Public domain",
-          "attribution": "http://en.wikipedia.org/wiki/User:Attilios"
+          "attribution": "http://en.wikipedia.org/wiki/User:Attilios",
+          "sha256": "26bbeeed87a41a63173b63662b2e0fd4108e3851e44a15c2cfc8a8f4bc899c05"
         },
         {
           "filename": "06_dying_slave.jpg",
@@ -215,7 +248,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:%27Dying_Slave%27_Michelangelo_JBU001.jpg",
           "license": "CC BY-SA 3.0",
-          "attribution": "J\u00f6rg Bittner Unna"
+          "attribution": "Jörg Bittner Unna",
+          "sha256": "12c2a01fdee1ee52c04ec2547984245dc2d49cc3613bc4bf25cbc7c74b1e35b0"
         },
         {
           "filename": "07_rebellious_slave.jpg",
@@ -224,9 +258,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:%27Rebellious_Slave%27_Michelangelo_JBU81.jpg",
           "license": "CC BY-SA 3.0",
-          "attribution": "J\u00f6rg Bittner Unna"
+          "attribution": "Jörg Bittner Unna",
+          "sha256": "fd1868f2ce0a78a54b068bcd148a84f2cb1d4a0daf89c12b1a78c499400c1667"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "picasso",
@@ -246,7 +284,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Room,_by_Pablo_Picasso.jpg",
           "license": "Public domain",
-          "attribution": "Pablo Picasso"
+          "attribution": "Pablo Picasso",
+          "sha256": "61e75aaf05fd3bf824186cbfdcb6b815c8b43a16b28295ad3b24daf2366c5f94"
         },
         {
           "filename": "02_boy_holding_a_blue_vase.jpg",
@@ -255,7 +294,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Boy_Holding_a_Blue_Vase,_by_Pablo_Picasso,_1905,_oil_on_canvas_-_Hyde_Collection_-_Glens_Falls,_NY_-_20180224_123602.jpg",
           "license": "Public domain",
-          "attribution": "Daderot"
+          "attribution": "Daderot",
+          "sha256": "247c6bcfac6249dedbd0a91daf5d5b2c33088e81d7272d4e15f424c6fc5e9a84"
         },
         {
           "filename": "03_child_on_a_ball_stamp.jpg",
@@ -264,7 +304,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Soviet_Union_1971_CPA_4024_stamp_(Child_on_Ball_(Pablo_Picasso)).jpg",
           "license": "Public domain",
-          "attribution": "USSR Post"
+          "attribution": "USSR Post",
+          "sha256": "b2a4cc6512ee13557c20fb7250a32821bcbf52ce2af8e56539a08d8de43180ab"
         },
         {
           "filename": "04_picasso_ceramic.jpg",
@@ -273,7 +314,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Pablo_Picasso%27s_ceramic3.jpg",
           "license": "CC0",
-          "attribution": "Suohros"
+          "attribution": "Suohros",
+          "sha256": "d0edfac35c2ad14177f1ec97cda8bc1f96aae5ccf466d78ba15ec9c676549dcc"
         },
         {
           "filename": "05_picasso_in_the_studio.jpg",
@@ -282,9 +324,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Pablo_Picasso_dando_instrucciones_a_una_modelo_en_su_taller_de_pintura.jpg",
           "license": "Public domain",
-          "attribution": "Unknown author"
+          "attribution": "Unknown author",
+          "sha256": "f9261f59dc1257b89126ddfb1fbbc0d34dd9423e05ca980d78bbd54375d7bfa3"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "donatello",
@@ -304,7 +350,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Marble_David_by_Donatello-Bargello.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Yair Haklai"
+          "attribution": "Yair Haklai",
+          "sha256": "1f65b90f29ddd36998dc18c6b3066131da832fb7d12c4a0849fc48cee9c4f222"
         },
         {
           "filename": "02_david_bronze.jpg",
@@ -313,7 +360,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Bargello_Donatello_David_03.JPG",
           "license": "CC BY-SA 4.0",
-          "attribution": "Miguel Hermoso Cuesta"
+          "attribution": "Miguel Hermoso Cuesta",
+          "sha256": "0dff8f401881976cbb1c41b7041a62f464b06ce0bfa4bb6642421db513998e94"
         },
         {
           "filename": "03_penitent_magdalene.jpg",
@@ -322,7 +370,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Donatello,_maria_maddalena_02.JPG",
           "license": "CC BY 2.5",
-          "attribution": "sailko"
+          "attribution": "sailko",
+          "sha256": "926d9b306f71470c66dcba3eb2b228ac5f5b777c391bd8578f5d76ddd7979632"
         },
         {
           "filename": "04_saint_george.jpg",
@@ -331,7 +380,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:St._Georg,_Donatello,_1416-17,_Bargello_Florenz-01.jpg",
           "license": "CC BY-SA 3.0",
-          "attribution": "Rufus46"
+          "attribution": "Rufus46",
+          "sha256": "78363d884ed26274195aaabed5730dcae51ed7472447dbd518b054532d2687ab"
         },
         {
           "filename": "05_equestrian_statue_of_gattamelata.jpg",
@@ -340,7 +390,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Statue_of_Gattamelata_by_Donatello_-_Padua_2016_(2).jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Jos\u00e9 Luiz"
+          "attribution": "José Luiz",
+          "sha256": "03c24e72bfd83507c3cc18506fd53396fd09b68116d9242f6105807eb192ef1c"
         },
         {
           "filename": "06_judith_and_holofernes.jpg",
@@ -349,7 +400,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Giuditta_di_donatello_04.JPG",
           "license": "CC BY-SA 3.0",
-          "attribution": "sailko"
+          "attribution": "sailko",
+          "sha256": "02ea6af4adda8a89464771419bad71ed7355f04e0c57bbdc26640625703c9acd"
         },
         {
           "filename": "07_the_feast_of_herod.jpg",
@@ -358,9 +410,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Baptismal_font_of_the_Siena_Baptistry_la-test_battista_presenta.jpg",
           "license": "CC BY-SA 3.0",
-          "attribution": "MatthiasKabel"
+          "attribution": "MatthiasKabel",
+          "sha256": "c48e6dc37603db26fef69292ad0bc53265763302272a7519f7b420427f89015a"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "van_gogh",
@@ -378,65 +434,77 @@
           "path": "scene_packs/van_gogh/01_the_starry_night.jpg",
           "title": "The Starry Night",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:VanGogh-starry_night_ballance1.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:VanGogh-starry_night_ballance1.jpg",
+          "sha256": "2546225d2866032bcbe506215950821f53b3b70ae105d77e7f2f49acc281b16e"
         },
         {
           "filename": "02_sunflowers.jpg",
           "path": "scene_packs/van_gogh/02_sunflowers.jpg",
           "title": "Sunflowers",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sunflowers_(1888,_National_Gallery_London).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Sunflowers_(1888,_National_Gallery_London).jpg",
+          "sha256": "f30c1523762252c5dcd9bf91c79f99b8ca3e3309e8eee0b5980ce50b59e43b87"
         },
         {
           "filename": "03_caf_terrace_at_night.jpg",
           "path": "scene_packs/van_gogh/03_caf_terrace_at_night.jpg",
-          "title": "Caf\u00e9 Terrace at Night",
+          "title": "Café Terrace at Night",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_(Place_du_Forum)_1888.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Terrace_of_a_Caf%C3%A9_at_Night_(Place_du_Forum)_1888.jpg",
+          "sha256": "fcd9277fde841c0f99e089b8021ea57af45a13f6de0047aa65eb0db021f18635"
         },
         {
           "filename": "04_the_bedroom.jpg",
           "path": "scene_packs/van_gogh/04_the_bedroom.jpg",
           "title": "The Bedroom",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:La_Chambre_%C3%A0_Arles,_by_Vincent_van_Gogh,_from_C2RMF.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:La_Chambre_%C3%A0_Arles,_by_Vincent_van_Gogh,_from_C2RMF.jpg",
+          "sha256": "7a19d7516a93f804c55b39b02b323ea390575c5ddfda8c78832f320ef474d568"
         },
         {
           "filename": "05_wheatfield_with_crows.jpg",
           "path": "scene_packs/van_gogh/05_wheatfield_with_crows.jpg",
           "title": "Wheatfield with Crows",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Korenveld_met_kraaien_-_s0149V1962_-_Van_Gogh_Museum.jpg",
+          "sha256": "5441e0afc0440727654b87cc3e033a8471d641f7835b414506979c51f124a160"
         },
         {
           "filename": "06_irises.jpg",
           "path": "scene_packs/van_gogh/06_irises.jpg",
           "title": "Irises",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Irises-Vincent_van_Gogh.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Irises-Vincent_van_Gogh.jpg",
+          "sha256": "a6e0a00d7dafe595f07cf48f6e4ec7182fa42460aeb13365088f2925580ccf53"
         },
         {
           "filename": "07_self_portrait.jpg",
           "path": "scene_packs/van_gogh/07_self_portrait.jpg",
           "title": "Self-Portrait",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_Self-Portrait_-_Google_Art_Project.jpg",
+          "sha256": "b0c7cddc4ce98cdd66a69cb2f52c8b77ab2e82246719dac1293874bb6108c9f9"
         },
         {
           "filename": "08_the_potato_eaters.jpg",
           "path": "scene_packs/van_gogh/08_the_potato_eaters.jpg",
           "title": "The Potato Eaters",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_potato_eaters_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Vincent_van_Gogh_-_The_potato_eaters_-_Google_Art_Project.jpg",
+          "sha256": "5818eb98486a4b4b6e48c75bb464e5162d72234d5797c095331a7a6bbe865974"
         },
         {
           "filename": "09_almond_blossoms.jpg",
           "path": "scene_packs/van_gogh/09_almond_blossoms.jpg",
           "title": "Almond Blossoms",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Amandelbloesem_-_s0176V1962_-_Van_Gogh_Museum.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Amandelbloesem_-_s0176V1962_-_Van_Gogh_Museum.jpg",
+          "sha256": "4f6ae3254dfc9ec7a3ede1dc8ac90dde31c2b8efbfd6447a9d84829cd1313dbd"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "rembrandt",
@@ -456,7 +524,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "34b79905dd37de50fdd491c3a750cfa8d8b09a912bd289c44aaa04b1247648ea"
         },
         {
           "filename": "02_the_anatomy_lesson_of_dr_nicolaes_tulp.jpg",
@@ -465,7 +534,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_The_Anatomy_Lesson_of_Dr_Nicolaes_Tulp.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "aa9391d9bde4f2cbd3eef48513b7af69d560bac2e56803727a1d87e57b8f2fbe"
         },
         {
           "filename": "03_self_portrait.jpg",
@@ -474,7 +544,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_van_Rijn_-_Self-Portrait_-_Google_Art_Project.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "e494f94959d668ead314f8fc68acc69dc4755c7449d8cecb5f5f22d9e8b34ae2"
         },
         {
           "filename": "04_the_jewish_bride.jpg",
@@ -483,7 +554,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_Het_Joodse_bruidje.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "467a460faaf0caa03ea1690a9724906cac5e43dfe74d8777820395146abeb94d"
         },
         {
           "filename": "05_the_return_of_the_prodigal_son.jpg",
@@ -492,7 +564,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_-_The_Return_of_the_Prodigal_Son.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "a737f60d3e66022b8b1437f0f1c844c605060d577adf747a3bd890f71d1dca80"
         },
         {
           "filename": "06_the_syndics_of_the_drapers_guild.jpg",
@@ -501,7 +574,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_De_Staalmeesters-_het_college_van_staalmeesters_(waardijns)_van_het_Amsterdamse_lakenbereidersgilde_-_Google_Art_Project.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "e5699efadd697452b210c713318d0e8585757702ad902f3c4004c67a10220384"
         },
         {
           "filename": "07_bathsheba_at_her_bath.jpg",
@@ -510,7 +584,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_Harmensz._van_Rijn_016.jpg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "5fd2dc408bcf6a5ff30cd3ab62747e4adf20a923847f56c9278327dd5765c2a8"
         },
         {
           "filename": "08_the_storm_on_the_sea_of_galilee.jpg",
@@ -519,9 +594,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Christ_in_the_Storm_on_the_Sea_of_Galilee.jpeg",
           "license": "Public domain",
-          "attribution": "Rembrandt"
+          "attribution": "Rembrandt",
+          "sha256": "a20b2934e1584fa55d250ee40b90322d292a5cee951f3ab2d28ef43786b323df"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "hokusai",
@@ -541,7 +620,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_The_Great_Wave_off_the_Coast_of_Kanagawa_LCCN2008660568.jpg",
           "license": "Public domain",
-          "attribution": "Katsushika, Hokusai, 1760-1849, artist"
+          "attribution": "Katsushika, Hokusai, 1760-1849, artist",
+          "sha256": "963fd9f14d26991b334ee74cf8a545cee7f03eade8600742eaaa84d0cdb816d6"
         },
         {
           "filename": "02_fine_wind_clear_morning.jpg",
@@ -550,7 +630,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_Fine_Wind,_Clear_Morning_(Gaif%C5%AB_kaisei)_-_Google_Art_Project.jpg",
           "license": "Public domain",
-          "attribution": "Katsushika Hokusai"
+          "attribution": "Katsushika Hokusai",
+          "sha256": "95917a092523a1bfc766a2ec899b9d148d720b944e7b23b564a6dfd47b6639e8"
         },
         {
           "filename": "03_ejiri_in_suruga_province.jpg",
@@ -559,7 +640,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Ejiri_in_the_Suruga_province.jpg",
           "license": "Public domain",
-          "attribution": "Katsushika Hokusai"
+          "attribution": "Katsushika Hokusai",
+          "sha256": "cfc23e180f8c5e9a0314472958233793b298632e5a7667186febeb1ef331af24"
         },
         {
           "filename": "04_kajikazawa_in_kai_province.jpg",
@@ -568,7 +650,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Kajikazawa_in_Kai_province.jpg",
           "license": "Public domain",
-          "attribution": "Katsushika Hokusai"
+          "attribution": "Katsushika Hokusai",
+          "sha256": "f80da5764b9d069c5f1cdafd88494e3e77130495230a781b430f7c5af3b4ed74"
         },
         {
           "filename": "05_amida_falls_on_the_kiso_road.jpg",
@@ -577,7 +660,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai,_la_cascata_di_kamida_ga_taki_nella_provincia_di_mino,_dalla_serie_tour_delle_cascate_in_varie_province,_1833.jpg",
           "license": "CC BY 3.0",
-          "attribution": "Katsushika Hokusai"
+          "attribution": "Katsushika Hokusai",
+          "sha256": "8ced6cb4fb7f34d2f9ce04263dab18e9f6e62ff9175cd479cef7d7fcacf4657e"
         },
         {
           "filename": "06_yoshitsune_s_horse_washing_falls.jpg",
@@ -586,9 +670,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_Hokusai,_Yoshitsune_Umarai_waterfall_at_Yoshino_in_Wash%C5%AB,_ca._1833.jpg",
           "license": "Public domain",
-          "attribution": "Katsushika Hokusai"
+          "attribution": "Katsushika Hokusai",
+          "sha256": "2a7adb1eba703697c94422e7c46bc16e883796f8379186ecada269aacb5e9ac5"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "mucha",
@@ -608,7 +696,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Poster_for_Victorien_Sardou%27s_Gismonda_starring_Sarah_Bernhardt_-_Original.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "6e04c3a43302491149a09a56e323101770b54e03b538b1ddafa0121ec4405137"
         },
         {
           "filename": "02_zodiac.jpg",
@@ -617,7 +706,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Zodiac,_1869.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "50f60a5be42136e47a776620fb255a454c15839d9f6830423fe094df17f45662"
         },
         {
           "filename": "03_job_cigarettes.jpg",
@@ -626,16 +716,18 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Alphonse_Mucha_-_Advertisment_for_Job_cigarettes,_1896.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "3d6359ec72515be483a0b501eb58c126964598b7dfec2790e67cfec8f38d77d3"
         },
         {
           "filename": "04_mo_t_chandon.jpg",
           "path": "scene_packs/mucha/04_mo_t_chandon.jpg",
-          "title": "Mo\u00ebt & Chandon",
+          "title": "Moët & Chandon",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Mo%C3%ABt_%26_Chandon_Champagne_White_Star_affiche,_Mucha_99.jpg",
           "license": "Public domain",
-          "attribution": "Mucha, Alphonse (1860-1939). Illustrateur"
+          "attribution": "Mucha, Alphonse (1860-1939). Illustrateur",
+          "sha256": "e5569743032a08922e1728fdce7832cbb33f82e33358db03b93b20816bacf663"
         },
         {
           "filename": "05_the_seasons_spring.jpg",
@@ -644,7 +736,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Mucha_-_Les_Saisons_(1896)_-_printemps.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "ea7e81d5eb51780826a61aa3e2e9f36832beab54a06520cb4f7549185c6d071b"
         },
         {
           "filename": "06_the_seasons_summer.jpg",
@@ -653,7 +746,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Mucha_-_Les_Saisons_(1896)_-_ete.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "82866fc5f1ca861afff7c592709116b138cfef662971a1e589938dcbca754f51"
         },
         {
           "filename": "07_princess_hyacinth.jpg",
@@ -662,9 +756,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Alfons_Mucha_-_Princess_Hyacinth.jpg",
           "license": "Public domain",
-          "attribution": "Alphonse Mucha"
+          "attribution": "Alphonse Mucha",
+          "sha256": "5b0d077b38bfe328d2475aebb7547dcb1c6fab11f52914d61f42e5c61b3338c7"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "classic_art",
@@ -682,65 +780,77 @@
           "path": "scene_packs/classic_art/01_girl_with_a_pearl_earring.jpg",
           "title": "Girl with a Pearl Earring",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:1665_Girl_with_a_Pearl_Earring.jpg",
+          "sha256": "0e0024890c8fe12deafe193c3b2ca875c8baca10868eb60717c2ccd3cf9fe6b4"
         },
         {
           "filename": "02_the_great_wave_off_kanagawa.jpg",
           "path": "scene_packs/classic_art/02_the_great_wave_off_kanagawa.jpg",
           "title": "The Great Wave off Kanagawa",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_The_Great_Wave_off_the_Coast_of_Kanagawa_LCCN2008660568.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_The_Great_Wave_off_the_Coast_of_Kanagawa_LCCN2008660568.jpg",
+          "sha256": "963fd9f14d26991b334ee74cf8a545cee7f03eade8600742eaaa84d0cdb816d6"
         },
         {
           "filename": "03_the_birth_of_venus.jpg",
           "path": "scene_packs/classic_art/03_the_birth_of_venus.jpg",
           "title": "The Birth of Venus",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Birth_of_Venus_(Botticelli)_1.jpg",
+          "sha256": "05c34dbbd3d70aa03232e2b475f1b22a9786437ca5e9b5723e2f851df12b03fe"
         },
         {
           "filename": "04_the_night_watch.jpg",
           "path": "scene_packs/classic_art/04_the_night_watch.jpg",
           "title": "The Night Watch",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:La_ronda_de_noche,_por_Rembrandt_van_Rijn.jpg",
+          "sha256": "34b79905dd37de50fdd491c3a750cfa8d8b09a912bd289c44aaa04b1247648ea"
         },
         {
           "filename": "05_the_garden_of_earthly_delights.jpg",
           "path": "scene_packs/classic_art/05_the_garden_of_earthly_delights.jpg",
           "title": "The Garden of Earthly Delights",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_(Ecclesia%27s_Paradise).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_-_The_Garden_of_Earthly_Delights_-_Garden_of_Earthly_Delights_(Ecclesia%27s_Paradise).jpg",
+          "sha256": "618b5c867da0ff00b041fccd0d2be2e77afbde812c6a340622e244f6954ebf56"
         },
         {
           "filename": "06_the_arnolfini_portrait.jpg",
           "path": "scene_packs/classic_art/06_the_arnolfini_portrait.jpg",
           "title": "The Arnolfini Portrait",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg",
+          "sha256": "45e5f3f489d8cd4c306397f359810efffb762eb25008440603dc38ca2de9dfc6"
         },
         {
           "filename": "07_las_meninas.jpg",
           "path": "scene_packs/classic_art/07_las_meninas.jpg",
           "title": "Las Meninas",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Las_Meninas,_by_Diego_Vel%C3%A1zquez,_from_Prado_in_Google_EarthFXD.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Las_Meninas,_by_Diego_Vel%C3%A1zquez,_from_Prado_in_Google_EarthFXD.jpg",
+          "sha256": "fda8f8a0c60e86efcec77cd52afca8cb08d29ac1c69d7552400dc24c61b9096f"
         },
         {
           "filename": "08_the_kiss.jpg",
           "path": "scene_packs/classic_art/08_the_kiss.jpg",
           "title": "The Kiss",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+          "sha256": "7556dea4e8ab5e26aefc386ce2ff2ef19a7210be6f73e247d957f28f3ef870df"
         },
         {
           "filename": "09_fine_wind_clear_morning.jpg",
           "path": "scene_packs/classic_art/09_fine_wind_clear_morning.jpg",
           "title": "Fine Wind, Clear Morning",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_Fine_Wind,_Clear_Morning_(Gaif%C5%AB_kaisei)_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Katsushika_Hokusai_-_Fine_Wind,_Clear_Morning_(Gaif%C5%AB_kaisei)_-_Google_Art_Project.jpg",
+          "sha256": "95917a092523a1bfc766a2ec899b9d148d720b944e7b23b564a6dfd47b6639e8"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": true
     },
     {
       "id": "christmas",
@@ -762,72 +872,85 @@
           "path": "scene_packs/christmas/01_christmas_tree.jpg",
           "title": "Christmas Tree",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "5801bc79efa42d26c66ff33a72373f77d2de57e09744e0099d6b59a123a8884e"
         },
         {
           "filename": "02_santa_claus.jpg",
           "path": "scene_packs/christmas/02_santa_claus.jpg",
           "title": "Santa Claus",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "7f68960cf1758a7a345d521eee63fb741f6279d2bd3e98695bb02eeec244bcb5"
         },
         {
           "filename": "03_snowman.jpg",
           "path": "scene_packs/christmas/03_snowman.jpg",
           "title": "Snowman",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "da3132ba484d9dbdcf910dcfe0e4357fd4645cea6dfa0407e9513c745da6123b"
         },
         {
           "filename": "04_nativity_scene.jpg",
           "path": "scene_packs/christmas/04_nativity_scene.jpg",
           "title": "Nativity Scene",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "1a03b27f1ae09b8527bed851a703ed458693b1c5087bae99857592dd835345f0"
         },
         {
           "filename": "05_gingerbread_house.jpg",
           "path": "scene_packs/christmas/05_gingerbread_house.jpg",
           "title": "Gingerbread House",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "d791a4519a80019aa2bc1632b8aaaa4981d8a8bf1806373140209412063fd32a"
         },
         {
           "filename": "06_christmas_wreath.jpg",
           "path": "scene_packs/christmas/06_christmas_wreath.jpg",
           "title": "Christmas Wreath",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "d40221c79a977481bcfc963533337b187bae3dcfa01dfa63d405207179d84681"
         },
         {
           "filename": "07_decorating_the_christmas_tree.jpg",
           "path": "scene_packs/christmas/07_decorating_the_christmas_tree.jpg",
           "title": "Decorating the Christmas Tree",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Knud_Larsen_Decorating_the_Christmas_tree_1897.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Knud_Larsen_Decorating_the_Christmas_tree_1897.jpg",
+          "sha256": "85fc0a864674c25f80374b4ef3ec2e30c4b3c39a46bed5ae479a804ac740a38b"
         },
         {
           "filename": "08_victorian_christmas_postcard.jpg",
           "path": "scene_packs/christmas/08_victorian_christmas_postcard.jpg",
           "title": "Victorian Christmas Postcard",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Victorian_Christmas_postcard_by_Raphael_Tuck_%26_Sons.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Victorian_Christmas_postcard_by_Raphael_Tuck_%26_Sons.jpg",
+          "sha256": "48ac6df786301d48affad8650a4a1264e7bccf3ebce8191b70445e352590aed2"
         },
         {
           "filename": "09_christmas_tree_by_aleksey_korin.jpg",
           "path": "scene_packs/christmas/09_christmas_tree_by_aleksey_korin.jpg",
           "title": "Christmas Tree (Korin)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Christmas_Tree_by_Aleksey_Korin_%281910%29.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Christmas_Tree_by_Aleksey_Korin_%281910%29.jpg",
+          "sha256": "79d4451cf357fc85f73abed96923bd7a6703841357409160e027652cc2822e49"
         },
         {
           "filename": "10_christmas_postcard_bowley.jpg",
           "path": "scene_packs/christmas/10_christmas_postcard_bowley.jpg",
           "title": "Christmas Postcard (Bowley)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Raphael_Tuck_%26_Sons_Christmas_Postcard_-_A.L._Bowley_-_circa_1909.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Raphael_Tuck_%26_Sons_Christmas_Postcard_-_A.L._Bowley_-_circa_1909.jpg",
+          "sha256": "a90550781103998b4f1e44f98035cc1e580803dfdbdc6233e3892772dd0e4df6"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "halloween",
@@ -849,72 +972,85 @@
           "path": "scene_packs/halloween/01_jack_o_lanterns.jpg",
           "title": "Jack-o'-Lanterns",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "9f6175494f82e64a47a12c3868f1dc3827c9317b03ee0ea72835c0e378fe1167"
         },
         {
           "filename": "02_witch_flying_on_broomstick.jpg",
           "path": "scene_packs/halloween/02_witch_flying_on_broomstick.jpg",
           "title": "Witch flying on Broomstick",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "6389c257953c7044fa7763de45fd12669a15973087a7b9fa28d9ff29458109a6"
         },
         {
           "filename": "03_friendly_ghost.jpg",
           "path": "scene_packs/halloween/03_friendly_ghost.jpg",
           "title": "Friendly Ghost",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "9884499618f22337afde0eb89913e1966cecb6905799b1fcb5732819e6ad1f81"
         },
         {
           "filename": "04_haunted_house.jpg",
           "path": "scene_packs/halloween/04_haunted_house.jpg",
           "title": "Haunted House",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "b78f189bcc4ffc3cb1fe86607d78cf1f64e0cff3f03de0af40f0d933b7437320"
         },
         {
           "filename": "05_black_cat_and_pumpkin.jpg",
           "path": "scene_packs/halloween/05_black_cat_and_pumpkin.jpg",
           "title": "Black Cat and Pumpkin",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "1a2db361edc00172d18b0a5c4af4278b2428bc912bae34287ce46af59a8bf025"
         },
         {
           "filename": "06_bats_flying_across_red_moon.jpg",
           "path": "scene_packs/halloween/06_bats_flying_across_red_moon.jpg",
           "title": "Bats flying across Red Moon",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "f4ff97f037f1abe215d0b2b929579300dbd0a0fbeb6af78f437cf1fbcd00c381"
         },
         {
           "filename": "07_examination_of_a_witch.jpg",
           "path": "scene_packs/halloween/07_examination_of_a_witch.jpg",
           "title": "Examination of a Witch (Matteson)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Examination_of_a_Witch_-_Tompkins_Matteson.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Examination_of_a_Witch_-_Tompkins_Matteson.jpg",
+          "sha256": "c2877c2b4859f7514a3684f584369645995c318ad2f68e84f91b6b20d8f6ab73"
         },
         {
           "filename": "08_winslow_homer_pumpkin_patch.jpg",
           "path": "scene_packs/halloween/08_winslow_homer_pumpkin_patch.jpg",
           "title": "The Pumpkin Patch (Homer)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Pumpkin_Patch_%281878%29.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_The_Pumpkin_Patch_%281878%29.jpg",
+          "sha256": "c86c0a9d25c61de3365767e6745e5aad5fc15b49bc0ebca17da9ac6b8fda4475"
         },
         {
           "filename": "09_takiyasha_the_witch_skeleton.jpg",
           "path": "scene_packs/halloween/09_takiyasha_the_witch_skeleton.jpg",
           "title": "Takiyasha the Witch (Kuniyoshi)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Takiyasha_the_Witch_and_the_Skeleton_Spectre_3.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Takiyasha_the_Witch_and_the_Skeleton_Spectre_3.jpg",
+          "sha256": "6f61aec9031030e49b49b1ef96901c6312bedba27388273a071ef62c72d61c47"
         },
         {
           "filename": "10_woman_with_a_pumpkin.jpg",
           "path": "scene_packs/halloween/10_woman_with_a_pumpkin.jpg",
           "title": "Woman with a Pumpkin (Kishida)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Kishida_Ryusei_-_Woman_with_a_Pumpkin_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Kishida_Ryusei_-_Woman_with_a_Pumpkin_-_Google_Art_Project.jpg",
+          "sha256": "394b2fec3072bc79d6be58444e4cd81c9e1bb325ebc948c1d37e685d286d59f0"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "independence_day",
@@ -936,72 +1072,85 @@
           "path": "scene_packs/independence_day/01_statue_of_liberty.jpg",
           "title": "Statue of Liberty",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "2fb05a31ed9cc5417b74d00476e3d14b020266597156d875e8ceb4779f11bbc6"
         },
         {
           "filename": "02_bald_eagle_and_flag.jpg",
           "path": "scene_packs/independence_day/02_bald_eagle_and_flag.jpg",
           "title": "Bald Eagle and Flag",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "7cba3b524eced1b9d713b8b4bbbecbc1bc2ab146ad1af24d6e98f4d52ff324fd"
         },
         {
           "filename": "03_independence_day_fireworks.jpg",
           "path": "scene_packs/independence_day/03_independence_day_fireworks.jpg",
           "title": "Independence Day Fireworks",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "227cf3c191b7cecb4cc3659a7e2141f788da24fa894ce75cabb06d1fd56d9ded"
         },
         {
           "filename": "04_mount_rushmore.jpg",
           "path": "scene_packs/independence_day/04_mount_rushmore.jpg",
           "title": "Mount Rushmore",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "ed79c5d4bdc4cc09cabe911dfaa96b5f0118ff79cb7ecd10b0c05bf8557be46a"
         },
         {
           "filename": "05_uncle_sam_celebration.jpg",
           "path": "scene_packs/independence_day/05_uncle_sam_celebration.jpg",
           "title": "Uncle Sam's Celebration",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "d93517430677e4822aff2fc2ae28406cc4449c89f9590bc65a70567ea185671c"
         },
         {
           "filename": "06_sailboat_and_fireworks.jpg",
           "path": "scene_packs/independence_day/06_sailboat_and_fireworks.jpg",
           "title": "Sailboat and Fireworks (Homer)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Sailboat_and_Fourth_of_July_Fireworks.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Winslow_Homer_-_Sailboat_and_Fourth_of_July_Fireworks.jpg",
+          "sha256": "e34d7703a97d0d059725b5a0c576123d4e8c0c26006bf73e4e5025ff7a3a457a"
         },
         {
           "filename": "07_fourth_of_july_picnic.jpg",
           "path": "scene_packs/independence_day/07_fourth_of_july_picnic.jpg",
           "title": "Fourth of July Picnic (Spencer)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Lily_Martin_Spencer_-_The_Artist_and_Her_Family_on_a_Fourth_of_July_Picnic.JPG"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Lily_Martin_Spencer_-_The_Artist_and_Her_Family_on_a_Fourth_of_July_Picnic.JPG",
+          "sha256": "0350701ec1835d2a0e79ac2f940a4b9457cca0e6baf5e24e555c510be01ebabb"
         },
         {
           "filename": "08_unveiling_statue_of_liberty.jpg",
           "path": "scene_packs/independence_day/08_unveiling_statue_of_liberty.jpg",
           "title": "Unveiling the Statue of Liberty (Moran)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:EdwardMoran-UnveilingTheStatueofLiberty1886Large.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:EdwardMoran-UnveilingTheStatueofLiberty1886Large.jpg",
+          "sha256": "3f61ecfa51da47eb3bec51874655b4cd7c687cdc81e872b7e0f259f0d9745e75"
         },
         {
           "filename": "09_uncle_sam_postcard_hurrah.jpg",
           "path": "scene_packs/independence_day/09_uncle_sam_postcard_hurrah.jpg",
           "title": "Uncle Sam Postcard (Hurrah!)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Hurrah%21_For_the_Fourth_of_July_Hurrah%21_-_Uncle_Sam_postcard.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Hurrah%21_For_the_Fourth_of_July_Hurrah%21_-_Uncle_Sam_postcard.jpg",
+          "sha256": "3cbd348427947b4e3942cc03bab1cab5ff4e0321c41a8270e299dc9923e213e1"
         },
         {
           "filename": "10_uncle_sam_postcard_going_off.jpg",
           "path": "scene_packs/independence_day/10_uncle_sam_postcard_going_off.jpg",
           "title": "Uncle Sam Postcard (Going Off)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:We%27re_Going_Off_on_the_4th_-_Uncle_Sam_postcard.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:We%27re_Going_Off_on_the_4th_-_Uncle_Sam_postcard.jpg",
+          "sha256": "8658dba142c82cf01ad83be2bdfaf2da1928d0bd61cfa69b310f5a7afcd9db75"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "thanksgiving",
@@ -1019,72 +1168,85 @@
           "path": "scene_packs/thanksgiving/01_home_to_thanksgiving_durrie.jpg",
           "title": "Home to Thanksgiving (Durrie)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Home_To_Thanksgiving,_Currier_and_Ives.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Home_To_Thanksgiving,_Currier_and_Ives.jpg",
+          "sha256": "9c09a19c204894525408601f2ea2841b6b8a81777d9558c0b25252e63e8f5aca"
         },
         {
           "filename": "02_still_life_of_fruit_roesen.jpg",
           "path": "scene_packs/thanksgiving/02_still_life_of_fruit_roesen.jpg",
           "title": "Still Life of Fruit (Roesen)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Fruit_Still_Life_with_Champagne_Bottle_-_2000.363_-_Dallas_Museum_of_Art.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Fruit_Still_Life_with_Champagne_Bottle_-_2000.363_-_Dallas_Museum_of_Art.jpg",
+          "sha256": "7e4c83442ed22cff788cbaea9b22c40ee659a9c162ba7a5eba41bdcf33915439"
         },
         {
           "filename": "03_fruit_cornucopia_roesen.jpg",
           "path": "scene_packs/thanksgiving/03_fruit_cornucopia_roesen.jpg",
           "title": "Fruit Cornucopia (Roesen)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Two-Tiered_Still_Life_with_Fruit_and_Sunset_Landscape_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Two-Tiered_Still_Life_with_Fruit_and_Sunset_Landscape_-_Google_Art_Project.jpg",
+          "sha256": "1eeb40faf02b7c3cc0299a22050a161c0fba44e0a8db731642af78c69add720a"
         },
         {
           "filename": "04_still_life_with_fruit_roesen.jpg",
           "path": "scene_packs/thanksgiving/04_still_life_with_fruit_roesen.jpg",
           "title": "Still Life with Fruit (Roesen)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Still_Life_with_Fruit_-_Google_Art_Project.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Severin_Roesen_-_Still_Life_with_Fruit_-_Google_Art_Project.jpg",
+          "sha256": "b93ae54b9020a279bfe59226d2ca1c95da6bcf7de15a5d3a2bc6fa96efd8cdfc"
         },
         {
           "filename": "05_vintage_thanksgiving_postcard.jpg",
           "path": "scene_packs/thanksgiving/05_vintage_thanksgiving_postcard.jpg",
           "title": "Vintage Thanksgiving Postcard",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_day_-_DPLA_-_754f1711409e406676cf9febaf17862a_(page_1).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_day_-_DPLA_-_754f1711409e406676cf9febaf17862a_(page_1).jpg",
+          "sha256": "d82a7cee0308932b404466fc3f8b927e2e437bee694fe9b7e8cbc5e96592550e"
         },
         {
           "filename": "06_thanksgiving_glackens.jpg",
           "path": "scene_packs/thanksgiving/06_thanksgiving_glackens.jpg",
           "title": "Thanksgiving (Glackens)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Puck_Thanksgiving_1903_-_L.M._Glackens._LCCN2010652321.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Puck_Thanksgiving_1903_-_L.M._Glackens._LCCN2010652321.jpg",
+          "sha256": "45687170a0e793f2ff2ebd2a3c733efec2ac75eb31b87092231fb4d204bd0a34"
         },
         {
           "filename": "07_thanksgiving_day_ways_and_means.jpg",
           "path": "scene_packs/thanksgiving/07_thanksgiving_day_ways_and_means.jpg",
           "title": "Thanksgiving Day -- Ways and Means",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Day_%E2%80%93_Ways_and_Means_(Harper%27s_Weekly,_Vol._II)_MET_DP875137.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Thanksgiving_Day_%E2%80%93_Ways_and_Means_(Harper%27s_Weekly,_Vol._II)_MET_DP875137.jpg",
+          "sha256": "7301f100bdf2f20ce5e5e0735380a58360d4b85d3a37f34cb8588fc3a9cdc9a3"
         },
         {
           "filename": "08_hearty_thanksgiving_greeting_winsch.jpg",
           "path": "scene_packs/thanksgiving/08_hearty_thanksgiving_greeting_winsch.jpg",
           "title": "Hearty Thanksgiving Greeting (Winsch)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:%22Hearty_Thanksgiving_Greeting.%22.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:%22Hearty_Thanksgiving_Greeting.%22.jpg",
+          "sha256": "cfd554b996acaf6ba0e67d593856e98ca0272d9146ad017c671b64153740fe10"
         },
         {
           "filename": "09_the_thanksgiving_turkey_campbell.jpg",
           "path": "scene_packs/thanksgiving/09_the_thanksgiving_turkey_campbell.jpg",
           "title": "The Thanksgiving Turkey (Campbell)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Thanksgiving_turkey_-_Alfcamp,_Elizabeth,_N.J._LCCN90710727.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Thanksgiving_turkey_-_Alfcamp,_Elizabeth,_N.J._LCCN90710727.jpg",
+          "sha256": "eda9e40d304364063230c520c11d685c9ffa5166f76b32d1efbc12d75d25f02a"
         },
         {
           "filename": "10_thanksgiving_dinner_hotel_marlborough.jpg",
           "path": "scene_packs/thanksgiving/10_thanksgiving_dinner_hotel_marlborough.jpg",
           "title": "Thanksgiving Dinner (Hotel Marlborough)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:THANKSGIVING_DAY_DINNER_(held_by)_HOTEL_MARLBOROUGH_(at)_NY_(HOTEL)_(NYPL_Hades-270314-474964).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:THANKSGIVING_DAY_DINNER_(held_by)_HOTEL_MARLBOROUGH_(at)_NY_(HOTEL)_(NYPL_Hades-270314-474964).jpg",
+          "sha256": "237c68416a268f3681800f9eb9f269aac03c545f079e0157fe4b4d01fdbb52c5"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "easter",
@@ -1106,58 +1268,69 @@
           "path": "scene_packs/easter/01_bunny_basket_landscape.jpg",
           "title": "Easter Bunny and Basket",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "54b2c4a0fb95e51722da65894405f17b6e62b63fe5fbc5b1ca0bd42613d19e8e"
         },
         {
           "filename": "02_decorated_eggs_landscape.jpg",
           "path": "scene_packs/easter/02_decorated_eggs_landscape.jpg",
           "title": "Vibrant Easter Eggs in Spring Grass",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "c1e78d052fd32d52ffa0757c477b581561da080d2459b195765bc2fd4159c9db"
         },
         {
           "filename": "03_bunny_portrait_tall.jpg",
           "path": "scene_packs/easter/03_bunny_portrait_tall.jpg",
           "title": "Fluffy Easter Bunny Portrait",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "975f3c6b8681afbb8c5dd9eb401daf0c9e4c531eb5e52faebce60e1a804f7f77"
         },
         {
           "filename": "04_eggs_hanging_portrait.jpg",
           "path": "scene_packs/easter/04_eggs_hanging_portrait.jpg",
           "title": "Pastel Eggs Hanging from Cherry Blossoms",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "d6d28c0cf0470f64cdb55ee25b8be291b541fb1e2d3e74bc976a557e842cdce2"
         },
         {
           "filename": "05_egg_hunt_landscape.jpg",
           "path": "scene_packs/easter/05_egg_hunt_landscape.jpg",
           "title": "Easter Egg Hunt in the Meadow",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "7718b8bdd0f2dd879b46839410f5e3069ddb07c969db43a61fa3b769979f4e7e"
         },
         {
           "filename": "06_bunny_painting_portrait.jpg",
           "path": "scene_packs/easter/06_bunny_painting_portrait.jpg",
           "title": "Whimsical Bunny Painting Easter Egg",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "1809e22d7c03a9ecf2656f6be8b2f8fbce006d64f0b693ce26f95a39b1072b06"
         },
         {
           "filename": "07_easter_wreath_landscape.jpg",
           "path": "scene_packs/easter/07_easter_wreath_landscape.jpg",
           "title": "Rustic Spring Easter Wreath",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "ed377c4198afd91cd19ec6d5752b23efb5c6f84227a46d5e3cc4749755535f9b"
         },
         {
           "filename": "08_chicks_nest_portrait.jpg",
           "path": "scene_packs/easter/08_chicks_nest_portrait.jpg",
           "title": "Fluffy Yellow Chicks in Nest",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "b97ec5bdc7556e3ea80b50996e68d2e33107d5b76f6d1d4026cfc7327586d868"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "new_years",
@@ -1179,58 +1352,69 @@
           "path": "scene_packs/new_years/01_nyc_times_square_landscape.jpg",
           "title": "New Year's Eve in Times Square",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "2ed5b43f4822a2d914309e4d1abd3ead120df89608971b444c5c30acbde8a8cb"
         },
         {
           "filename": "02_sydney_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/02_sydney_fireworks_landscape.jpg",
           "title": "Sydney Harbour Fireworks Celebration",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "9282d839ebd253f60c5c687523b67d9e864a9ec65286bf5dc221780193f0813e"
         },
         {
           "filename": "03_champagne_toast_portrait.jpg",
           "path": "scene_packs/new_years/03_champagne_toast_portrait.jpg",
           "title": "Champagne Toast at Midnight",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "70c0864f7d95c2fe29c957c1d75ec75bbc05092911b7c63de412d4a47931ef36"
         },
         {
           "filename": "04_ball_drop_portrait.jpg",
           "path": "scene_packs/new_years/04_ball_drop_portrait.jpg",
           "title": "One Times Square Ball Drop",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "d2dbb7a9baeacdb592b2612553c0a4c9fafe5dc8d1fda12218bb8f630d2fd669"
         },
         {
           "filename": "05_paris_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/05_paris_fireworks_landscape.jpg",
           "title": "Eiffel Tower Fireworks Display",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "6977659f60ed5f8f082dfe9b5d20761f78286f4f93d7e099fedb811b82062248"
         },
         {
           "filename": "06_sparkler_close_up_portrait.jpg",
           "path": "scene_packs/new_years/06_sparkler_close_up_portrait.jpg",
           "title": "Glowing New Year Sparkler",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "7d056b19f52445a8030ddb98c1a036e452fbfaa59375bbfcfbfcbab2b5ef337a"
         },
         {
           "filename": "07_london_fireworks_landscape.jpg",
           "path": "scene_packs/new_years/07_london_fireworks_landscape.jpg",
           "title": "London Eye Fireworks Spectacular",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "8ec79f2cc6f67b7505c53cf550b6cfc775767d1340bdcf46f96d3d246854b8d6"
         },
         {
           "filename": "08_confetti_party_portrait.jpg",
           "path": "scene_packs/new_years/08_confetti_party_portrait.jpg",
           "title": "New Year's Eve Celebration Party",
           "source": "AI Generated (Antigravity)",
-          "commons_url": null
+          "commons_url": null,
+          "sha256": "8597424918226fa312a537f670c1cba5b972eee04ea6220b476509751925f419"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "valentines_day",
@@ -1248,79 +1432,93 @@
           "path": "scene_packs/valentines_day/01_pygmalion_and_galatea_gerome.jpg",
           "title": "Pygmalion and Galatea (Gerome)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome_-_Pygmalion_and_Galatea.png"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Jean-Leon_Gerome_-_Pygmalion_and_Galatea.png",
+          "sha256": "a6e3f08dcc1689e8c37d32dea7f8349250e6a70f20538f4c9055d3e2cacb4379"
         },
         {
           "filename": "02_the_storm_cot.jpg",
           "path": "scene_packs/valentines_day/02_the_storm_cot.jpg",
           "title": "The Storm (Cot)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:1880_Pierre_Auguste_Cot_-_The_StormFXD.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:1880_Pierre_Auguste_Cot_-_The_StormFXD.jpg",
+          "sha256": "7901b4f77b93463cc2c7e3aeb10833b9888f239ea6e63554aad2de411e44bcf5"
         },
         {
           "filename": "03_the_kiss_il_bacio.jpg",
           "path": "scene_packs/valentines_day/03_the_kiss_il_bacio.jpg",
           "title": "The Kiss (Il Bacio)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:El_Beso_(Pinacoteca_de_Brera,_Mil%C3%A1n,_1859).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:El_Beso_(Pinacoteca_de_Brera,_Mil%C3%A1n,_1859).jpg",
+          "sha256": "a97319de52a00ac4f6d1995684c4b3320027cea9748177b92e608cdfa150fd12"
         },
         {
           "filename": "04_the_swing_fragonard.jpg",
           "path": "scene_packs/valentines_day/04_the_swing_fragonard.jpg",
           "title": "The Swing (Fragonard)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Joean_Honor%C3%A9_Fragonard_-_The_Swing.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Joean_Honor%C3%A9_Fragonard_-_The_Swing.jpg",
+          "sha256": "b6c14c298e3b5bd2d1a308094e89b2c0187a37297e495acda9fc8147b0ad619f"
         },
         {
           "filename": "05_vintage_valentine_clapsaddle.jpg",
           "path": "scene_packs/valentines_day/05_vintage_valentine_clapsaddle.jpg",
           "title": "Vintage Valentine (Clapsaddle)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Valentine_Met_DP886048.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Valentine_Met_DP886048.jpg",
+          "sha256": "8d4a7690e40ae6288dcba12bf191e5a9e3bd4c983602fae51b50d6d9530a1d32"
         },
         {
           "filename": "06_cupid_s_valentine_brundage.jpg",
           "path": "scene_packs/valentines_day/06_cupid_s_valentine_brundage.jpg",
           "title": "Cupid's Valentine (Brundage)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Frances_Brundage_-_Little_Hunter_Cupid_with_Rifle.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Frances_Brundage_-_Little_Hunter_Cupid_with_Rifle.jpg",
+          "sha256": "10bc0f88075f2079289d6e5c5ec43f2dec8ba3c218f4a29ebbe4ae4bfea93ce8"
         },
         {
           "filename": "07_venus_and_cupid_ricci.jpg",
           "path": "scene_packs/valentines_day/07_venus_and_cupid_ricci.jpg",
           "title": "Venus and Cupid (Ricci)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Venus_and_Cupid_(c.1700)_-_Sebastiano_Ricci.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Venus_and_Cupid_(c.1700)_-_Sebastiano_Ricci.jpg",
+          "sha256": "77c3f4ac3436119ed6865867405961ec9809faae4b5104b69c33446aa9ce652f"
         },
         {
           "filename": "08_cupid_and_doves_leighton.jpg",
           "path": "scene_packs/valentines_day/08_cupid_and_doves_leighton.jpg",
           "title": "Cupid and Doves (Leighton)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Doves_-_Frederic_Leighton.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Doves_-_Frederic_Leighton.jpg",
+          "sha256": "b4a4ef7f1ed507c4fd732883e71c12f07285eb39e3a6e9856354af2b9e3f22c6"
         },
         {
           "filename": "09_cupid_and_psyche_picot.jpg",
           "path": "scene_packs/valentines_day/09_cupid_and_psyche_picot.jpg",
           "title": "Cupid and Psyche (Picot)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Psyche_by_Fran%C3%A7ois-%C3%89douard_Picot.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Psyche_by_Fran%C3%A7ois-%C3%89douard_Picot.jpg",
+          "sha256": "4a0c8b5ccf99d20ebf3c2c101b786b8d606a44eb54bbc48b1ee39b2c2f288928"
         },
         {
           "filename": "10_the_love_of_paris_and_helen.jpg",
           "path": "scene_packs/valentines_day/10_the_love_of_paris_and_helen.jpg",
           "title": "The Love of Paris and Helen",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Les_amours_de_P%C3%A2ris_et_d%27H%C3%A9l%C3%A8ne_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3696_;_MR_1439.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Les_amours_de_P%C3%A2ris_et_d%27H%C3%A9l%C3%A8ne_-_Jacques-Louis_David_-_Mus%C3%A9e_du_Louvre_Peintures_INV_3696_;_MR_1439.jpg",
+          "sha256": "af3ebb2865055493dbfd0f133ff2e2048e4ece1f0367eccf2e46295d72b1ef76"
         },
         {
           "filename": "11_cupid_and_psyche_troy.jpg",
           "path": "scene_packs/valentines_day/11_cupid_and_psyche_troy.jpg",
           "title": "Cupid and Psyche (Troy)",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Psyche_by_Jean-Fran%C3%A7ois_de_Troy.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cupid_and_Psyche_by_Jean-Fran%C3%A7ois_de_Troy.jpg",
+          "sha256": "86fafca372b8d7494c4bda51e4ed23b268ddcd0283f1dfc5bf6806a81d399617"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "presidents",
@@ -1338,317 +1536,365 @@
           "path": "scene_packs/presidents/01_george_washington.jpg",
           "title": "George Washington",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg",
+          "sha256": "9400074c4644e4962031983dcd391c28c4ed8e855dd4baa6639b6d41199c8917"
         },
         {
           "filename": "02_john_adams.jpg",
           "path": "scene_packs/presidents/02_john_adams.jpg",
           "title": "John Adams",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Adams_A18236.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Adams_A18236.jpg",
+          "sha256": "434ee48bbe75fd2466ed1eb2c2c97e181037b6e79d3709233457fcb9f6bc717c"
         },
         {
           "filename": "03_thomas_jefferson.jpg",
           "path": "scene_packs/presidents/03_thomas_jefferson.jpg",
           "title": "Thomas Jefferson",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Presidential_portrait_of_Thomas_Jefferson_(by_Rembrandt_Peale,_1800).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Presidential_portrait_of_Thomas_Jefferson_(by_Rembrandt_Peale,_1800).jpg",
+          "sha256": "f09ba4391160cc5f0e6863d31e9a04669f01aee157d56c11df473ceeeb632fbd"
         },
         {
           "filename": "04_james_madison.jpg",
           "path": "scene_packs/presidents/04_james_madison.jpg",
           "title": "James Madison",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Madison.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Madison.jpg",
+          "sha256": "9aad60e8ef557e790eeaa8bd3c9c8d723ea9ae9606308320ae3b17cce732c6bc"
         },
         {
           "filename": "05_james_monroe.jpg",
           "path": "scene_packs/presidents/05_james_monroe.jpg",
           "title": "James Monroe",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Monroe_White_House_portrait_1819.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Monroe_White_House_portrait_1819.jpg",
+          "sha256": "83832a1286d57b04a07f3f657082a239da4893d29b4c858085f36d9c72291c1d"
         },
         {
           "filename": "06_john_quincy_adams.jpg",
           "path": "scene_packs/presidents/06_john_quincy_adams.jpg",
           "title": "John Quincy Adams",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Quincy_Adams_1858_crop.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Quincy_Adams_1858_crop.jpg",
+          "sha256": "1483c0438720b74c3cdf7894ea5eed8fb14f09b2d19b7b08c25d3f84eb864448"
         },
         {
           "filename": "07_andrew_jackson.jpg",
           "path": "scene_packs/presidents/07_andrew_jackson.jpg",
           "title": "Andrew Jackson",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_jackson_head.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_jackson_head.jpg",
+          "sha256": "bf2ae03052617eafad1a7c1a78735db0078c735b540e130735475df3f1e9ce7b"
         },
         {
           "filename": "08_martin_van_buren.jpg",
           "path": "scene_packs/presidents/08_martin_van_buren.jpg",
           "title": "Martin Van Buren",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Martin_Van_Buren_MET_ap93.19.2.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Martin_Van_Buren_MET_ap93.19.2.jpg",
+          "sha256": "db3db22ad023a0b4ac6088193bdac967e02aa2a8dde8878da8f461212e650817"
         },
         {
           "filename": "09_william_henry_harrison.jpg",
           "path": "scene_packs/presidents/09_william_henry_harrison.jpg",
           "title": "William Henry Harrison",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:William_Henry_Harrison_by_James_Reid_Lambdin,_1835.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:William_Henry_Harrison_by_James_Reid_Lambdin,_1835.jpg",
+          "sha256": "f074f004696bb3e4ec27d1dd8266268bf0b5f1a0bbd2efdcb206e149e7a429a6"
         },
         {
           "filename": "10_john_tyler.jpg",
           "path": "scene_packs/presidents/10_john_tyler.jpg",
           "title": "John Tyler",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Tyler_(cropped_3x4).png"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Tyler_(cropped_3x4).png",
+          "sha256": "0073915197672457aef4ce4e426d646d532668d1737580df443653f215bd6fe0"
         },
         {
           "filename": "11_james_k_polk.jpg",
           "path": "scene_packs/presidents/11_james_k_polk.jpg",
           "title": "James K. Polk",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:JamesKPolk.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:JamesKPolk.jpg",
+          "sha256": "1c41f6dd803f296f781036150dcdc4fe5f20a951c11c5d3e9e8f4220a8d361a8"
         },
         {
           "filename": "12_zachary_taylor.jpg",
           "path": "scene_packs/presidents/12_zachary_taylor.jpg",
           "title": "Zachary Taylor",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Zachary_Taylor_restored_and_cropped.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Zachary_Taylor_restored_and_cropped.jpg",
+          "sha256": "9a0516c3c322caf58ef287b00f7a72d2ab29df70c9c259ce4a1bca9fec0ed63b"
         },
         {
           "filename": "13_millard_fillmore.jpg",
           "path": "scene_packs/presidents/13_millard_fillmore.jpg",
           "title": "Millard Fillmore",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Millard_Fillmore_Better_Crop.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Millard_Fillmore_Better_Crop.jpg",
+          "sha256": "b4a624ba5044c38473e8e8ab9d90b3e073fb57951fa39e19fa2fc639ef1026c0"
         },
         {
           "filename": "14_franklin_pierce.jpg",
           "path": "scene_packs/presidents/14_franklin_pierce.jpg",
           "title": "Franklin Pierce",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Mathew_Brady_-_Franklin_Pierce_-_alternate_crop.jpg",
+          "sha256": "ecb4564335ec9b3782a87b8699a27800650cb57ca831fe7eabdadcb0788fa223"
         },
         {
           "filename": "15_james_buchanan.jpg",
           "path": "scene_packs/presidents/15_james_buchanan.jpg",
           "title": "James Buchanan",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Buchanan_Eads_-_Brady-Handy.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Buchanan_Eads_-_Brady-Handy.jpg",
+          "sha256": "6e2990caa45a20c6a5f496b48fd69f61087b7dbe61e5b228aa9a7c142d914c2b"
         },
         {
           "filename": "16_abraham_lincoln.jpg",
           "path": "scene_packs/presidents/16_abraham_lincoln.jpg",
           "title": "Abraham Lincoln",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg",
+          "sha256": "e353a96095976534646d80ce1dc464a72977830a001cc6d37cebc396d56dd76a"
         },
         {
           "filename": "17_andrew_johnson.jpg",
           "path": "scene_packs/presidents/17_andrew_johnson.jpg",
           "title": "Andrew Johnson",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_Johnson_photo_portrait_head_and_shoulders,_c1870-1880-Edit1.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Andrew_Johnson_photo_portrait_head_and_shoulders,_c1870-1880-Edit1.jpg",
+          "sha256": "39139180c9421c95c63f99326d5ae746b5058d5162294dc5f799026440680a91"
         },
         {
           "filename": "18_ulysses_s_grant.jpg",
           "path": "scene_packs/presidents/18_ulysses_s_grant.jpg",
           "title": "Ulysses S. Grant",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Ulysses_S_Grant_by_Brady_c1870-restored.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Ulysses_S_Grant_by_Brady_c1870-restored.jpg",
+          "sha256": "c85eefcc72ca9be3dcf9d0bb768832b701e0b23b9e63a669620b0002c65c6eff"
         },
         {
           "filename": "19_rutherford_b_hayes.jpg",
           "path": "scene_packs/presidents/19_rutherford_b_hayes.jpg",
           "title": "Rutherford B. Hayes",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Rutherford_Hayes_1870_-_1880.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Rutherford_Hayes_1870_-_1880.jpg",
+          "sha256": "fe8ed1a9d3426c5c838ff65b035562aef4e024be6f5feaeaf4a49500fe627654"
         },
         {
           "filename": "20_james_a_garfield.jpg",
           "path": "scene_packs/presidents/20_james_a_garfield.jpg",
           "title": "James A. Garfield",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Abram_Garfield,_photo_portrait_seated_(cropped_4x5).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:James_Abram_Garfield,_photo_portrait_seated_(cropped_4x5).jpg",
+          "sha256": "6bc8f9d02acd608f9bb947b8fbe15e35fe9088329da6e4d7c3d53564935cb1c6"
         },
         {
           "filename": "21_chester_a_arthur.jpg",
           "path": "scene_packs/presidents/21_chester_a_arthur.jpg",
           "title": "Chester A. Arthur",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Chester_A._Arthur_by_Abraham_Bogardus.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Chester_A._Arthur_by_Abraham_Bogardus.jpg",
+          "sha256": "0dacbdf44fb801235f6f1c310a24ea3f4d05ca7f544b76ea46c1960f128830c9"
         },
         {
           "filename": "22_grover_cleveland.jpg",
           "path": "scene_packs/presidents/22_grover_cleveland.jpg",
           "title": "Grover Cleveland",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Grover_Cleveland_by_Charles_Milton_Bell_color_change_(3x4_cropped).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Grover_Cleveland_by_Charles_Milton_Bell_color_change_(3x4_cropped).jpg",
+          "sha256": "96715b9026023c6cde5fc27c5b98d11714c6e8897a3fea037d64342b8147c196"
         },
         {
           "filename": "23_benjamin_harrison.jpg",
           "path": "scene_packs/presidents/23_benjamin_harrison.jpg",
           "title": "Benjamin Harrison",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Benjamin_Harrison,_head_and_shoulders_bw_photo,_1896.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Benjamin_Harrison,_head_and_shoulders_bw_photo,_1896.jpg",
+          "sha256": "1ba8c564fce338f2eb7dcd6518ad9414319b4b7edd72cc21a26bc1d3fdfd9c0a"
         },
         {
           "filename": "24_william_mckinley.jpg",
           "path": "scene_packs/presidents/24_william_mckinley.jpg",
           "title": "William McKinley",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:McKinley_(cropped).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:McKinley_(cropped).jpg",
+          "sha256": "66ede66c2ecd8e40121e0ededd66dfcd9b4d2f4c3e6b1a30a5f3524495c2cd79"
         },
         {
           "filename": "25_theodore_roosevelt.jpg",
           "path": "scene_packs/presidents/25_theodore_roosevelt.jpg",
           "title": "Theodore Roosevelt",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros.jpg",
+          "sha256": "254628e19dc7fbfafb0f0ad39ed694992bc748aab878b4c91f3123169b8e024e"
         },
         {
           "filename": "26_william_howard_taft.jpg",
           "path": "scene_packs/presidents/26_william_howard_taft.jpg",
           "title": "William Howard Taft",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Cabinet_card_of_William_Howard_Taft_by_Pach_Brothers_-_Cropped_to_image.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Cabinet_card_of_William_Howard_Taft_by_Pach_Brothers_-_Cropped_to_image.jpg",
+          "sha256": "d95c1648245b80dc53b285ed46f06f9261359241841e2507b9d8c871d49abee4"
         },
         {
           "filename": "27_woodrow_wilson.jpg",
           "path": "scene_packs/presidents/27_woodrow_wilson.jpg",
           "title": "Woodrow Wilson",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Woodrow_Wilson_Harris_%26_Ewing_(3x4_cropped_b).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Woodrow_Wilson_Harris_%26_Ewing_(3x4_cropped_b).jpg",
+          "sha256": "509751c0ce5443695d95548534e768cc26b6f7c94439b11fd03482de9c794fce"
         },
         {
           "filename": "28_warren_g_harding.jpg",
           "path": "scene_packs/presidents/28_warren_g_harding.jpg",
           "title": "Warren G. Harding",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:HARDING,_WARREN_G._HONORABLE_LCCN2016859359.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:HARDING,_WARREN_G._HONORABLE_LCCN2016859359.jpg",
+          "sha256": "b6ea0d6cf2e4c8303cb9e9b7ec518f4bd2bc0805a8998b5f4ae2802afde2f584"
         },
         {
           "filename": "29_calvin_coolidge.jpg",
           "path": "scene_packs/presidents/29_calvin_coolidge.jpg",
           "title": "Calvin Coolidge",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Calvin_Coolidge,_1924_head-and-shoulders_portrait,_facing_slightly_right_(2).jpeg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Calvin_Coolidge,_1924_head-and-shoulders_portrait,_facing_slightly_right_(2).jpeg",
+          "sha256": "84fc4526688c350895c4a209a7efd8e913238ce7f0aa9e5d109f101ddb29e186"
         },
         {
           "filename": "30_herbert_hoover.jpg",
           "path": "scene_packs/presidents/30_herbert_hoover.jpg",
           "title": "Herbert Hoover",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Herbert_Clark_Hoover_by_Greene,_1956.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Herbert_Clark_Hoover_by_Greene,_1956.jpg",
+          "sha256": "249f12f4f1ccdc387757c5512a31a65703c0dcf062e1deaf0171e55f1e3e0a39"
         },
         {
           "filename": "31_franklin_d_roosevelt.jpg",
           "path": "scene_packs/presidents/31_franklin_d_roosevelt.jpg",
           "title": "Franklin D. Roosevelt",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Franklin_Delano_Roosevelt_portrait_painting_LCCN2016894437.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Franklin_Delano_Roosevelt_portrait_painting_LCCN2016894437.jpg",
+          "sha256": "abdab5d040b255fdb78ed72bc77567daeb442a8101e66bbf5eaa5effd2a27e96"
         },
         {
           "filename": "32_harry_s_truman.jpg",
           "path": "scene_packs/presidents/32_harry_s_truman.jpg",
           "title": "Harry S. Truman",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:TRUMAN_58-766-06.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:TRUMAN_58-766-06.jpg",
+          "sha256": "fa7c8d1a7b6554417bd1fb5d23eee363a33824330514db0b6d8f7b9015cc296e"
         },
         {
           "filename": "33_dwight_d_eisenhower.jpg",
           "path": "scene_packs/presidents/33_dwight_d_eisenhower.jpg",
           "title": "Dwight D. Eisenhower",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg",
+          "sha256": "38d5c5990d1f0fd15a2e80fb0a5e095db86a2fb99e8495ee754ec3dc23e86ff6"
         },
         {
           "filename": "34_john_f_kennedy.jpg",
           "path": "scene_packs/presidents/34_john_f_kennedy.jpg",
           "title": "John F. Kennedy",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Fitzgerald_Kennedy_official_White_House_portrait_(July_1963).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:John_Fitzgerald_Kennedy_official_White_House_portrait_(July_1963).jpg",
+          "sha256": "78eedfaa6cd8608aae49403c93d57b2c718d45f9e72b698c9e8cfa1e3aacba4b"
         },
         {
           "filename": "35_lyndon_b_johnson.jpg",
           "path": "scene_packs/presidents/35_lyndon_b_johnson.jpg",
           "title": "Lyndon B. Johnson",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Black_and_White_37_Lyndon_Johnson_3x4.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Black_and_White_37_Lyndon_Johnson_3x4.jpg",
+          "sha256": "c9f5aff64d634a3f4fd134ca5a03a819f2fe61eb9bdee607f88183ac8c3f8a9b"
         },
         {
           "filename": "36_richard_nixon.jpg",
           "path": "scene_packs/presidents/36_richard_nixon.jpg",
           "title": "Richard Nixon",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Richard_Nixon_Vice_Presidential_Portrait.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Richard_Nixon_Vice_Presidential_Portrait.jpg",
+          "sha256": "5456fc93d9ca3e163ff87467cd899fdc06aa1c8451a6cb27851ce2be708037ad"
         },
         {
           "filename": "37_gerald_ford.jpg",
           "path": "scene_packs/presidents/37_gerald_ford.jpg",
           "title": "Gerald Ford",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Gerald_R._Ford_(1974)_(A0381-600).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Gerald_R._Ford_(1974)_(A0381-600).jpg",
+          "sha256": "f3a44f48210a7105408222dd5e18f51ffcb3fe015cc0891f3e474dcaae3d9f7f"
         },
         {
           "filename": "38_jimmy_carter.jpg",
           "path": "scene_packs/presidents/38_jimmy_carter.jpg",
           "title": "Jimmy Carter",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Jimmy_Carter_-_NARA_-_179156_(cropped).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_portrait_of_Jimmy_Carter_-_NARA_-_179156_(cropped).jpg",
+          "sha256": "c6a0cef4bfec59558e8c8a4caaad281cbfc38da9fc9b0deb510188676bc97d9a"
         },
         {
           "filename": "39_ronald_reagan.jpg",
           "path": "scene_packs/presidents/39_ronald_reagan.jpg",
           "title": "Ronald Reagan",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Official_Portrait_of_President_Reagan_1981.jpg",
+          "sha256": "f88acc604eab49aff93825f59122571372765ebd1814d4757fcc860db90bc20a"
         },
         {
           "filename": "40_george_h_w_bush.jpg",
           "path": "scene_packs/presidents/40_george_h_w_bush.jpg",
           "title": "George H. W. Bush",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:George_H._W._Bush_presidential_portrait_2.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:George_H._W._Bush_presidential_portrait_2.jpg",
+          "sha256": "42e3b746895e5e456c1afa80f3e338d9a1d6857b60a9e7f6708cc5f013173660"
         },
         {
           "filename": "41_bill_clinton.jpg",
           "path": "scene_packs/presidents/41_bill_clinton.jpg",
           "title": "Bill Clinton",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Bill_Clinton_(cropped_4).jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Bill_Clinton_(cropped_4).jpg",
+          "sha256": "a474596c14474957264b0f97eefe9243b94cafb6dce2a90fac250f277978419b"
         },
         {
           "filename": "42_george_w_bush.jpg",
           "path": "scene_packs/presidents/42_george_w_bush.jpg",
           "title": "George W. Bush",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:George_W._Bush_2003_(4x5).png"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:George_W._Bush_2003_(4x5).png",
+          "sha256": "d2e9c75ca3dfdcab6075847f542d14bd3d699b1eee922a93f0a3a43ecd3d1270"
         },
         {
           "filename": "43_barack_obama.jpg",
           "path": "scene_packs/presidents/43_barack_obama.jpg",
           "title": "Barack Obama",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg",
+          "sha256": "007296ab8d2ce1b8359340cae75dc55b47efdb50f4efe049ca784beaf7ee1a7b"
         },
         {
           "filename": "44_donald_trump.jpg",
           "path": "scene_packs/presidents/44_donald_trump.jpg",
           "title": "Donald Trump",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:January_2025_Official_Presidential_Portrait_of_Donald_J._Trump.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:January_2025_Official_Presidential_Portrait_of_Donald_J._Trump.jpg",
+          "sha256": "0d801730e196d9c5d9a1dffb13e4ccd5be63e778e191bab8723c5ea31edc4c76"
         },
         {
           "filename": "45_joe_biden.jpg",
           "path": "scene_packs/presidents/45_joe_biden.jpg",
           "title": "Joe Biden",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg",
+          "sha256": "d73fc5c2215809d34632efc071247822b2080dfde195d77d1b797dd3a1f76df7"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "wonders",
@@ -1666,58 +1912,69 @@
           "path": "scene_packs/wonders/01_great_wall_of_china.jpg",
           "title": "Great Wall of China",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Wall_of_China_at_Jinshanling.jpg",
+          "sha256": "71b9a40d732279835bf6c488ec971f9af1fe56538c6421faa7623146518c0787"
         },
         {
           "filename": "02_petra.jpg",
           "path": "scene_packs/wonders/02_petra.jpg",
           "title": "Petra",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Monastery,_Petra,_Jordan8.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Monastery,_Petra,_Jordan8.jpg",
+          "sha256": "71f2b541e7f5e96be6d5e12b3352205743f91245d2fd39e8e43befbaecdcfbea"
         },
         {
           "filename": "03_christ_the_redeemer.jpg",
           "path": "scene_packs/wonders/03_christ_the_redeemer.jpg",
           "title": "Christ the Redeemer",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Unique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Unique_Moment_with_the_Moon_and_Christ_the_Redeemer_3.jpg",
+          "sha256": "931d08c7f3ed45c35b9c9dcbac0302bc6dd2597fae531e1585dda76457e078cc"
         },
         {
           "filename": "04_machu_picchu.jpg",
           "path": "scene_packs/wonders/04_machu_picchu.jpg",
           "title": "Machu Picchu",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:80_-_Machu_Picchu_-_Juin_2009_-_edit.jpg",
+          "sha256": "c852a0a7d1173be89bf93c1f60d7105c243009883413d33fd082a0049a081297"
         },
         {
           "filename": "05_chich_n_itz.jpg",
           "path": "scene_packs/wonders/05_chich_n_itz.jpg",
-          "title": "Chich\u00e9n Itz\u00e1",
+          "title": "Chichén Itzá",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Chichen-Itza-Castillo-Seen-From-East.JPG"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Chichen-Itza-Castillo-Seen-From-East.JPG",
+          "sha256": "be151bf3e249864d12a6303e5bfc3164b707f91b6af0b91af621829e268df5c1"
         },
         {
           "filename": "06_colosseum.jpg",
           "path": "scene_packs/wonders/06_colosseum.jpg",
           "title": "Colosseum",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome,_Italy_-_April_2007.jpg",
+          "sha256": "69b7e80ac16c5df7738eda851f17f5980dfa050e4f35e16089592c410a156cd0"
         },
         {
           "filename": "07_taj_mahal.jpg",
           "path": "scene_packs/wonders/07_taj_mahal.jpg",
           "title": "Taj Mahal",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_in_March_2004.jpg",
+          "sha256": "0b2a15ec2fc3e9c79aba18ef9755742adb715eba6000e6524f2f80f1a944aaad"
         },
         {
           "filename": "08_great_pyramid_of_giza.jpg",
           "path": "scene_packs/wonders/08_great_pyramid_of_giza.jpg",
           "title": "Great Pyramid of Giza",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_from_southeast_corner.JPG"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:The_Great_Pyramid_of_Giza_from_southeast_corner.JPG",
+          "sha256": "77e3bf26416a3bc7616df536e545adfbd3deff4737a78720a4ce11ed0b752144"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "nasa_space",
@@ -1741,7 +1998,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:NASA_Earthrise_AS08-14-2383_Apollo_8,_1968-12-24,_from_print.png",
           "license": "Public domain",
-          "attribution": "NASA"
+          "attribution": "NASA",
+          "sha256": "855352135ba31be12a468166c1671a5daaa49ad5f1d80d8886dfacb414d3fa71"
         },
         {
           "filename": "02_the_blue_marble.jpg",
@@ -1750,7 +2008,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Blue_Marble,_AS17-148-22727.jpg",
           "license": "Public domain",
-          "attribution": "Harrison Schmitt / Apollo 17"
+          "attribution": "Harrison Schmitt / Apollo 17",
+          "sha256": "152b840f583a57ac9ffe2cab85ffb85ba1c301ba2b36dac7764ed14c71e71d5d"
         },
         {
           "filename": "03_buzz_aldrin_on_the_moon.jpg",
@@ -1759,7 +2018,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Astronaut_Edwin_Aldrin_descends_the_Lunar_Module_ladder,_AS11-40-5868_(21037483754).jpg",
           "license": "Public domain",
-          "attribution": "Neil A. Armstrong"
+          "attribution": "Neil A. Armstrong",
+          "sha256": "c84587e0a9a097f8927157c8ce9eeb89135b5a2e15901b328709972da3da5306"
         },
         {
           "filename": "04_lunar_module_eagle.jpg",
@@ -1768,7 +2028,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Earth,_Moon_and_Lunar_Module,_AS11-44-6643.jpg",
           "license": "Public domain",
-          "attribution": "NASA / Apollo 11"
+          "attribution": "NASA / Apollo 11",
+          "sha256": "43c8bb65b66602a6aa3ecb5b4cf6c79a3bfe84a877a7d17e63c88481008f03bf"
         },
         {
           "filename": "05_pillars_of_creation.jpg",
@@ -1777,7 +2038,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_Pillars_of_Creation_(Hubble_and_Webb_Images_Side_by_Side).png",
           "license": "CC BY 2.0",
-          "attribution": "NASA's James Webb Space Telescope"
+          "attribution": "NASA's James Webb Space Telescope",
+          "sha256": "5dcce6fa4d3855a6ef18bcfb14560b00c0f1dfc497c2f59bea4efd1e96ca3923"
         },
         {
           "filename": "06_hubble_ultra_deep_field.jpg",
@@ -1786,7 +2048,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Hubble_ultra_deep_field_high_rez_edit1.jpg",
           "license": "Public domain",
-          "attribution": "NASA and the European Space Agency. Edited by Noodle snacks"
+          "attribution": "NASA and the European Space Agency. Edited by Noodle snacks",
+          "sha256": "a0b64138950c642d6ac8ee29b7d5fb7d3881942ddfd96db97db3473535dbed64"
         },
         {
           "filename": "07_carina_nebula.jpg",
@@ -1795,7 +2058,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:%22Cosmic_Cliffs%22_in_the_Carina_Nebula_(NIRCam_and_MIRI_Composite_Compass_Image)_(2022-031).png",
           "license": "Public domain",
-          "attribution": "IMAGE: NASA, ESA, CSA, STScI"
+          "attribution": "IMAGE: NASA, ESA, CSA, STScI",
+          "sha256": "89cdbf86249e06a56e35a9e7267ed3020b55f10cd9bd7288af9967873c4d56aa"
         },
         {
           "filename": "08_jupiter_and_the_great_red_spot.jpg",
@@ -1804,9 +2068,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Jupiter_%27s_Great_Red_Spot_-_Nasa%E2%80%99s_Juno_PJ_31_(51641404848).png",
           "license": "CC BY 2.0",
-          "attribution": "Andrea Luck"
+          "attribution": "Andrea Luck",
+          "sha256": "ff726465897a914ffc637af133a0e6b14af61bfcc608def1124aaffaec7274c6"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "wpa_national_parks",
@@ -1830,7 +2098,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_National_Park,_a_free_government_service_LCCN2007676131.jpg",
           "license": "Public domain",
-          "attribution": "Work Projects Administration Poster Collection"
+          "attribution": "Work Projects Administration Poster Collection",
+          "sha256": "73ce99e861e5ccdcf9f5346d4ae1e3ed5363f8f186b164bee9a2c1f29b3f3036"
         },
         {
           "filename": "02_lassen_volcanic_national_park.jpg",
@@ -1839,7 +2108,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Lassen_Volcanic_National_Park,_Ranger_Naturalist_Service_LCCN2007676132.jpg",
           "license": "Public domain",
-          "attribution": "Work Projects Administration Poster Collection"
+          "attribution": "Work Projects Administration Poster Collection",
+          "sha256": "ceee4c132e6d50c7aa5e6ff779253d25f3d3888c563e9f4c4c35ea009a910c3b"
         },
         {
           "filename": "03_yellowstone_national_park.jpg",
@@ -1848,7 +2118,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park,_Ranger_Naturalist_Service_LCCN2007676133.jpg",
           "license": "Public domain",
-          "attribution": "Work Projects Administration Poster Collection"
+          "attribution": "Work Projects Administration Poster Collection",
+          "sha256": "92c1919879f8d38f36fa4d20962a76c17d64165fb0096e98ce6f73b230b7f6d5"
         },
         {
           "filename": "04_zion_national_park.jpg",
@@ -1857,7 +2128,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Zion_National_Park,_Ranger_Naturalist_Service_LCCN2007676134.jpg",
           "license": "Public domain",
-          "attribution": "Work Projects Administration Poster Collection"
+          "attribution": "Work Projects Administration Poster Collection",
+          "sha256": "62911facac018a36785f2a982d2202f429cac25a587235dc4e1ed085cd03fffa"
         },
         {
           "filename": "05_national_parks_preserve_wildlife.jpg",
@@ -1866,7 +2138,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:The_national_parks_preserve_wild_life_LCCN98518597.jpg",
           "license": "Public domain",
-          "attribution": "Work Projects Administration Poster Collection"
+          "attribution": "Work Projects Administration Poster Collection",
+          "sha256": "dab8a6ec7cbcfcd05e9370e9e1929918f10da63e24f1ef889b34ebfe128e7ddd"
         },
         {
           "filename": "06_pueblos_of_the_southwest.jpg",
@@ -1875,9 +2148,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Pueblos_of_the_Southwest_poster,_ca._1935.jpg",
           "license": "Public domain",
-          "attribution": "Dorothy Waugh, employed by the National Park Service [1]"
+          "attribution": "Dorothy Waugh, employed by the National Park Service [1]",
+          "sha256": "9728c227adb95dddc4b187197ab77f106abea7f7f4e4cb930f73814884570119"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "skylines",
@@ -1897,7 +2174,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Lower_Manhattan_from_Jersey_City_September_2020_panorama.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "King of Hearts"
+          "attribution": "King of Hearts",
+          "sha256": "b91e7324f53ab71dd6ccd4418ea977aa53f0415ff5d3ffbe1d3d98a3f9e07230"
         },
         {
           "filename": "02_shanghai.jpg",
@@ -1906,7 +2184,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Pudong_Shanghai_November_2017_panorama.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "King of Hearts"
+          "attribution": "King of Hearts",
+          "sha256": "7525712459438e1fb2d23a9914e51865a9512533c83542301cbfcbeadea0e88c"
         },
         {
           "filename": "03_tokyo.jpg",
@@ -1915,7 +2194,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Tokyo_-_Sunset_Skyline.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Fred Cherrygarden"
+          "attribution": "Fred Cherrygarden",
+          "sha256": "e5a8263825af39c329be37f5feddd91bcce77d90cc7b1e85eda8908ba9d0e87c"
         },
         {
           "filename": "04_london.jpg",
@@ -1924,7 +2204,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:City_of_London_skyline_from_London_City_Hall_-_Sept_2015_-_Crop_Aligned.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "User:Colin and Kim Hansen"
+          "attribution": "User:Colin and Kim Hansen",
+          "sha256": "950d9c25e84c59a92309e4b55b772228895035a623f6d684a92859535fe0fea8"
         },
         {
           "filename": "05_dubai.jpg",
@@ -1933,7 +2214,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Dubai_Skyline_with_Ra%27s_Al_Khor_Wildlife_Sanctuary.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Chuck202"
+          "attribution": "Chuck202",
+          "sha256": "eb4078472c1c040afd064960db089681ec70049893fad5f0adb214ec6b55f77c"
         },
         {
           "filename": "06_sydney.jpg",
@@ -1942,7 +2224,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Sydney_skyline_at_night_2020.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "MDRX"
+          "attribution": "MDRX",
+          "sha256": "30d07b53a5c6656e5100192b124991059dbe15ff46c1173222986264c1cfd747"
         },
         {
           "filename": "07_frankfurt.jpg",
@@ -1951,9 +2234,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Skyline_Frankfurt_am_Main_2015.jpg",
           "license": "CC BY-SA 3.0 de",
-          "attribution": "Christian Wolf (www.c-w-design.de)"
+          "attribution": "Christian Wolf (www.c-w-design.de)",
+          "sha256": "5ab57213f92dd4d998c3f451681c8d5796fbd925fd52ef8b09f8e16a9d331ce4"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "castles_cathedrals",
@@ -1977,7 +2264,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Neuschwanstein_Castle_2024-02.jpg",
           "license": "CC0",
-          "attribution": "Wilfredor"
+          "attribution": "Wilfredor",
+          "sha256": "4dac5be295e1095d69fce6de6f30f16d562fba4f9b365f35cc7f8a9fe8dc558b"
         },
         {
           "filename": "02_mont_saint_michel.jpg",
@@ -1986,7 +2274,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Mont-Saint-Michel_vu_du_ciel.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Amaustan"
+          "attribution": "Amaustan",
+          "sha256": "08024726f122277a0696cf903f2a04a9a9f344dd528e8bab9ad5bcbfd59c4665"
         },
         {
           "filename": "03_cologne_cathedral.jpg",
@@ -1995,7 +2284,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:K%C3%B6lner_Dom_-_Westfassade_2022_ohne_Ger%C3%BCst-0968_b.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Raimond Spekking"
+          "attribution": "Raimond Spekking",
+          "sha256": "040dcfa7cb7782dc1cf7fb379d8311ca8648936511c70558ad6c1298e1688a5c"
         },
         {
           "filename": "04_notre_dame_de_paris.jpg",
@@ -2004,16 +2294,18 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Paris_Notre-Dame_Southeast_View_01.JPG",
           "license": "CC BY-SA 4.0",
-          "attribution": "Uoaei1"
+          "attribution": "Uoaei1",
+          "sha256": "b9f5caa4cf8460a3acc5719abede8de0bd61139de04efb453ad79e0b1c6be2ff"
         },
         {
           "filename": "05_alc_zar_of_segovia.jpg",
           "path": "scene_packs/castles_cathedrals/05_alc_zar_of_segovia.jpg",
-          "title": "Alc\u00e1zar of Segovia",
+          "title": "Alcázar of Segovia",
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Segovia_-_Alc%C3%A1zar_de_Segovia_22_2017-10-24.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Rafa Esteve"
+          "attribution": "Rafa Esteve",
+          "sha256": "442306bdb93618d9f06c46d07ce6e4ee0599a5748f986ec471fcbcdb25b7e286"
         },
         {
           "filename": "06_edinburgh_castle.jpg",
@@ -2022,7 +2314,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Half-Moon_battery_Edinburgh_Castle_dec.23.jpg",
           "license": "CC BY 4.0",
-          "attribution": "Peulle"
+          "attribution": "Peulle",
+          "sha256": "3f2404b0ed2cf1b731d5b701a1fa7164d26fbc40b5616af4251f6513007701d0"
         },
         {
           "filename": "07_chartres_cathedral.jpg",
@@ -2031,7 +2324,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Chartres_JBU01.JPG",
           "license": "CC BY-SA 3.0",
-          "attribution": "J\u00f6rg Bittner Unna"
+          "attribution": "Jörg Bittner Unna",
+          "sha256": "54f43b50fc20cb4506707528719eaa22f00d50b3842fca0345c331111786eb6f"
         },
         {
           "filename": "08_bran_castle.jpg",
@@ -2040,9 +2334,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Bran_Castle_cloudy.jpg",
           "license": "CC BY-SA 4.0",
-          "attribution": "Ryanjoejohnmccleary"
+          "attribution": "Ryanjoejohnmccleary",
+          "sha256": "f2ce2d33ed44972e4958e177d61ddab2a05964c6a6d408b436b9a94ba0bc4faa"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "aviation",
@@ -2066,7 +2364,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:First_flight2.jpg",
           "license": "Public domain",
-          "attribution": "John T. Daniels"
+          "attribution": "John T. Daniels",
+          "sha256": "d937fccc6865bb1ec418a43f2451c7d7e018234d61b05a603a1bf65b99f44e74"
         },
         {
           "filename": "02_spirit_of_st_louis.jpg",
@@ -2075,7 +2374,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Charles_Lindbergh_and_airplane_%22Spirit_of_St._Louis%22_LCCN2016888581.jpg",
           "license": "Public domain",
-          "attribution": "Harris &amp; Ewing, photographer"
+          "attribution": "Harris &amp; Ewing, photographer",
+          "sha256": "9c92b21a4145f909d410b6351cd5ebcec07a9278502ae8bd640a0863218d3875"
         },
         {
           "filename": "03_supermarine_spitfire.jpg",
@@ -2084,7 +2384,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Supermarine_Spitfire_Mk_XVI_NR.jpg",
           "license": "CC BY-SA 2.5",
-          "attribution": "ChowellsNoise reduction and shadows lifted by Diliff."
+          "attribution": "ChowellsNoise reduction and shadows lifted by Diliff.",
+          "sha256": "5debb4182cd42a1e14ae52783169d0b0ddd8f6e4bb989856841ee1588f722921"
         },
         {
           "filename": "04_memphis_belle_b_17_flying_fortress.jpg",
@@ -2093,7 +2394,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Memphis_Belle.jpg",
           "license": "Public domain",
-          "attribution": "Unknown authorUnknown author"
+          "attribution": "Unknown authorUnknown author",
+          "sha256": "b3a4f15d50568f89f3f682480be7d2e088836c87de5db876387c7d6741677967"
         },
         {
           "filename": "05_sr_71_blackbird.jpg",
@@ -2102,7 +2404,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Lockheed_SR-71_Blackbird.jpg",
           "license": "Public domain",
-          "attribution": "USAF / Judson Brohmer"
+          "attribution": "USAF / Judson Brohmer",
+          "sha256": "6f4ca5c9e37cae91e2fc97413afa09034c582eec17f7689700f67ffa029d75c4"
         },
         {
           "filename": "06_concorde.jpg",
@@ -2111,7 +2414,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Concorde_Sierra_Delta_%26_001.jpg",
           "license": "CC0",
-          "attribution": "GerdeeX"
+          "attribution": "GerdeeX",
+          "sha256": "1d30d25d18c407f3665f00d4ab57cf8fdfc651246398e187d64112d2dd6784d5"
         },
         {
           "filename": "07_boeing_747.jpg",
@@ -2120,7 +2424,8 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Boeing_747-8_first_flight_Everett,_WA.jpg",
           "license": "CC BY 2.0",
-          "attribution": "Boeing Dreamscape"
+          "attribution": "Boeing Dreamscape",
+          "sha256": "a19a72ea6c1540577b79e0a474ff25ce976ef71be164a6f38a17b53fc54bc5d1"
         },
         {
           "filename": "08_air_force_one.jpg",
@@ -2129,9 +2434,13 @@
           "source": "Wikimedia Commons",
           "commons_url": "https://commons.wikimedia.org/wiki/File:Air_Force_One_over_Mt._Rushmore.jpg",
           "license": "Public domain",
-          "attribution": "U.S. Air Force File Photo."
+          "attribution": "U.S. Air Force File Photo.",
+          "sha256": "14b88e89e723ca2749528c9decca54b7725fa7a63ea837dfe0fcef4f988f6222"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "canyons",
@@ -2149,37 +2458,45 @@
           "path": "scene_packs/canyons/01_grand_canyon.jpg",
           "title": "Grand Canyon Sunset",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "b55539464a4bee0fd39202380ea13ace53cf520a0b33dcf06cad8d172ce32fb0"
         },
         {
           "filename": "02_antelope_canyon.jpg",
           "path": "scene_packs/canyons/02_antelope_canyon.jpg",
           "title": "Antelope Canyon Light Beam",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "afaa84ac6ddcc182583311d17adb56b545db5cfbc752be30dafa16d99b4eb0cd"
         },
         {
           "filename": "03_bryce_canyon.jpg",
           "path": "scene_packs/canyons/03_bryce_canyon.jpg",
           "title": "Bryce Canyon Amphitheater",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Sunrise_Point_Bryce_Canyon_November_2018_002.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Sunrise_Point_Bryce_Canyon_November_2018_002.jpg",
+          "sha256": "a836654f38ac78806c38f32187c285454641d8fefbeb59f40c0b1f68a2b90bd1"
         },
         {
           "filename": "04_zion_canyon.jpg",
           "path": "scene_packs/canyons/04_zion_canyon.jpg",
           "title": "Zion Canyon View",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Zion_Canyon,_Zion_National_Park.JPG"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Zion_Canyon,_Zion_National_Park.JPG",
+          "sha256": "7312d8ae4b61fe08f7ca997d868f5fcc15808e77749ca1122b9373d13c4a355e"
         },
         {
           "filename": "05_waimea_canyon.jpg",
           "path": "scene_packs/canyons/05_waimea_canyon.jpg",
           "title": "Waimea Canyon, Kauai",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Waimea_Canyon,_Kaua%CA%BBi.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Waimea_Canyon,_Kaua%CA%BBi.jpg",
+          "sha256": "0564b605ed9a01e0f5270dc32ec089b9d796f903f4ffd18ccdb20f5fab5cb2a7"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "architecture",
@@ -2197,37 +2514,45 @@
           "path": "scene_packs/architecture/01_golden_gate.jpg",
           "title": "Golden Gate Bridge in Evening Fog",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "599455e7e56271eb04cd173bf2ff15a1e901a2aa233ef281f6c0e92b418206c8"
         },
         {
           "filename": "02_great_pyramids.jpg",
           "path": "scene_packs/architecture/02_great_pyramids.jpg",
           "title": "Great Pyramids of Giza at Sunset",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "f098419efcdb385e65cf872c1c36568480153d6185be232175dda02db6e2174a"
         },
         {
           "filename": "03_eiffel_tower.jpg",
           "path": "scene_packs/architecture/03_eiffel_tower.jpg",
           "title": "Eiffel Tower in Paris",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg",
+          "sha256": "7f411723001d1bf2712fc40742aea9db18d2c55f84f0d83f3554bef4428f5561"
         },
         {
           "filename": "04_taj_mahal.jpg",
           "path": "scene_packs/architecture/04_taj_mahal.jpg",
           "title": "Taj Mahal Sunset",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Sunset.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Taj_Mahal_Sunset.jpg",
+          "sha256": "84788dd5b2e1cbc7cb3234168610a5f43560fed980cb7e07310f6695c933d829"
         },
         {
           "filename": "05_colosseum.jpg",
           "path": "scene_packs/architecture/05_colosseum.jpg",
           "title": "Colosseum in Rome",
           "source": "Wikimedia Commons",
-          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome-April_2007-1-_copie_2B.jpg"
+          "commons_url": "https://commons.wikimedia.org/wiki/File:Colosseum_in_Rome-April_2007-1-_copie_2B.jpg",
+          "sha256": "a97ab75dacbd01abbcca3226a46677b8f720e0fab9bff780dea4396eb2f61eb3"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "muscle_cars",
@@ -2245,37 +2570,45 @@
           "path": "scene_packs/muscle_cars/01_mustang.jpg",
           "title": "Ford Mustang Shelby GT500",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "8b65d811c189bbd7770f1c6f0ab559eebd0a94ed6134c29320e5ef0f5e8b3913"
         },
         {
           "filename": "02_porsche.jpg",
           "path": "scene_packs/muscle_cars/02_porsche.jpg",
           "title": "Porsche 911 GT3 RS",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "1484a06d009ba530368c32505214c3ae436f3a5fb92d1f991a65e69919021e94"
         },
         {
           "filename": "03_lamborghini.jpg",
           "path": "scene_packs/muscle_cars/03_lamborghini.jpg",
           "title": "Lamborghini Aventador",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "f9f34dd40da97e6322d7aa1be329067a0112f51290f82774feb9ed0034138c3f"
         },
         {
           "filename": "04_bugatti.jpg",
           "path": "scene_packs/muscle_cars/04_bugatti.jpg",
           "title": "Bugatti Chiron",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "ec1c6792173cc206defafa4483403d72eb875960e1e3730af1586df2a9d7ed66"
         },
         {
           "filename": "05_dodge_charger.jpg",
           "path": "scene_packs/muscle_cars/05_dodge_charger.jpg",
           "title": "Classic 1969 Dodge Charger",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "7d45620d7fd50e1db2e9d5950869a88a4f085d578114bcfa7b0d449c71a4051e"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     },
     {
       "id": "fast_animals",
@@ -2297,37 +2630,45 @@
           "path": "scene_packs/animals/01_eagle.jpg",
           "title": "Bald Eagle in Flight",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "6db92a394483f7f141cc3e832eefdb991b9569c7741ae614d5b3a92ebde793af"
         },
         {
           "filename": "02_cheetah.jpg",
           "path": "scene_packs/animals/02_cheetah.jpg",
           "title": "Cheetah Sprinting",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "01f0eae5b7e2bebdf11b5616f4782cb6488aaaca3274e0816ed97aa0e4a5eb34"
         },
         {
           "filename": "03_greyhound.jpg",
           "path": "scene_packs/animals/03_greyhound.jpg",
           "title": "Racing Greyhound",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "126b4fcad361b4a10a894fb0c2b8eb03c6678ec45313176bcd7d4105499a8649"
         },
         {
           "filename": "04_falcon.jpg",
           "path": "scene_packs/animals/04_falcon.jpg",
           "title": "Peregrine Falcon Dive",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "d9d57e43a4175fdbaf0b983c196e36e80f223746e466e5daa2baa06a4166bd2c"
         },
         {
           "filename": "05_sailfish.jpg",
           "path": "scene_packs/animals/05_sailfish.jpg",
           "title": "Sailfish Leaping",
           "source": "Generative Art",
-          "commons_url": ""
+          "commons_url": "",
+          "sha256": "befb27e01f4fb4b47f90b548134eead622e01a4c618f26698d35c756598a497e"
         }
-      ]
+      ],
+      "version": "1.0.0",
+      "min_integration": "0.12.0",
+      "featured": false
     }
   ]
 }

@@ -1,73 +1,80 @@
-# Contributing Scene Packs
+# Contributing to the Digital Frames content catalog
 
-We welcome contributions of new scene packs! Since these packs are downloaded automatically by users' integrations, we maintain high standards for image quality, display optimization, and legal compliance.
+This repository supplies **Gallery art packs** (and first-party Live renderer
+sources) for [ha-digital-frames](https://github.com/dsackr/ha-digital-frames).
 
----
+**Images and JSON only for community PRs.** Do not contribute remote-exec
+Python “widgets” or installable scripts. Generators ship first-party via the
+integration’s pinned Live skills.
 
-## ⚠️ Licensing Requirements (Critical)
-
-All image assets contributed to this repository **must** be legally free to distribute and use. Before adding any images, verify that they meet one of the following requirements:
-
-1. **Public Domain (Preferred):** 
-   * Works where the copyright has expired (e.g., paintings from artists deceased for more than 70 years, such as Claude Monet, Vincent van Gogh).
-   * Works created by the U.S. Federal Government (which are automatically public domain under US copyright law, e.g., official presidential portraits, NASA photos).
-2. **Creative Commons / Open Licensing:** 
-   * Openly licensed works (e.g., CC0, CC-BY, CC-BY-SA) where attribution can be verified.
-3. **No Copyrighted/Proprietary Images:** 
-   * Do not submit contemporary artwork, commercial photography, movie stills, or any images with restrictive licenses.
-
-When querying Wikimedia Commons, the generator script automatically checks the file's metadata to verify it is marked as `public domain`. Any file failing this check will be skipped.
+See [docs/CATALOG_SCHEMA.md](docs/CATALOG_SCHEMA.md) for the index format
+(version, `min_integration`, `sha256`, `featured`).
 
 ---
 
-## How to Add a New Scene Pack
+## Licensing (critical)
 
-Scene packs are defined in `scripts/build_scene_pack.py` and built using Wikimedia Commons metadata.
+All images **must** be free to redistribute:
 
-### 1. Add the Pack Definition
-Open `scripts/build_scene_pack.py` and add a new dictionary to the `PACKS` list:
+1. **Public domain** (preferred) — e.g. artists deceased 70+ years; US government works (NASA, etc.).
+2. **Open licenses** (CC0 / CC-BY / CC-BY-SA) with verifiable attribution.
+3. **No** modern copyrighted photos, film stills, or proprietary art.
+
+`scripts/build_scene_pack.py` only keeps Wikimedia Commons files whose
+metadata explicitly says public domain (plus artist checks where configured).
+
+---
+
+## Adding an art pack
+
+### 1. Define the pack
+
+Edit `PACKS` in `scripts/build_scene_pack.py`:
 
 ```python
     {
         "id": "my_new_pack",
         "name": "My New Pack Name",
         "description": "A brief description of what this pack contains.",
-        # Packs can appear in multiple Add-ons categories. Categories are
-        # tags, not folders, so pick every category that applies.
         "categories": ["famous_artists"],
         "queries": [
-            # Option A: Fuzzy Search (finds the best match for the query)
             ("Claude Monet Water Lilies painting", "Water Lilies", "Monet"),
-            
-            # Option B: Exact Filename (recommended when you want a specific file)
-            ("File:Specific Image Filename on Commons.jpg", "Friendly Display Title", ""),
+            ("File:Exact_Commons_Name.jpg", "Friendly Title", ""),
         ],
     },
 ```
 
-* **Query (First value):** The search term or the exact `File:Name.jpg` from Wikimedia Commons.
-* **Display Title (Second value):** The name shown to the user on the dashboard.
-* **Artist Keyword (Third value):** Used for fuzzy matching to verify the artist's name in metadata. Use `""` (empty string) if you are targeting a specific filename directly.
+Category tags (non-exhaustive): `famous_artists`, `nature`, `architecture`,
+`seasons`, `history`, `speed`, `AI Art`. The Gallery builds tiles from tags
+in `scene_packs/index.json`.
 
-Current category tags are `famous_artists`, `nature`, `architecture`, `seasons`, `history`, `speed`, and `AI Art`. The Add-ons page builds its Art Packs category tiles from the tags in `scene_packs/index.json`, so a pack with `["speed", "nature"]` appears in both categories.
-
-### 2. Generate the Assets
-Run the build script to download, downsize, and register the pack:
+### 2. Build assets
 
 ```bash
 python3 scripts/build_scene_pack.py my_new_pack
+python3 scripts/stamp_catalog.py
 ```
 
-This will:
-* Query Wikimedia Commons to locate the files and check licenses.
-* Download and resize the images to a max edge of 2400px (saving them under `scene_packs/my_new_pack/`).
-* Update the central index `scene_packs/index.json`.
+`stamp_catalog.py` writes `version`, `min_integration`, `featured`, and
+per-image `sha256` for marketplace integrity checks.
 
-### 3. Verify & Commit
-1. Check the downloaded files under `scene_packs/my_new_pack/` to ensure they are cropped correctly and look high-quality.
-2. Stage and commit the changes:
-   ```bash
-   git add scene_packs/my_new_pack/ scene_packs/index.json scripts/build_scene_pack.py
-   git commit -m "Add my_new_pack scene pack"
-   git push origin main
-   ```
+### 3. Open a PR
+
+Use the **art pack** PR template. Include provenance notes and confirm
+licensing.
+
+---
+
+## Forbidden
+
+- `type: "widget"` catalog entries  
+- `script_url` or any executable payload for community packs  
+- Copyrighted imagery  
+
+---
+
+## First-party renderers
+
+`addons/xotd/` and `addons/daily_agenda/` are **not** Gallery installs.
+They are pinned by SHA in the integration for Live skill rendering
+(`--render-only`).
