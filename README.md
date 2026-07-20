@@ -9,10 +9,8 @@ scripts for the [Digital Frames Home Assistant integration](https://github.com/d
 * **`scene_packs/`**: Curated, public-domain art and seasonal image bundles
   (Gallery). Central manifest: `scene_packs/index.json`.
 * **`addons/`**: First-party renderer scripts used by the integration:
-  * **[Daily Agenda](addons/daily_agenda/)** — calendar + weather layout (still
-    installed as a catalog widget until Content Platform Phase 4 migrates it
-    to Live generators — see `docs/CONTENT_PLATFORM_ROADMAP.md` in the
-    integration repo).
+  * **[Daily Agenda](addons/daily_agenda/)** — calendar + weather layout used as
+    a **pinned Live renderer** (`--render-only`); not a Gallery install.
   * **[xOTD renderer](addons/xotd/)** — text layout engine for Live content
     (joke/quote/word/scripture). **Not** a user-installable catalog entry;
     `skills.py` downloads a **pinned** commit of this script for
