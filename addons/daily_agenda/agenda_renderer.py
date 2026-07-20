@@ -9,6 +9,7 @@ and uploads it to the Fraimic e-ink canvas frame.
 
 from __future__ import annotations
 
+import argparse
 import os
 import sys
 import json
@@ -213,14 +214,21 @@ def fetch_ical_events(ical_url: str, target_tz) -> list[dict]:
     events.sort(key=lambda x: x["start"])
     return events
 
-def fetch_ha_events(config: dict, target_tz) -> list[dict]:
-    """Fetch calendar events from the Home Assistant API."""
+def fetch_ha_events(
+    config: dict, target_tz, *, events_path: str | None = None
+) -> list[dict]:
+    """Fetch calendar events from the Home Assistant API.
+
+    Prefer a pre-fetched ``ha_events.json`` written by the Digital Frames
+    integration (next to config when using --config), so render-only runs
+    never need HA URL/token inside the subprocess.
+    """
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    ha_events_path = os.path.join(script_dir, "ha_events.json")
+    ha_events_path = events_path or os.path.join(script_dir, "ha_events.json")
     
     data = []
     if os.path.exists(ha_events_path):
-        print("Loading calendar events from local pre-fetched ha_events.json...")
+        print(f"Loading calendar events from local pre-fetched {ha_events_path}...")
         try:
             with open(ha_events_path, "r") as f:
                 data = json.load(f)
@@ -861,27 +869,52 @@ def upload_bin_to_frame(frame_ip: str, binary_bytes: bytes) -> bool:
 # ---------------------------------------------------------------------------
 # Main Routine
 # ---------------------------------------------------------------------------
-def main():
+def parse_args(argv=None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--config",
+        default=None,
+        help="Path to config.json (default: config.json next to this script). "
+             "Preview/bin outputs and optional ha_events.json are written next "
+             "to this path for concurrent isolated renders.",
+    )
+    parser.add_argument(
+        "--render-only",
+        action="store_true",
+        help="Render and pack agenda.bin / agenda_preview.png but skip "
+             "uploading to the frame. Used by Digital Frames Live skills.",
+    )
+    return parser.parse_args(argv)
+
+
+def main(argv=None):
+    args = parse_args(argv)
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    config_path = os.path.join(script_dir, "config.json")
-    
+    config_path = (
+        os.path.abspath(args.config)
+        if args.config
+        else os.path.join(script_dir, "config.json")
+    )
+    output_dir = os.path.dirname(config_path)
+
     if not os.path.exists(config_path):
         print(f"Error: Configuration file not found at {config_path}")
         print("Please copy config.example.json to config.json and adjust settings.")
         sys.exit(1)
-        
+
     with open(config_path, "r") as f:
         config = json.load(f)
-        
+
     # Set timezone
     tz_name = config.get("timezone", "UTC")
     target_tz = get_timezone(tz_name)
-    
+
     # 1. Fetch Calendar Events
     cal_conf = config.get("calendar", {})
     source_type = cal_conf.get("source_type", "ical")
     events = []
-    
+    ha_events_path = os.path.join(output_dir, "ha_events.json")
+
     if source_type == "ical":
         ical_url = cal_conf.get("ical_url")
         if ical_url:
@@ -889,10 +922,10 @@ def main():
         else:
             print("Error: ical_url is not configured.")
     elif source_type == "ha":
-        events = fetch_ha_events(cal_conf, target_tz)
+        events = fetch_ha_events(cal_conf, target_tz, events_path=ha_events_path)
     else:
         print(f"Error: Unknown calendar source_type '{source_type}'.")
-        
+
     # 2. Fetch Weather Forecast
     weather_conf = config.get("weather", {})
     weather = {}
@@ -900,54 +933,62 @@ def main():
         lat = weather_conf.get("latitude")
         lon = weather_conf.get("longitude")
         zip_code = weather_conf.get("zip_code")
-        
+
         if (lat is None or lon is None) and zip_code:
             print(f"Resolving coordinates for location '{zip_code}'...")
             coords = get_coordinates_from_location(zip_code)
             if coords:
                 lat, lon = coords
                 print(f"Resolved coordinates: {lat}, {lon}")
-                
+
         temp_unit = weather_conf.get("temp_unit", "fahrenheit")
         api_url = weather_conf.get("api_url")
         if lat is not None and lon is not None:
             weather = fetch_weather(lat, lon, temp_unit, api_url)
         else:
             print("Warning: Location coordinates missing for weather forecast.")
-            
-    # 3. Query Frame Status
+
+    # 3. Query Frame Status (skip for render-only — integration owns delivery)
     frame_conf = config.get("frame", {})
-    frame_ip = frame_conf.get("ip_address", "fraimic.local")
-    frame_stats = fetch_frame_info(frame_ip)
-    
+    frame_ip = frame_conf.get("ip_address", "")
+    if args.render_only or not frame_ip:
+        frame_stats = {
+            "connected": False,
+            "battery": None,
+            "wifi": None,
+        }
+    else:
+        frame_stats = fetch_frame_info(frame_ip)
+
     # 4. Render Canvas Image
     resolution = frame_conf.get("resolution", [1200, 1600])
     width, height = resolution[0], resolution[1]
-    
+
     print(f"Generating layout ({width}x{height})...")
-    # Dispatch layout based on aspect ratio/orientation
     if width > height:
         img = render_landscape(width, height, events, weather, frame_stats, target_tz)
     else:
         img = render_portrait(width, height, events, weather, frame_stats, target_tz)
-        
-    # Save a PNG preview next to the script for debug/visual verification
-    preview_path = os.path.join(script_dir, "agenda_preview.png")
+
+    preview_path = os.path.join(output_dir, "agenda_preview.png")
     img.save(preview_path)
     print(f"Saved local PNG preview to {preview_path}")
-    
+
     # 5. Pack binary file
     layout_type = frame_conf.get("layout", "split_half")
     binary_bytes = encode_spectra6_bin(img, layout_type)
-    
-    # Save local bin backup
-    bin_path = os.path.join(script_dir, "agenda.bin")
+
+    bin_path = os.path.join(output_dir, "agenda.bin")
     with open(bin_path, "wb") as f:
         f.write(binary_bytes)
     print(f"Saved local Spectra 6 binary to {bin_path}")
-    
+
+    if args.render_only:
+        print("--render-only set: skipping upload to frame.")
+        return
+
     # 6. Upload
-    if frame_stats["connected"]:
+    if frame_stats.get("connected"):
         success = upload_bin_to_frame(frame_ip, binary_bytes)
         if success:
             print("Successfully updated Daily Agenda frame!")
@@ -955,6 +996,7 @@ def main():
             print("Failed to upload Daily Agenda.")
     else:
         print("Frame is currently offline or unreachable. Skipping REST upload.")
+
 
 if __name__ == "__main__":
     main()
