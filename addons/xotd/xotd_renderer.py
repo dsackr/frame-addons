@@ -4,7 +4,10 @@
 Fetches a daily joke, quote, or Bible verse -- depending on the configured
 content_mode -- from the web or a local custom list, renders it onto a
 premium high-contrast canvas, encodes it to the Spectra 6 4-bit binary
-format, and uploads it to the Fraimic e-ink canvas frame.
+format, and uploads it to the Fraimic e-ink canvas frame. content_mode
+"message" instead renders a user-typed message_text in one of a handful of
+fixed visual styles -- no fetch involved, the text comes straight from the
+caller's config.json.
 """
 
 from __future__ import annotations
@@ -155,6 +158,18 @@ FONT_SOURCES = {
             "Medium": "Bungee-Regular.ttf",
             "SemiBold": "Bungee-Regular.ttf",
             "Bold": "Bungee-Regular.ttf",
+        },
+    },
+    # Bold condensed display face (Google Fonts, OFL) -- the movie-poster
+    # message style's headline font. Single static weight, same sourcing
+    # pattern as Bungee above.
+    "BebasNeue": {
+        "base_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/bebasneue",
+        "styles": {
+            "Regular": "BebasNeue-Regular.ttf",
+            "Medium": "BebasNeue-Regular.ttf",
+            "SemiBold": "BebasNeue-Regular.ttf",
+            "Bold": "BebasNeue-Regular.ttf",
         },
     },
 }
@@ -1139,6 +1154,134 @@ def render_word_image(width: int, height: int, word: str, pos: str, definition: 
     return img
 
 # ---------------------------------------------------------------------------
+# Message styles: user-typed text, not fetched content. Each style owns its
+# own colors/fonts/decoration outright -- unlike THEMES (see get_theme
+# above), which only re-assigns color/font roles within one shared layout,
+# these are genuinely different compositions (border ornaments, banner
+# ribbons, poster strap), so they deliberately don't use the THEMES/
+# get_theme machinery at all. Matches this file's existing convention of
+# hardcoding layout per content mode rather than a generic template engine.
+# ---------------------------------------------------------------------------
+def _layout_plain(width: int, height: int, message_text: str) -> Image.Image:
+    """Plain style: the message centered on a bare white canvas, no
+    decoration -- closest to a printed note. Auto-fits like every other
+    content mode, so a short message renders big and a long one shrinks
+    only as much as it has to."""
+    img = Image.new("RGB", (width, height), COLOR_WHITE)
+    draw = ImageDraw.Draw(img)
+
+    is_landscape = width > height
+    margin = int(min(width, height) * (0.12 if is_landscape else 0.16))
+    wrap_width = width - 2 * margin
+    max_size = min(width, height) // 3
+
+    font, lines, heights, line_spacing, total_height = fit_text_to_box(
+        draw, message_text, wrap_width, height - 2 * margin,
+        font_loader=lambda size: load_font("Outfit", "SemiBold", size),
+        max_size=max_size, min_size=20,
+    )
+    start_y = (height - total_height) // 2
+    draw_text_block(draw, lines, heights, line_spacing, font, COLOR_BLACK, width, start_y)
+    return img
+
+def _layout_ad_50s(width: int, height: int, message_text: str) -> Image.Image:
+    """1950s diner-ad style: double border (red outer, black inner),
+    yellow ribbon banners top and bottom framing the message as a "diner
+    special," set in Bungee -- the same bold rounded display face already
+    used for the retro_atomic theme. Built only from the fixed Spectra6
+    palette, like every other layout in this file."""
+    img = Image.new("RGB", (width, height), COLOR_WHITE)
+    draw = ImageDraw.Draw(img)
+
+    is_landscape = width > height
+    outer_margin = int(min(width, height) * 0.05)
+    inner_margin = outer_margin + int(min(width, height) * 0.02)
+    border_width = 4 if is_landscape else 6
+
+    draw.rectangle(
+        (outer_margin, outer_margin, width - outer_margin, height - outer_margin),
+        outline=COLOR_RED, width=border_width,
+    )
+    draw.rectangle(
+        (inner_margin, inner_margin, width - inner_margin, height - inner_margin),
+        outline=COLOR_BLACK, width=2,
+    )
+
+    banner_h = int(min(width, height) * 0.09)
+    banner_font = load_font("Bungee", "Regular", max(int(banner_h * 0.5), 14))
+    draw.rectangle(
+        (inner_margin, inner_margin, width - inner_margin, inner_margin + banner_h),
+        fill=COLOR_YELLOW,
+    )
+    draw.text(
+        (width // 2, inner_margin + banner_h // 2), "* SPECIAL MESSAGE *",
+        fill=COLOR_BLACK, font=banner_font, anchor="mm",
+    )
+    draw.rectangle(
+        (inner_margin, height - inner_margin - banner_h, width - inner_margin, height - inner_margin),
+        fill=COLOR_YELLOW,
+    )
+    draw.text(
+        (width // 2, height - inner_margin - banner_h // 2), "* TODAY ONLY *",
+        fill=COLOR_BLACK, font=banner_font, anchor="mm",
+    )
+
+    content_top = inner_margin + banner_h + 20
+    content_bottom = height - inner_margin - banner_h - 20
+    wrap_width = width - 2 * inner_margin - 40
+
+    font, lines, heights, line_spacing, total_height = fit_text_to_box(
+        draw, message_text, wrap_width, content_bottom - content_top,
+        font_loader=lambda size: load_font("Bungee", "Regular", size),
+        max_size=int(min(width, height) * 0.3), min_size=20,
+    )
+    start_y = content_top + max(0, (content_bottom - content_top - total_height) // 2)
+    draw_text_block(draw, lines, heights, line_spacing, font, COLOR_RED, width, start_y)
+    return img
+
+def _layout_movie_poster(width: int, height: int, message_text: str) -> Image.Image:
+    """Movie-poster style: black canvas, a yellow "NOW SHOWING" strap above
+    a bold condensed all-caps headline (Bebas Neue) in white, with a red
+    rule underneath standing in for a credits-block divider."""
+    img = Image.new("RGB", (width, height), COLOR_BLACK)
+    draw = ImageDraw.Draw(img)
+
+    is_landscape = width > height
+    margin = int(min(width, height) * (0.1 if is_landscape else 0.14))
+    strap_font_size = max(int(min(width, height) * 0.035), 14)
+    strap_font = load_font("Bungee", "Regular", strap_font_size)
+
+    draw.text(
+        (width // 2, margin), "NOW SHOWING",
+        fill=COLOR_YELLOW, font=strap_font, anchor="ma",
+    )
+
+    content_top = margin + strap_font_size + 30
+    content_bottom = height - margin
+    wrap_width = width - 2 * margin
+
+    font, lines, heights, line_spacing, total_height = fit_text_to_box(
+        draw, message_text.upper(), wrap_width, content_bottom - content_top,
+        font_loader=lambda size: load_font("BebasNeue", "Regular", size),
+        max_size=int(min(width, height) * 0.35), min_size=20,
+    )
+    start_y = content_top + max(0, (content_bottom - content_top - total_height) // 2)
+    draw_text_block(draw, lines, heights, line_spacing, font, COLOR_WHITE, width, start_y)
+
+    draw.line((margin, height - margin, width - margin, height - margin), fill=COLOR_RED, width=3)
+    return img
+
+def render_message_image(width: int, height: int, message_text: str, style: str = "plain") -> Image.Image:
+    """Compose a user-typed message in one of the three fixed visual
+    styles above, falling back to "plain" for an unknown/missing value --
+    same defensive fallback convention as get_theme."""
+    if style == "ad_50s":
+        return _layout_ad_50s(width, height, message_text)
+    if style == "movie_poster":
+        return _layout_movie_poster(width, height, message_text)
+    return _layout_plain(width, height, message_text)
+
+# ---------------------------------------------------------------------------
 # Binary Encoding for Spectra 6
 # ---------------------------------------------------------------------------
 def get_closest_nibble(r: int, g: int, b: int) -> int:
@@ -1336,6 +1479,20 @@ def main():
         label = "Word of the Day"
         print(f"Generating {label} layout ({width}x{height})...")
         img = render_word_image(width, height, word, pos, definition, example, theme, drop_cap)
+
+    elif content_mode == "message":
+        message_text = config.get("message_text", "").strip()
+        style = config.get("style", "plain")
+
+        if not message_text:
+            print("Error: message_text is required for content_mode 'message'.")
+            sys.exit(1)
+
+        preview_text = message_text[:40] + ("…" if len(message_text) > 40 else "")
+        print(f'Selected Message: "{preview_text}" ({style})')
+        label = "Message"
+        print(f"Generating {label} layout ({width}x{height})...")
+        img = render_message_image(width, height, message_text, style)
 
     else:  # "quote" (default)
         quote_feed = config.get("quote_feed", "zenquotes")
